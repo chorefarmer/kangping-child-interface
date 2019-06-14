@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.bouncycastle:bctsp-jdk14:1.46">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bctsp-jdk14/1.46/6ebffec28dbbaa24d5d7270a61993aa376d85ef1/bctsp-jdk14-1.46.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bctsp-jdk14/1.46/b960dd4c333e626c03d01893aa9cdda86108e7a4/bctsp-jdk14-1.46-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
