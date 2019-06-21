@@ -37,6 +37,9 @@ public class BodyCompositionTest {
 
     private Double ExtracellularFluid;//细胞外液
 
+    //总体水  liang-20190617 细胞內液  细胞
+//    private Double ExtracellularFluid;
+
     private Double Muscle;//肌肉
 
     private Double FatfreeBodyWeight;//瘦体重

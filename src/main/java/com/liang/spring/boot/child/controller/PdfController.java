@@ -1,7 +1,3 @@
-/*
- * 版权所有 © 成都太阳高科技有限责任公司
- * http://www.suncd.com
- */
 package com.liang.spring.boot.child.controller;
 
 
@@ -95,10 +91,6 @@ public class PdfController {
         listVars.add(variables);
         PdfUtils.download(configurer,"pdfPage.ftl",listVars,response,"测试中文.pdf");
     }
-
-
-
-
 
 
 }
