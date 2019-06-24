@@ -1,8 +1,12 @@
 package com.liang.spring.boot.child.controller;
 
 
+import com.liang.spring.boot.child.domain.DietarySurvey;
 import com.liang.spring.boot.child.domain.Information;
+import com.liang.spring.boot.child.domain.SportsSurvey;
+import com.liang.spring.boot.child.repository.DietarySurveyRepository;
 import com.liang.spring.boot.child.repository.InformationRepository;
+import com.liang.spring.boot.child.repository.SportsSurveyRepository;
 import com.liang.spring.boot.child.untils.GetAgeByBirth;
 import com.liang.spring.boot.child.untils.PdfUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +37,12 @@ public class PdfController {
     @Autowired
     private InformationRepository informationRepository;
 
+    @Autowired
+    private SportsSurveyRepository sportsSurveyRepository;
+
+    @Autowired
+    private DietarySurveyRepository dietarySurveyRepository;
+
     /**
      * pdf预览
      *
@@ -48,25 +58,33 @@ public class PdfController {
         //根据id查询到基本信息
         Information information=informationRepository.getOne(id);
 
-        variables.put("information",information);
+            variables.put("information",information);
 
-        //处理报告性别数据显示
-        Integer sex=information.getSex();
-        if(sex==1){
-            variables.put("sex","男");
-        }else if(sex==2){
-            variables.put("sex","女");
-        }
+            //处理报告性别数据显示
+            Integer sex=information.getSex();
+            if(sex==1){
+                variables.put("sex","男");
+            }else if(sex==2){
+                variables.put("sex","女");
+            }
 
-        //处理报告年龄显示
+            //处理报告年龄显示
 
-        Date birth=information.getBirth();
+            Date birth=information.getBirth();
 
-        String age=GetAgeByBirth.getAgeFromBirthTime(birth);
+            String age=GetAgeByBirth.getAgeFromBirthTime(birth);
 
-        System.out.println(age);
+            System.out.println(age);
 
+        //计算运动对应的能量
+        //根据id查询到运动情况
+        SportsSurvey sportsSurvey=sportsSurveyRepository.findOne(id);
 
+        //计算能量
+
+        //计算膳食营养素分析结果
+        //根据id查询到膳食调查情况
+        DietarySurvey dietarySurvey=dietarySurveyRepository.findOne(id);
 
 
         variables.put("title","儿童营养监测分析报告");

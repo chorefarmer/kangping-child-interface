@@ -101,15 +101,15 @@
                     <tbody>
                     <tr>
                         <td>细胞内液(kg)</td>
-                        <td>19.4</td>
-                        <td rowspan="2">34.5</td>
+                        <td>14.3</td>
+                        <td rowspan="2">27.6</td>
                         <td rowspan="3"></td>
                         <td rowspan="4"></td>
                         <td rowspan="5"></td>
                     </tr>
                     <tr>
                         <td>细胞外液(kg)</td>
-                        <td>15.1</td>
+                        <td>13.3</td>
                         <#--<td></td>-->
                         <#--<td></td>-->
                         <#--<td></td>-->
@@ -117,21 +117,21 @@
                     </tr>
                     <tr>
                         <td>蛋白质(kg)</td>
-                        <td>9.4</td>
-                        <td colspan="2">37.36</td>
+                        <td>7</td>
+                        <td colspan="2">32.9</td>
                     </tr>
                     <tr>
                         <td>无机盐(kg)</td>
                         <td>3.6</td>
-                        <td colspan="3">40.76</td>
+                        <td colspan="3">35.5</td>
                         <#--<td></td>-->
                         <#--<td></td>-->
                         <#--<td></td>-->
                     </tr>
                     <tr>
                         <td>脂肪(kg)</td>
-                        <td>12.3</td>
-                        <td colspan="4">59.00</td>
+                        <td>6.3</td>
+                        <td colspan="4">41.8</td>
                         <#--<td></td>-->
                         <#--<td></td>-->
                         <#--<td></td>-->
@@ -150,7 +150,15 @@
                 <div class="title-right"></div>
             </div>
             <div >
-                <img style="margin-left: -150px;width:300px;height:450px"  src="http://localhost:8082/img/ImgHeight.jpg" />
+                <img style="margin-left: -300px;width:600px;height:350px"  src="http://localhost:8082/img/Height0624.jpg" />
+
+            </div>
+                <div >
+                <img style="margin-left: 50px;width:600px;height:350px"  src="http://localhost:8082/img/Weight0624.jpg" />
+
+            </div>
+            <div >
+                <img style="margin-left: 50px;width:600px;height:350px"  src="http://localhost:8082/img/BMI0624.jpg" />
 
             </div>
 
@@ -258,23 +266,23 @@
                     <tbody>
                     <tr>
                         <td>谷类</td>
-                        <td>400g</td>
+                        <td>287.5g</td>
                     </tr>
                     <tr>
                         <td>蔬菜</td>
-                        <td>750g</td>
+                        <td>500g</td>
                     </tr>
                     <tr>
                         <td>水果</td>
-                        <td>400g</td>
+                        <td>200g</td>
                     </tr>
                     <tr>
                         <td>禽畜</td>
-                        <td>75g</td>
+                        <td>50g</td>
                     </tr>
                     <tr>
                         <td>海产品</td>
-                        <td>100g</td>
+                        <td>50g</td>
                     </tr>
                     <tr>
                         <td>蛋及制品</td>
@@ -282,11 +290,11 @@
                     </tr>
                     <tr>
                         <td>奶</td>
-                        <td>400g</td>
+                        <td>320g</td>
                     </tr>
                     <tr>
                         <td>豆及制品</td>
-                        <td>25g</td>
+                        <td>12.5g</td>
                     </tr>
                     <tr>
                         <td>坚果</td>
@@ -294,11 +302,11 @@
                     </tr>
                     <tr>
                         <td>油脂</td>
-                        <td>25g</td>
+                        <td>20g</td>
                     </tr>
                     <tr>
                         <td>每日推荐摄入能量</td>
-                        <td>2868Kcal</td>
+                        <td>1956Kcal-2056Kcal</td>
                     </tr>
 
 
@@ -329,20 +337,20 @@
                     <tr>
                         <td rowspan="5">早餐</td>
                         <td>谷类</td>
-                        <td>90g</td>
-                        <td>一个普通大小和一个稍小的馒头|三片较大的全麦吐司</td>
+                        <td>70g</td>
+                        <td>一个较大的馒头；两片较大或三片较小的全麦吐司</td>
                     </tr>
                     <tr>
                         <#--<td>早餐</td>-->
                         <td>蔬菜</td>
-                        <td>70g</td>
-                        <td>三分之二碗的油菜或菠菜等绿叶菜|半碗的芹菜茎</td>
+                        <td>60g</td>
+                        <td>半碗油菜或菠菜等绿叶菜；三分之一碗的芹菜茎</td>
                     </tr>
                     <tr>
                         <#--<td>早餐</td>-->
                         <td>水果</td>
-                        <td>80g</td>
-                        <td>半个普通大小的去核苹果|5-8个樱桃番茄|5-6颗草莓|一根小型的香蕉</td>
+                        <td>50g</td>
+                        <td>半个体积较小的去核苹果；3-5个樱桃番茄；3-4颗草莓；半根香蕉</td>
                     </tr>
                     <tr>
                         <#--<td>早餐</td>-->
@@ -359,26 +367,26 @@
                     <tr>
                         <td>加餐</td>
                         <td>水果</td>
-                        <td>320g</td>
-                        <td>两个普通大小的苹果|两根大香蕉和一根小香蕉或三根半小香蕉|23-24颗草莓|18颗樱桃番茄</td>
+                        <td>250g</td>
+                        <td>两个半的去核小苹果或一个半的去核普通大小苹果；两根大香蕉；14-17颗草莓；14颗樱桃番茄</td>
                     </tr>
                     <tr>
                         <td rowspan="4">午餐</td>
                         <td>谷类</td>
-                        <td>160g</td>
-                        <td>一碗+四分之三碗米饭</td>
+                        <td>100g</td>
+                        <td>满满一碗米饭接近溢出</td>
                     </tr>
                     <tr>
                         <#--<td>午餐</td>-->
                         <td>蔬菜</td>
-                        <td>250g</td>
-                        <td>一碗+三分之二碗绿叶菜</td>
+                        <td>200g</td>
+                        <td>4颗全手长的油菜或三分之二碟芹菜茎</td>
                     </tr>
                     <tr>
                         <#--<td>午餐</td>-->
                         <td>禽畜肉类</td>
-                        <td>100g</td>
-                        <td>超市买到的鸡胸肉的五分之四大小即可</td>
+                        <td>50g</td>
+                        <td>超市买到的鸡胸肉的五分之二大小即可</td>
                     </tr>
                     <tr>
                         <#--<td>午餐</td>-->
@@ -395,24 +403,24 @@
                     <tr>
                         <td rowspan="5">晚餐</td>
                         <td>谷类</td>
-                        <td>125g</td>
-                        <td>四分之三碗蒸红薯|两个稍大些的馒头</td>
+                        <td>80g</td>
+                        <td>四分之三碗米饭或两个较小的馒头</td>
                     </tr>
                     <tr>
                         <#--<td>晚餐</td>-->
                         <td>蔬菜</td>
-                        <td>180g</td>
-                        <td>9颗手中指长度的小油菜|6片大白菜</td>
+                        <td>170g</td>
+                        <td>满满一碗绿叶菜接近溢出</td>
                     </tr><tr>
                         <#--<td>晚餐</td>-->
                         <td>水产类</td>
-                        <td>100g</td>
-                        <td>从指根到腕关节部分手掌大小的带鱼段和三个虾仁；八只河虾；十一只基围虾；十个虾仁</td>
+                        <td>50g</td>
+                        <td>从指根到腕关节部分手掌大小的带鱼段的五分之四大小即可；四只河虾；两只基围虾和三个虾仁</td>
                     </tr><tr>
                         <#--<td>晚餐</td>-->
                         <td>大豆</td>
-                        <td>25g</td>
-                        <td>对应豆浆500毫升左右；或豆腐脑10汤勺左右；扁平状的豆腐干一小块；北豆腐或南豆腐一小块</td>
+                        <td>15g</td>
+                        <td>对应豆浆300毫升左右，一瓶鲜豆浆的量；或豆腐脑6汤勺左右；扁平状的豆腐干一小块；北豆腐或南豆腐一小块</td>
                     </tr><tr>
                         <#--<td>晚餐</td>-->
                         <td>烹调油</td>
@@ -469,10 +477,10 @@
                         <td>游泳</td>
                         <td>游泳40分钟</td>
                     </tr>
-                    <tr>
-                        <td>瑜伽</td>
-                        <td>瑜伽50分钟</td>
-                    </tr>
+                    <#--<tr>-->
+                        <#--<td>瑜伽</td>-->
+                        <#--<td>瑜伽50分钟</td>-->
+                    <#--</tr>-->
                     <tr>
                         <td>注意事项:</td>
                         <td>可根据自己的具体情况调整运动时间，可多次完成</td>
