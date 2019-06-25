@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="16ec6a7d-2b40-41e0-85c1-7e7f41e82d72" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pdfPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pdfPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/Application.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -42,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
+            <state relative-caret-position="792">
               <caret line="51" column="26" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -51,16 +50,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pdfPage.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="482" column="29" lean-forward="true" selection-start-line="479" selection-start-column="24" selection-end-line="482" selection-end-column="29" />
+            <state relative-caret-position="292">
+              <caret line="482" column="29" selection-start-line="479" selection-start-column="24" selection-end-line="482" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="20" column="63" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="63" />
               <folding>
-                <element signature="n#style#0;n#img#0;n#div#5;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#6;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#7;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/LaboratoryDetectionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="29" column="37" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -105,6 +120,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/SystemImgUploadController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/pdfPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/Application.java" />
       </list>
     </option>
   </component>
@@ -129,6 +145,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,7 +286,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -282,7 +298,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561349788995" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561444565048" />
     <property name="last_opened_file_path" value="E:/liang_java_develop/Git/cmd/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -357,18 +373,19 @@
       <workItem from="1560821688426" duration="2651000" />
       <workItem from="1560908332757" duration="590000" />
       <workItem from="1561087026256" duration="13988000" />
-      <workItem from="1561347453982" duration="2315000" />
+      <workItem from="1561347453982" duration="2938000" />
+      <workItem from="1561435764229" duration="1144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61329000" />
+    <option name="totallyTimeSpent" value="63096000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17880085" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18094218" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -378,7 +395,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32964602" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26438054" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26438054" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -497,13 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="13" column="83" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -693,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/LaboratoryDetectionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2424">
-          <caret line="120" column="28" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/InformationRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -750,7 +753,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
+        <state relative-caret-position="792">
           <caret line="51" column="26" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -760,13 +763,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pdfPage.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="482" column="29" lean-forward="true" selection-start-line="479" selection-start-column="24" selection-end-line="482" selection-end-column="29" />
+        <state relative-caret-position="292">
+          <caret line="482" column="29" selection-start-line="479" selection-start-column="24" selection-end-line="482" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="63" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="63" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#5;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#6;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#7;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/LaboratoryDetectionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="37" />
         </state>
       </provider>
     </entry>
