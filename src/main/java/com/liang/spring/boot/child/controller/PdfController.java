@@ -60,6 +60,8 @@ public class PdfController {
 
             variables.put("information",information);
 
+        System.out.println("当前id号"+information.getGuardian_phone());
+
             //处理报告性别数据显示
             Integer sex=information.getSex();
             if(sex==1){
@@ -77,14 +79,18 @@ public class PdfController {
             System.out.println(age);
 
         //计算运动对应的能量
-        //根据id查询到运动情况
-        SportsSurvey sportsSurvey=sportsSurveyRepository.findOne(id);
 
-        //计算能量
+            //根据id查询到运动情况
+//            SportsSurvey sportsSurvey=sportsSurveyRepository.findOne(id);
+//
+//            //计算能量
+//            int sport_satus=sportsSurvey.getSport_status();
+
+       // System.out.println("当前运动状态："+sport_satus);
 
         //计算膳食营养素分析结果
         //根据id查询到膳食调查情况
-        DietarySurvey dietarySurvey=dietarySurveyRepository.findOne(id);
+//        DietarySurvey dietarySurvey=dietarySurveyRepository.findOne(id);
 
 
         variables.put("title","儿童营养监测分析报告");

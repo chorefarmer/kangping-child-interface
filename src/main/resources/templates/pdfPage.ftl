@@ -150,15 +150,15 @@
                 <div class="title-right"></div>
             </div>
             <div >
-                <img style="margin-left: -300px;width:600px;height:350px"  src="http://localhost:8082/img/Height0624.jpg" />
+                <img style="margin-left: -300px;width:600px;height:350px"  src="http://localhost:8082/${information.guardian_phone?c}_Height.png" />
 
             </div>
                 <div >
-                <img style="margin-left: 50px;width:600px;height:350px"  src="http://localhost:8082/img/Weight0624.jpg" />
+                <img style="margin-left: 50px;width:600px;height:350px"  src="http://localhost:8082/${information.guardian_phone?c}_Weight.png" />
 
             </div>
             <div >
-                <img style="margin-left: 50px;width:600px;height:350px"  src="http://localhost:8082/img/BMI0624.jpg" />
+                <img style="margin-left: 50px;width:600px;height:350px"  src="http://localhost:8082/${information.guardian_phone?c}_Bmi.png" />
 
             </div>
 
