@@ -49,50 +49,52 @@ public class CalcuPAL {
          *    如6岁6个月，这按照7岁走
          *    如果6岁5个月，则按照6岁走
          */
-        if(sport_status==1){
+        if(age>=6) {
+            if (sport_status == 1) {
 
-            if(age>=6&&age<=7){
-                PAL=1.75;
-            }else if(age>=8&&age<=9){
-                PAL=1.8;
-            }else if(age>=10&&age<=14){
-                PAL=1.85;
-            }else if(age>=15&&age<=18){
-                PAL=1.95;
+                if (age >= 6 && age <= 7) {
+                    PAL = 1.75;
+                } else if (age >= 8 && age <= 9) {
+                    PAL = 1.8;
+                } else if (age >= 10 && age <= 14) {
+                    PAL = 1.85;
+                } else if (age >= 15 && age <= 18) {
+                    PAL = 1.95;
+                }
             }
-        }
 
 
-        /**
-         * 全天内各种类型的身体活动时间应累计少于180分钟且不少于60分钟
-         */
-        if(sport_status==2){
+            /**
+             * 全天内各种类型的身体活动时间应累计少于180分钟且不少于60分钟
+             */
+            if (sport_status == 2) {
 
-            if(age>=6&&age<=7){
-                PAL=1.55;
-            }else if(age>=8&&age<=9){
-                PAL=1.6;
-            }else if(age>=10&&age<=14){
-                PAL=1.65;
-            }else if(age>=15&&age<=18){
-                PAL=1.75;
+                if (age >= 6 && age <= 7) {
+                    PAL = 1.55;
+                } else if (age >= 8 && age <= 9) {
+                    PAL = 1.6;
+                } else if (age >= 10 && age <= 14) {
+                    PAL = 1.65;
+                } else if (age >= 15 && age <= 18) {
+                    PAL = 1.75;
+                }
             }
-        }
 
-        /**
-         * 全天内各种类型的身体活动时间应累计少于60分钟，
-         * 主要是看电子产品或以坐为主
-         */
-        if(sport_status==3){
+            /**
+             * 全天内各种类型的身体活动时间应累计少于60分钟，
+             * 主要是看电子产品或以坐为主
+             */
+            if (sport_status == 3) {
 
-            if(age>=6&&age<=7){
-                PAL=1.35;
-            }else if(age>=8&&age<=9){
-                PAL=1.4;
-            }else if(age>=10&&age<=14){
-                PAL=1.45;
-            }else if(age>=15&&age<=18){
-                PAL=1.55;
+                if (age >= 6 && age <= 7) {
+                    PAL = 1.35;
+                } else if (age >= 8 && age <= 9) {
+                    PAL = 1.4;
+                } else if (age >= 10 && age <= 14) {
+                    PAL = 1.45;
+                } else if (age >= 15 && age <= 18) {
+                    PAL = 1.55;
+                }
             }
         }
 

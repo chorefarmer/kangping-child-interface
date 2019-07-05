@@ -101,15 +101,15 @@
                     <tbody>
                     <tr>
                         <td>细胞内液(kg)</td>
-                        <td>14.3</td>
-                        <td rowspan="2">27.6</td>
+                        <td>14.3</td><#--细胞內液-->
+                        <td rowspan="2">27.6</td><#--总体水-->
                         <td rowspan="3"></td>
                         <td rowspan="4"></td>
                         <td rowspan="5"></td>
                     </tr>
                     <tr>
                         <td>细胞外液(kg)</td>
-                        <td>13.3</td>
+                        <td>13.3</td><#--细胞外液-->
                         <#--<td></td>-->
                         <#--<td></td>-->
                         <#--<td></td>-->
@@ -117,21 +117,21 @@
                     </tr>
                     <tr>
                         <td>蛋白质(kg)</td>
-                        <td>7</td>
-                        <td colspan="2">32.9</td>
+                        <td>${Protein}</td><#--蛋白质-->
+                        <td colspan="2">32.9</td><#--肌肉量-->
                     </tr>
                     <tr>
                         <td>无机盐(kg)</td>
-                        <td>3.6</td>
-                        <td colspan="3">35.5</td>
+                        <td>3.6</td><#--无机盐-->
+                        <td colspan="3">${FatfreeBodyWeight}</td><#--瘦体重-->
                         <#--<td></td>-->
                         <#--<td></td>-->
                         <#--<td></td>-->
                     </tr>
                     <tr>
                         <td>脂肪(kg)</td>
-                        <td>6.3</td>
-                        <td colspan="4">41.8</td>
+                        <td>${Fat}</td><#--脂肪-->
+                        <td colspan="4">${Weight}</td><#--体重-->
                         <#--<td></td>-->
                         <#--<td></td>-->
                         <#--<td></td>-->

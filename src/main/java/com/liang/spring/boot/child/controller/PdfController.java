@@ -1,9 +1,14 @@
 package com.liang.spring.boot.child.controller;
 
 
+import com.liang.spring.boot.child.calculate.CalcuBMRBetweenOneAndSix;
+import com.liang.spring.boot.child.calculate.CalcuEER;
+import com.liang.spring.boot.child.calculate.CalcuPAL;
+import com.liang.spring.boot.child.domain.BodyCompositionTest;
 import com.liang.spring.boot.child.domain.DietarySurvey;
 import com.liang.spring.boot.child.domain.Information;
 import com.liang.spring.boot.child.domain.SportsSurvey;
+import com.liang.spring.boot.child.repository.BodyCompositionTestRepository;
 import com.liang.spring.boot.child.repository.DietarySurveyRepository;
 import com.liang.spring.boot.child.repository.InformationRepository;
 import com.liang.spring.boot.child.repository.SportsSurveyRepository;
@@ -43,6 +48,10 @@ public class PdfController {
     @Autowired
     private DietarySurveyRepository dietarySurveyRepository;
 
+    @Autowired
+    private BodyCompositionTestRepository bodyCompositionTestRepository;
+
+
     /**
      * pdf预览
      *
@@ -56,7 +65,7 @@ public class PdfController {
         Map<String,Object> variables = new HashMap<>();
 
         //根据id查询到基本信息
-        Information information=informationRepository.getOne(id);
+        Information information=informationRepository.findOne(id);
 
             variables.put("information",information);
 
@@ -66,7 +75,7 @@ public class PdfController {
             Integer sex=information.getSex();
             if(sex==1){
                 variables.put("sex","男");
-            }else if(sex==2){
+            }else if(sex==0){
                 variables.put("sex","女");
             }
 
@@ -74,19 +83,66 @@ public class PdfController {
 
             Date birth=information.getBirth();
 
-            String age=GetAgeByBirth.getAgeFromBirthTime(birth);
+            int age=GetAgeByBirth.getAgeFromBirthTime(birth);
 
-            System.out.println(age);
+            System.out.println("年龄为"+age);
 
+            //根据id查询到它体成分检测结果
+        BodyCompositionTest bodyCompositionTest=bodyCompositionTestRepository.findOne(id);
+
+        variables.put("bodyCompositionTest",bodyCompositionTest);
+
+        variables.put("Protein",bodyCompositionTest.getProtein());//蛋白质
+
+        variables.put("FatfreeBodyWeight",bodyCompositionTest.getFatfreeBodyWeight());//瘦体重
+
+        variables.put("Fat",bodyCompositionTest.getFat());//脂肪
+
+        variables.put("Weight",bodyCompositionTest.getWeight());//体重
         //计算运动对应的能量
 
             //根据id查询到运动情况
-//            SportsSurvey sportsSurvey=sportsSurveyRepository.findOne(id);
-//
-//            //计算能量
-//            int sport_satus=sportsSurvey.getSport_status();
+        SportsSurvey sportsSurvey=sportsSurveyRepository.findOne(id);
 
-       // System.out.println("当前运动状态："+sport_satus);
+        int sport_status=sportsSurvey.getSport_status();
+
+        //计算PAL
+        Double PAL=CalcuPAL.caluPAL(age,sport_status);
+        System.out.println("运动PAL计算结果为:"+PAL);
+
+        //计算基础代谢   做了体成分检测的采用体成分检测的体重数据  没做体成分检测的采用个人基本信息的体重
+        if (bodyCompositionTest.getWeight()!=null){
+            Double BMR= CalcuBMRBetweenOneAndSix.calcuBMR(age,sex,bodyCompositionTest.getWeight());
+            System.out.println("基础代谢计算结果为："+BMR);
+        }else{
+            Double BMR= CalcuBMRBetweenOneAndSix.calcuBMR(age,sex,information.getWeight());
+            System.out.println("基础代谢计算结果为："+BMR);
+        }
+
+
+        //计算总能量
+            //年龄1-6个月
+            //年龄7-12月
+            //年龄1-6岁
+
+        //年龄小于一岁  分为两种情况  年龄1-6个月和 年龄7-12个月
+        if(age<1){
+            int month=GetAgeByBirth.getMonthFromBirthTime(birth);
+
+            Double EER= CalcuEER.calcuEEROfFirstYear(sex,month);
+            System.out.println(age+"岁儿童每日所需能量为"+EER);
+        }
+        if (age>=1&&age<6){
+
+            Double EER=CalcuEER.calcuEERBetweenFirstAndSix(sex,information.getWeight(),sport_status,age,PAL);
+            System.out.println(age+"岁儿童每日所需能量为"+EER);
+        }
+        if (age>=6&&age<=18){
+
+            Double EER=CalcuEER.calcuEERreaterThanSix(bodyCompositionTest.getMetabolicRate(),age,sport_status);
+            System.out.println(age+"岁儿童每日所需能量为"+EER);
+        }
+
 
         //计算膳食营养素分析结果
         //根据id查询到膳食调查情况

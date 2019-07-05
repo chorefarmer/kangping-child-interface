@@ -23,16 +23,19 @@ public class CalcuEER {
      * @param sex
      * @return
      */
-    public static Double calcuEEROfFirstYear(Integer sex){
+    public static Double calcuEEROfFirstYear(Integer sex,Integer month){
 
         /**
          * 0-6个月的婴儿，分男女，给出母乳喂养时奶量
          * */
-        if(sex==1){//男婴
-            ERR=544;
-        }else if(sex==2){//女婴
-            ERR=495;
+        if(month>0&&month<=6){
+            if(sex==1){//男婴
+                ERR=544;
+            }else if(sex==2){//女婴
+                ERR=495;
+            }
         }
+
 
         /*纯母乳喂养  母乳喂养时奶量*/
 
@@ -45,11 +48,14 @@ public class CalcuEER {
          * 7-12月婴儿混合喂养婴儿
          */
         /*混合喂养儿  */
-        if(sex==1){//男婴
-            ERR=719;
-        }else if(sex==2){//女婴
-            ERR=673;
+        if(month>=7&&month<12){
+            if(sex==1){//男婴
+                ERR=719;
+            }else if(sex==2){//女婴
+                ERR=673;
+            }
         }
+
         return ERR;
     }
 

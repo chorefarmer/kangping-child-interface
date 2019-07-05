@@ -24,9 +24,9 @@ public class CalcuBMRBetweenOneAndSix {
         /*1-3岁按照体重和性别计算BMR*/
         if(age>=1&&age<3){
             if(sex==1){//男童
-                BMR=1000*(0.255*W-0.141)/4.18;
-            }else if(sex==2){//女童
-                BMR=1000*(0.246*W-0.0965)/4.18;
+                BMR=1000*(0.255*weight-0.141)/4.18;
+            }else if(sex==0){//女童
+                BMR=1000*(0.246*weight-0.0965)/4.18;
             }
         }
 
@@ -34,9 +34,9 @@ public class CalcuBMRBetweenOneAndSix {
         /*3-6岁 （包括3岁学龄前儿童）按照体重和性别计算BMR*/
         if(age>=3&&age<6){
             if(sex==1){//男童
-                BMR=22.7*W+495;
-            }else if(sex==2){//女童
-                BMR=22.5*W+499;
+                BMR=22.7*weight+495;
+            }else if(sex==0){//女童
+                BMR=22.5*weight+499;
             }
         }
         return BMR;

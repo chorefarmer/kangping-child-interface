@@ -55,7 +55,7 @@ public class InformationController {
 								 @PathVariable("id") Long id) {
 		Information information=informationRepository.findOne(id);
 		Date birth=information.getBirth();
-		String age= GetAgeByBirth.getAgeFromBirthTime(birth);
+		int age= GetAgeByBirth.getAgeFromBirthTime(birth);
 
 		model.addAttribute("age",age);
 		model.addAttribute(information);

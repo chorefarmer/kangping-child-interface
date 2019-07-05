@@ -52,6 +52,9 @@ public class Information implements Serializable{
 
 	private String remark;//备注
 
+	//liang-2019-7-4  基本信息添加体重录入项
+	private Double weight;
+
 	/** 创建时间. */
 	@Column(name="CREATE_TIME",insertable=false, updatable=false)
 	@Generated(GenerationTime.INSERT)
@@ -66,7 +69,7 @@ public class Information implements Serializable{
 	protected Information() {  // JPA 的规范要求无参构造函数；设为 protected 防止直接使用
 	}
 
-	public Information(Long guardian_phone, String name, Integer sex, Integer height, Date birth, Integer nation, Integer blood, String guardian, Integer educationalOfParents, String remark, Date createTime, Date updateTime) {
+	public Information(Long guardian_phone, String name, Integer sex, Integer height, Date birth, Integer nation, Integer blood, String guardian, Integer educationalOfParents, String remark, Double weight, Date createTime, Date updateTime) {
 		this.guardian_phone = guardian_phone;
 		this.name = name;
 		this.sex = sex;
@@ -77,6 +80,7 @@ public class Information implements Serializable{
 		this.guardian = guardian;
 		this.educationalOfParents = educationalOfParents;
 		this.remark = remark;
+		this.weight = weight;
 		this.createTime = createTime;
 		this.updateTime = updateTime;
 	}
@@ -161,6 +165,14 @@ public class Information implements Serializable{
 		this.remark = remark;
 	}
 
+	public Double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(Double weight) {
+		this.weight = weight;
+	}
+
 	public Date getCreateTime() {
 		return createTime;
 	}
@@ -190,6 +202,7 @@ public class Information implements Serializable{
 				", guardian='" + guardian + '\'' +
 				", educationalOfParents=" + educationalOfParents +
 				", remark='" + remark + '\'' +
+				", weight='" + weight + '\'' +
 				", createTime=" + createTime +
 				", updateTime=" + updateTime +
 				'}';
