@@ -11,5 +11,6 @@ import com.liang.spring.boot.child.domain.User;
  * @since 1.0.0 2017年3月2日
  * @author <a href="https://waylau.com">Way Lau</a> 
  */
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<User,Long>{
+
 }

@@ -117,21 +117,21 @@
                     </tr>
                     <tr>
                         <td>蛋白质(kg)</td>
-                        <td>${Protein}</td><#--蛋白质-->
+                        <td>${bodyCompositionTest.protein}</td><#--蛋白质-->
                         <td colspan="2">32.9</td><#--肌肉量-->
                     </tr>
                     <tr>
                         <td>无机盐(kg)</td>
                         <td>3.6</td><#--无机盐-->
-                        <td colspan="3">${FatfreeBodyWeight}</td><#--瘦体重-->
+                        <td colspan="3">${bodyCompositionTest.fatfreeBodyWeight}</td><#--瘦体重-->
                         <#--<td></td>-->
                         <#--<td></td>-->
                         <#--<td></td>-->
                     </tr>
                     <tr>
                         <td>脂肪(kg)</td>
-                        <td>${Fat}</td><#--脂肪-->
-                        <td colspan="4">${Weight}</td><#--体重-->
+                        <td>${bodyCompositionTest.fat}</td><#--脂肪-->
+                        <td colspan="4">${bodyCompositionTest.weight}</td><#--体重-->
                         <#--<td></td>-->
                         <#--<td></td>-->
                         <#--<td></td>-->
@@ -266,43 +266,43 @@
                     <tbody>
                     <tr>
                         <td>谷类</td>
-                        <td>287.5g</td>
+                        <td>${dietaryGuide.stapleFoodG}g</td>
                     </tr>
                     <tr>
                         <td>蔬菜</td>
-                        <td>500g</td>
+                        <td>${dietaryGuide.vegetablesG}g</td>
                     </tr>
                     <tr>
                         <td>水果</td>
-                        <td>200g</td>
+                        <td>${dietaryGuide.fruitsG}g</td>
                     </tr>
                     <tr>
                         <td>禽畜</td>
-                        <td>50g</td>
+                        <td>${dietaryGuide.livestockG}g</td>
                     </tr>
                     <tr>
                         <td>海产品</td>
-                        <td>50g</td>
+                        <td>${dietaryGuide.aquaticProductG}g</td>
                     </tr>
                     <tr>
                         <td>蛋及制品</td>
-                        <td>50g</td>
+                        <td>${dietaryGuide.eggG}g</td>
                     </tr>
                     <tr>
                         <td>奶</td>
-                        <td>320g</td>
+                        <td>${dietaryGuide.milkG}g</td>
                     </tr>
                     <tr>
                         <td>豆及制品</td>
-                        <td>12.5g</td>
+                        <td>${dietaryGuide.beanG}g</td>
                     </tr>
                     <tr>
                         <td>坚果</td>
-                        <td>15g</td>
+                        <td>${dietaryGuide.nutG}g</td>
                     </tr>
                     <tr>
                         <td>油脂</td>
-                        <td>20g</td>
+                        <td>${dietaryGuide.oilG}g</td>
                     </tr>
                     <tr>
                         <td>每日推荐摄入能量</td>

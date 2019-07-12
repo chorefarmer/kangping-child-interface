@@ -5,13 +5,10 @@ import com.liang.spring.boot.child.calculate.CalcuBMRBetweenOneAndSix;
 import com.liang.spring.boot.child.calculate.CalcuEER;
 import com.liang.spring.boot.child.calculate.CalcuPAL;
 import com.liang.spring.boot.child.domain.BodyCompositionTest;
-import com.liang.spring.boot.child.domain.DietarySurvey;
+import com.liang.spring.boot.child.domain.DietaryGuide;
 import com.liang.spring.boot.child.domain.Information;
 import com.liang.spring.boot.child.domain.SportsSurvey;
-import com.liang.spring.boot.child.repository.BodyCompositionTestRepository;
-import com.liang.spring.boot.child.repository.DietarySurveyRepository;
-import com.liang.spring.boot.child.repository.InformationRepository;
-import com.liang.spring.boot.child.repository.SportsSurveyRepository;
+import com.liang.spring.boot.child.repository.*;
 import com.liang.spring.boot.child.untils.GetAgeByBirth;
 import com.liang.spring.boot.child.untils.PdfUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +21,7 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sound.midi.Soundbank;
 import java.util.*;
 
 /**
@@ -51,6 +49,8 @@ public class PdfController {
     @Autowired
     private BodyCompositionTestRepository bodyCompositionTestRepository;
 
+    @Autowired
+    private DietaryGuideRepository dietaryGuideRepository;
 
     /**
      * pdf预览
@@ -60,6 +60,12 @@ public class PdfController {
      */
     @GetMapping("/preview/{id}")
     public void preview(@PathVariable("id") Long id,HttpServletRequest request, HttpServletResponse response) {
+
+        //局部变量基础代谢率和每日建议摄入能量初始化
+         Double BMR=null;
+         Double EER=null;
+        String EER_=null;
+
         // 构造freemarker模板引擎参数,listVars.size()个数对应pdf页数
         List<Map<String,Object>> listVars = new ArrayList<>();
         Map<String,Object> variables = new HashMap<>();
@@ -111,13 +117,19 @@ public class PdfController {
         System.out.println("运动PAL计算结果为:"+PAL);
 
         //计算基础代谢   做了体成分检测的采用体成分检测的体重数据  没做体成分检测的采用个人基本信息的体重
-        if (bodyCompositionTest.getWeight()!=null){
-            Double BMR= CalcuBMRBetweenOneAndSix.calcuBMR(age,sex,bodyCompositionTest.getWeight());
-            System.out.println("基础代谢计算结果为："+BMR);
-        }else{
-            Double BMR= CalcuBMRBetweenOneAndSix.calcuBMR(age,sex,information.getWeight());
+        if(bodyCompositionTest.getMetabolicRate()==null){
+            if (bodyCompositionTest.getWeight()!=null){
+                BMR= CalcuBMRBetweenOneAndSix.calcuBMR(age,sex,bodyCompositionTest.getWeight());
+                System.out.println("基础代谢计算结果为："+BMR);
+            }else{
+                BMR= CalcuBMRBetweenOneAndSix.calcuBMR(age,sex,information.getWeight());
+                System.out.println("基础代谢计算结果为："+BMR);
+            }
+        }else {
+            BMR=bodyCompositionTest.getMetabolicRate();
             System.out.println("基础代谢计算结果为："+BMR);
         }
+
 
 
         //计算总能量
@@ -129,20 +141,33 @@ public class PdfController {
         if(age<1){
             int month=GetAgeByBirth.getMonthFromBirthTime(birth);
 
-            Double EER= CalcuEER.calcuEEROfFirstYear(sex,month);
-            System.out.println(age+"岁儿童每日所需能量为"+EER);
+            EER= CalcuEER.calcuEEROfFirstYear(sex,month);
+            EER_=String.format("%.0f",EER);
+            System.out.println(age+"岁儿童每日所需能量为"+EER_);
         }
         if (age>=1&&age<6){
 
-            Double EER=CalcuEER.calcuEERBetweenFirstAndSix(sex,information.getWeight(),sport_status,age,PAL);
-            System.out.println(age+"岁儿童每日所需能量为"+EER);
+            EER=CalcuEER.calcuEERBetweenFirstAndSix(sex,information.getWeight(),sport_status,age,PAL);
+            EER_=String.format("%.0f",EER);
+            System.out.println(age+"岁儿童每日所需能量为"+EER_);
         }
         if (age>=6&&age<=18){
 
-            Double EER=CalcuEER.calcuEERreaterThanSix(bodyCompositionTest.getMetabolicRate(),age,sport_status);
-            System.out.println(age+"岁儿童每日所需能量为"+EER);
+            EER=CalcuEER.calcuEERreaterThanSix(bodyCompositionTest.getMetabolicRate(),age,sport_status);
+            EER_=String.format("%.0f",EER);
+            System.out.println(age+"岁儿童每日所需能量为"+EER_);
         }
 
+        //处理计算出来的能量结果取整后获取数据库对应kcal食谱
+
+        Long kcal_=(Long.parseLong(EER_)/100)*100;
+        System.out.println("取整后能量结果为:"+kcal_);
+
+        DietaryGuide dietaryGuide=dietaryGuideRepository.findOne(kcal_);
+
+        System.out.println("推荐份数为："+dietaryGuide.getAquaticProductG());
+
+        variables.put("dietaryGuide",dietaryGuide);
 
         //计算膳食营养素分析结果
         //根据id查询到膳食调查情况

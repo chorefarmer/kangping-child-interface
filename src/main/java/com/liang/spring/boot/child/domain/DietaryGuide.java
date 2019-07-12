@@ -27,8 +27,7 @@ public class DietaryGuide implements Serializable{
 	@Column(columnDefinition="varchar(100) COMMENT '主食份数'")
 	private Double stapleFoodF;//主食份数
 
-	private Double stapleFoodG;//主食克数
-
+	private Double stapleFoodG;//主食克数`
 	@Column(columnDefinition="varchar(100) COMMENT '蔬菜份数'")
 	private Double vegetablesF;//蔬菜份数
 
