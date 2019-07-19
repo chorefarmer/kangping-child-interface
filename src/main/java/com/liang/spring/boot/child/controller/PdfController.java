@@ -4,10 +4,7 @@ package com.liang.spring.boot.child.controller;
 import com.liang.spring.boot.child.calculate.CalcuBMRBetweenOneAndSix;
 import com.liang.spring.boot.child.calculate.CalcuEER;
 import com.liang.spring.boot.child.calculate.CalcuPAL;
-import com.liang.spring.boot.child.domain.BodyCompositionTest;
-import com.liang.spring.boot.child.domain.DietaryGuide;
-import com.liang.spring.boot.child.domain.Information;
-import com.liang.spring.boot.child.domain.SportsSurvey;
+import com.liang.spring.boot.child.domain.*;
 import com.liang.spring.boot.child.repository.*;
 import com.liang.spring.boot.child.untils.GetAgeByBirth;
 import com.liang.spring.boot.child.untils.PdfUtils;
@@ -52,6 +49,9 @@ public class PdfController {
     @Autowired
     private DietaryGuideRepository dietaryGuideRepository;
 
+    @Autowired
+    private HospitalRepository hospitalRepository;
+
     /**
      * pdf预览
      *
@@ -69,6 +69,13 @@ public class PdfController {
         // 构造freemarker模板引擎参数,listVars.size()个数对应pdf页数
         List<Map<String,Object>> listVars = new ArrayList<>();
         Map<String,Object> variables = new HashMap<>();
+
+        //根据id查询到医院科室基本信息
+        Hospital hospital=hospitalRepository.findOne(id);
+
+        variables.put("hospital",hospital);
+
+        System.out.println("科室基本信息"+hospital.getHospitalName());
 
         //根据id查询到基本信息
         Information information=informationRepository.findOne(id);
@@ -160,6 +167,14 @@ public class PdfController {
 
         //处理计算出来的能量结果取整后获取数据库对应kcal食谱
 
+        int kcal_low=Integer.parseInt(EER_)-50;
+
+        int kcal_high=Integer.parseInt(EER_)+50;
+
+        variables.put("kcal_low",kcal_low);
+
+        variables.put("kcal_high",kcal_high);
+
         Long kcal_=(Long.parseLong(EER_)/100)*100;
         System.out.println("取整后能量结果为:"+kcal_);
 
@@ -167,12 +182,14 @@ public class PdfController {
 
         System.out.println("推荐份数为："+dietaryGuide.getAquaticProductG());
 
+
         variables.put("dietaryGuide",dietaryGuide);
+
+
 
         //计算膳食营养素分析结果
         //根据id查询到膳食调查情况
 //        DietarySurvey dietarySurvey=dietarySurveyRepository.findOne(id);
-
 
         variables.put("title","儿童营养监测分析报告");
         listVars.add(variables);
@@ -195,6 +212,10 @@ public class PdfController {
         variables.put("title","测试下载ASGX!");
         listVars.add(variables);
         PdfUtils.download(configurer,"pdfPage.ftl",listVars,response,"测试中文.pdf");
+
+
+
+
     }
 
 

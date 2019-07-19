@@ -31,7 +31,7 @@
 <div class="container">
     <div style="margin: 0 0 15px 200px " class="hospital">
         <img style="width: 60px;height: 60px;margin: 0 0 -20px 0 " src="http://localhost:8082/img/hospital.jpg" />
-        <span style="font-size: 35px">XXX医院</span>
+        <span style="font-size: 35px">${hospital.hospitalName}</span>
     </div>
 
     <div style="text-align: center" class="header">
@@ -306,9 +306,8 @@
                     </tr>
                     <tr>
                         <td>每日推荐摄入能量</td>
-                        <td>1956Kcal-2056Kcal</td>
+                        <td>${kcal_low?c}Kcal-${kcal_high?c}Kcal</td>
                     </tr>
-
 
                     </tbody>
                 </table>
