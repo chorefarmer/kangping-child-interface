@@ -1,6 +1,7 @@
 package com.liang.spring.boot.child.controller;
 
 import com.liang.spring.boot.child.domain.AllergiesAndIntolerances;
+import com.liang.spring.boot.child.domain.PeopleKey;
 import com.liang.spring.boot.child.repository.AllergiesAndIntolerancesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -51,13 +52,12 @@ public class AllergiesAndIntolerancesController_ModelAndView {
  
 	/**
 	 * 根据id查询食物过敏与不耐受
-	 * @param id
 	 * @return
 	 */
 	@ResponseBody
 	@GetMapping("{id}")
-	public ModelAndView view(@PathVariable("id") Long id, Model model) {
-		AllergiesAndIntolerances allergiesAndIntolerances = allergiesAndIntolerancesRepository.findOne(id);
+	public ModelAndView view(PeopleKey peopleKey) {
+		AllergiesAndIntolerances allergiesAndIntolerances = allergiesAndIntolerancesRepository.findOne(peopleKey);
 		ModelAndView mav = new ModelAndView(new MappingJackson2JsonView());
 		mav.addObject("allergiesAndIntolerances", allergiesAndIntolerances);
 		mav.addObject("title", "根据id查询食物过敏与不耐受");
@@ -90,30 +90,16 @@ public class AllergiesAndIntolerancesController_ModelAndView {
 
 	/**
 	 * 删除食物过敏与不耐受
-	 * @param id
 	 * @return
 	 */
-	@GetMapping(value = "delete/{id}")
-	public ModelAndView delete(@PathVariable("id") Long id, Model model) {
-		allergiesAndIntolerancesRepository.delete(id);
+	@GetMapping(value = "delete")
+	public ModelAndView delete(PeopleKey peopleKey) {
+		allergiesAndIntolerancesRepository.delete(peopleKey);
 		ModelAndView mav = new ModelAndView(new MappingJackson2JsonView());
 		mav.addObject("allergiesAndIntolerances",getAllergiesAndIntolerancesList());
 		mav.addObject("title", "删除食物过敏与不耐受");
 		return mav;
 	}
 
-	/**
-	 * 修改食物过敏与不耐受
-	 * @param id
-	 * @return
-	 */
-	@GetMapping(value = "modify/{id}")
-	public ModelAndView modifyForm(@PathVariable("id") Long id, Model model) {
-		AllergiesAndIntolerances allergiesAndIntolerances = allergiesAndIntolerancesRepository.findOne(id);
-		ModelAndView mav = new ModelAndView(new MappingJackson2JsonView());
-		mav.addObject("allergiesAndIntolerances",allergiesAndIntolerances);
-		mav.addObject("title", "修改食物过敏与不耐受");
-		return mav;
-	}
 
 }

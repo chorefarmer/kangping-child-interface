@@ -1,13 +1,17 @@
 package com.liang.spring.boot.child.controller;
 
 import com.liang.spring.boot.child.domain.AllergiesAndIntolerances;
+import com.liang.spring.boot.child.domain.Information;
+import com.liang.spring.boot.child.domain.PeopleKey;
 import com.liang.spring.boot.child.untils.ResultUtil;
 import com.liang.spring.boot.child.domain.ResultMsg;
 import com.liang.spring.boot.child.repository.AllergiesAndIntolerancesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,13 +44,12 @@ public class AllergiesAndIntolerancesController {
  
 	/**
 	 * 根据id查询食物过敏与不耐受
-	 * @param id
 	 * @return
 	 */
 	@ResponseBody
-	@GetMapping("{id}")
-	public ResultMsg getListById(@PathVariable("id") Long id) {
-		return ResultUtil.success(allergiesAndIntolerancesRepository.findOne(id));
+	@GetMapping("/search")
+	public ResultMsg getListById(Model model, @Valid PeopleKey peopleKey, BindingResult result) throws Exception{
+		return ResultUtil.success(allergiesAndIntolerancesRepository.findOne(peopleKey));
 	}
 
 	/**
@@ -73,20 +76,20 @@ public class AllergiesAndIntolerancesController {
 	 * @param id
 	 * @return
 	 */
-	@GetMapping(value = "delete/{id}")
-	public ResultMsg deleteAllergiesAndIntolerances(@PathVariable("id") Long id) {
+	@GetMapping(value = "/delete")
+	public ResultMsg deleteAllergiesAndIntolerances(PeopleKey id) {
 		allergiesAndIntolerancesRepository.delete(id);
 		return ResultUtil.success();
 	}
 
 	/**
 	 * 修改食物过敏与不耐受
-	 * @param id
+	 * @param allergiesAndIntolerances
 	 * @return
 	 */
-	@GetMapping(value = "modify/{id}")
-	public ResultMsg modifyAllergiesAndIntolerances(@PathVariable("id") Long id, Model model) {
-		return ResultUtil.success(allergiesAndIntolerancesRepository.findOne(id));
+	@PostMapping("/modify")
+	public ResultMsg modifyAllergiesAndIntolerances(AllergiesAndIntolerances allergiesAndIntolerances) {
+		return ResultUtil.success(allergiesAndIntolerancesRepository.save(allergiesAndIntolerances));
 	}
 
 }

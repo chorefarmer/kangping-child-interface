@@ -5,6 +5,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Transient;
 
 /**
@@ -15,11 +16,15 @@ import javax.persistence.Transient;
  */
 @Entity
 @DynamicUpdate
+@IdClass(PeopleKey.class)
 public class SystemImgUpload {
 
     @Id  // 主键
     //@GeneratedValue(strategy=GenerationType.IDENTITY) // 自增长策略
     private Long guardian_phone; // 表关联字段 监护人联系方式
+
+    @Id
+    private Integer inspectOrder;
 
     @Transient
     private MultipartFile file;

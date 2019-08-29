@@ -168,140 +168,280 @@ public class MealTimes {
         ExamplesOfDinnerOil = examplesOfDinnerOil;
     }
 
+    public Long getKcal() {
+        return Kcal;
+    }
+
     public void setKcal(Long kcal) {
         Kcal = kcal;
+    }
+
+    public Long getBreakfastCerealQuantity() {
+        return BreakfastCerealQuantity;
     }
 
     public void setBreakfastCerealQuantity(Long breakfastCerealQuantity) {
         BreakfastCerealQuantity = breakfastCerealQuantity;
     }
 
+    public String getExamplesOfBreakfastCereals() {
+        return ExamplesOfBreakfastCereals;
+    }
+
     public void setExamplesOfBreakfastCereals(String examplesOfBreakfastCereals) {
         ExamplesOfBreakfastCereals = examplesOfBreakfastCereals;
+    }
+
+    public Long getBreakfastVegetablesQuantity() {
+        return BreakfastVegetablesQuantity;
     }
 
     public void setBreakfastVegetablesQuantity(Long breakfastVegetablesQuantity) {
         BreakfastVegetablesQuantity = breakfastVegetablesQuantity;
     }
 
+    public String getExamplesOfBreakfastVegetables() {
+        return ExamplesOfBreakfastVegetables;
+    }
+
     public void setExamplesOfBreakfastVegetables(String examplesOfBreakfastVegetables) {
         ExamplesOfBreakfastVegetables = examplesOfBreakfastVegetables;
+    }
+
+    public Long getBreakfastFruitsQuantity() {
+        return BreakfastFruitsQuantity;
     }
 
     public void setBreakfastFruitsQuantity(Long breakfastFruitsQuantity) {
         BreakfastFruitsQuantity = breakfastFruitsQuantity;
     }
 
+    public String getExamplesOfBreakfastFruits() {
+        return ExamplesOfBreakfastFruits;
+    }
+
     public void setExamplesOfBreakfastFruits(String examplesOfBreakfastFruits) {
         ExamplesOfBreakfastFruits = examplesOfBreakfastFruits;
+    }
+
+    public Long getBreakfastEggsQuantity() {
+        return BreakfastEggsQuantity;
     }
 
     public void setBreakfastEggsQuantity(Long breakfastEggsQuantity) {
         BreakfastEggsQuantity = breakfastEggsQuantity;
     }
 
+    public String getExamplesOfBreakfastEggs() {
+        return ExamplesOfBreakfastEggs;
+    }
+
     public void setExamplesOfBreakfastEggs(String examplesOfBreakfastEggs) {
         ExamplesOfBreakfastEggs = examplesOfBreakfastEggs;
+    }
+
+    public Long getBreakfastMilkQuantity() {
+        return BreakfastMilkQuantity;
     }
 
     public void setBreakfastMilkQuantity(Long breakfastMilkQuantity) {
         BreakfastMilkQuantity = breakfastMilkQuantity;
     }
 
+    public String getExamplesOfBreakfastMilk() {
+        return ExamplesOfBreakfastMilk;
+    }
+
     public void setExamplesOfBreakfastMilk(String examplesOfBreakfastMilk) {
         ExamplesOfBreakfastMilk = examplesOfBreakfastMilk;
+    }
+
+    public Long getSnacksFruitsQuantity() {
+        return SnacksFruitsQuantity;
     }
 
     public void setSnacksFruitsQuantity(Long snacksFruitsQuantity) {
         SnacksFruitsQuantity = snacksFruitsQuantity;
     }
 
+    public String getExamplesOfSnacksFruits() {
+        return ExamplesOfSnacksFruits;
+    }
+
     public void setExamplesOfSnacksFruits(String examplesOfSnacksFruits) {
         ExamplesOfSnacksFruits = examplesOfSnacksFruits;
+    }
+
+    public Long getLunchCerealQuantity() {
+        return LunchCerealQuantity;
     }
 
     public void setLunchCerealQuantity(Long lunchCerealQuantity) {
         LunchCerealQuantity = lunchCerealQuantity;
     }
 
+    public String getExamplesOfLunchCereals() {
+        return ExamplesOfLunchCereals;
+    }
+
     public void setExamplesOfLunchCereals(String examplesOfLunchCereals) {
         ExamplesOfLunchCereals = examplesOfLunchCereals;
+    }
+
+    public Long getLunchVegetablesQuantity() {
+        return LunchVegetablesQuantity;
     }
 
     public void setLunchVegetablesQuantity(Long lunchVegetablesQuantity) {
         LunchVegetablesQuantity = lunchVegetablesQuantity;
     }
 
+    public String getExamplesOfLunchVegetables() {
+        return ExamplesOfLunchVegetables;
+    }
+
     public void setExamplesOfLunchVegetables(String examplesOfLunchVegetables) {
         ExamplesOfLunchVegetables = examplesOfLunchVegetables;
+    }
+
+    public Long getLunchMeatQuantity() {
+        return LunchMeatQuantity;
     }
 
     public void setLunchMeatQuantity(Long lunchMeatQuantity) {
         LunchMeatQuantity = lunchMeatQuantity;
     }
 
+    public String getExamplesOfLunchMeat() {
+        return ExamplesOfLunchMeat;
+    }
+
     public void setExamplesOfLunchMeat(String examplesOfLunchMeat) {
         ExamplesOfLunchMeat = examplesOfLunchMeat;
+    }
+
+    public Long getLunchOilQuantity() {
+        return LunchOilQuantity;
     }
 
     public void setLunchOilQuantity(Long lunchOilQuantity) {
         LunchOilQuantity = lunchOilQuantity;
     }
 
+    public String getExamplesOfLunchOil() {
+        return ExamplesOfLunchOil;
+    }
+
     public void setExamplesOfLunchOil(String examplesOfLunchOil) {
         ExamplesOfLunchOil = examplesOfLunchOil;
+    }
+
+    public Long getSnacksMilkQuantity() {
+        return SnacksMilkQuantity;
     }
 
     public void setSnacksMilkQuantity(Long snacksMilkQuantity) {
         SnacksMilkQuantity = snacksMilkQuantity;
     }
 
+    public String getExamplesOfSnacksMilk() {
+        return ExamplesOfSnacksMilk;
+    }
+
     public void setExamplesOfSnacksMilk(String examplesOfSnacksMilk) {
         ExamplesOfSnacksMilk = examplesOfSnacksMilk;
+    }
+
+    public Long getSnacksNutQuantity() {
+        return SnacksNutQuantity;
     }
 
     public void setSnacksNutQuantity(Long snacksNutQuantity) {
         SnacksNutQuantity = snacksNutQuantity;
     }
 
+    public String getExamplesOfSnacksNut() {
+        return ExamplesOfSnacksNut;
+    }
+
     public void setExamplesOfSnacksNut(String examplesOfSnacksNut) {
         ExamplesOfSnacksNut = examplesOfSnacksNut;
+    }
+
+    public Long getDinnerCerealQuantity() {
+        return DinnerCerealQuantity;
     }
 
     public void setDinnerCerealQuantity(Long dinnerCerealQuantity) {
         DinnerCerealQuantity = dinnerCerealQuantity;
     }
 
+    public String getExamplesOfDinnerCereals() {
+        return ExamplesOfDinnerCereals;
+    }
+
     public void setExamplesOfDinnerCereals(String examplesOfDinnerCereals) {
         ExamplesOfDinnerCereals = examplesOfDinnerCereals;
+    }
+
+    public Long getDinnerVegetablesQuantity() {
+        return DinnerVegetablesQuantity;
     }
 
     public void setDinnerVegetablesQuantity(Long dinnerVegetablesQuantity) {
         DinnerVegetablesQuantity = dinnerVegetablesQuantity;
     }
 
+    public String getExamplesOfDinnerVegetables() {
+        return ExamplesOfDinnerVegetables;
+    }
+
     public void setExamplesOfDinnerVegetables(String examplesOfDinnerVegetables) {
         ExamplesOfDinnerVegetables = examplesOfDinnerVegetables;
+    }
+
+    public Long getDinnerFisheriesQuantity() {
+        return DinnerFisheriesQuantity;
     }
 
     public void setDinnerFisheriesQuantity(Long dinnerFisheriesQuantity) {
         DinnerFisheriesQuantity = dinnerFisheriesQuantity;
     }
 
+    public String getExamplesOfDinnerFisheries() {
+        return ExamplesOfDinnerFisheries;
+    }
+
     public void setExamplesOfDinnerFisheries(String examplesOfDinnerFisheries) {
         ExamplesOfDinnerFisheries = examplesOfDinnerFisheries;
+    }
+
+    public Long getDinnerSoybeanQuantity() {
+        return DinnerSoybeanQuantity;
     }
 
     public void setDinnerSoybeanQuantity(Long dinnerSoybeanQuantity) {
         DinnerSoybeanQuantity = dinnerSoybeanQuantity;
     }
 
+    public String getExamplesOfDinnerSoybean() {
+        return ExamplesOfDinnerSoybean;
+    }
+
     public void setExamplesOfDinnerSoybean(String examplesOfDinnerSoybean) {
         ExamplesOfDinnerSoybean = examplesOfDinnerSoybean;
     }
 
+    public Long getDinnerOilQuantity() {
+        return DinnerOilQuantity;
+    }
+
     public void setDinnerOilQuantity(Long dinnerOilQuantity) {
         DinnerOilQuantity = dinnerOilQuantity;
+    }
+
+    public String getExamplesOfDinnerOil() {
+        return ExamplesOfDinnerOil;
     }
 
     public void setExamplesOfDinnerOil(String examplesOfDinnerOil) {

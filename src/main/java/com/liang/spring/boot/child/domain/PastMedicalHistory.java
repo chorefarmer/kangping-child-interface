@@ -17,11 +17,15 @@ import java.util.Date;
  */
 @Entity  // 实体
 @DynamicUpdate
+@IdClass(PeopleKey.class)
 public class PastMedicalHistory implements Serializable{
 
 	@Id  // 主键
 	//@GeneratedValue(strategy=GenerationType.IDENTITY) // 自增长策略
 	private Long guardian_phone; // 表关联字段 监护人联系方式
+
+	@Id
+	private Integer inspectOrder;
 
 	//既往病史
 	//	出生情况

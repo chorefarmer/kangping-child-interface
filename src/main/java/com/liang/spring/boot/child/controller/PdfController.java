@@ -52,6 +52,9 @@ public class PdfController {
     @Autowired
     private HospitalRepository hospitalRepository;
 
+    @Autowired
+    private MealTimesRepository mealTimesRepository;
+
     /**
      * pdf预览
      *
@@ -59,16 +62,20 @@ public class PdfController {
      * @param response HttpServletResponse
      */
     @GetMapping("/preview/{id}")
-    public void preview(@PathVariable("id") Long id,HttpServletRequest request, HttpServletResponse response) {
+    public void preview(@PathVariable("id") Long id,
+                        PeopleKey peopleKey,
+                        HttpServletRequest request, HttpServletResponse response) {
 
         //局部变量基础代谢率和每日建议摄入能量初始化
          Double BMR=null;
          Double EER=null;
-        String EER_=null;
+
+         String EER_=null;
 
         // 构造freemarker模板引擎参数,listVars.size()个数对应pdf页数
         List<Map<String,Object>> listVars = new ArrayList<>();
         Map<String,Object> variables = new HashMap<>();
+
 
         //根据id查询到医院科室基本信息
         Hospital hospital=hospitalRepository.findOne(id);
@@ -78,7 +85,7 @@ public class PdfController {
         System.out.println("科室基本信息"+hospital.getHospitalName());
 
         //根据id查询到基本信息
-        Information information=informationRepository.findOne(id);
+        Information information=informationRepository.findOne(peopleKey);
 
             variables.put("information",information);
 
@@ -101,7 +108,7 @@ public class PdfController {
             System.out.println("年龄为"+age);
 
             //根据id查询到它体成分检测结果
-        BodyCompositionTest bodyCompositionTest=bodyCompositionTestRepository.findOne(id);
+        BodyCompositionTest bodyCompositionTest=bodyCompositionTestRepository.findOne(peopleKey);
 
         variables.put("bodyCompositionTest",bodyCompositionTest);
 
@@ -115,7 +122,7 @@ public class PdfController {
         //计算运动对应的能量
 
             //根据id查询到运动情况
-        SportsSurvey sportsSurvey=sportsSurveyRepository.findOne(id);
+        SportsSurvey sportsSurvey=sportsSurveyRepository.findOne(peopleKey);
 
         int sport_status=sportsSurvey.getSport_status();
 
@@ -185,6 +192,15 @@ public class PdfController {
 
         variables.put("dietaryGuide",dietaryGuide);
 
+        //根据计算出来的kcal能量查询对应的餐次推荐
+        if(kcal_>=1000&&kcal_<=3000){
+            MealTimes mealTimes=mealTimesRepository.findOne(kcal_);
+            variables.put("mealTimes",mealTimes);
+            System.out.println("推荐摄入能量为"+kcal_+"早餐谷物食物量"+mealTimes.getBreakfastCerealQuantity());
+        }else if(kcal_>3000){
+            MealTimes mealTimes=mealTimesRepository.findOne(kcal_);
+            variables.put("mealTimes",mealTimes);
+        }
 
 
         //计算膳食营养素分析结果
@@ -194,7 +210,14 @@ public class PdfController {
         variables.put("title","儿童营养监测分析报告");
         listVars.add(variables);
 
-        PdfUtils.preview(configurer,"pdfPage.ftl",listVars,response);
+        if(age>0&&age<1){
+            PdfUtils.preview(configurer,"pdfPageOne.ftl",listVars,response);
+        }else if(age>=1&&age<3){
+            PdfUtils.preview(configurer,"pdfPageOneToThree.ftl",listVars,response);
+        }else if(age>=3&&age<18){
+            PdfUtils.preview(configurer,"pdfPage.ftl",listVars,response);
+        }
+
     }
 
 
@@ -207,16 +230,14 @@ public class PdfController {
      */
     @RequestMapping(value = "/download", method = RequestMethod.GET)
     public void download(HttpServletRequest request, HttpServletResponse response) {
-        List<Map<String,Object>> listVars = new ArrayList<>();
-        Map<String,Object> variables = new HashMap<>();
-        variables.put("title","测试下载ASGX!");
-        listVars.add(variables);
-        PdfUtils.download(configurer,"pdfPage.ftl",listVars,response,"测试中文.pdf");
+            List<Map<String,Object>> listVars = new ArrayList<>();
+            Map<String,Object> variables = new HashMap<>();
+            variables.put("title","测试下载ASGX!");
+            listVars.add(variables);
+            PdfUtils.download(configurer,"pdfPage.ftl",listVars,response,"测试中文.pdf");
 
 
-
-
-    }
+        }
 
 
 }

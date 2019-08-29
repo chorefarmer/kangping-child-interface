@@ -1,5 +1,6 @@
 package com.liang.spring.boot.child.controller;
 
+import com.liang.spring.boot.child.domain.PeopleKey;
 import com.liang.spring.boot.child.untils.ResultUtil;
 import com.liang.spring.boot.child.domain.DietarySurvey;
 import com.liang.spring.boot.child.domain.ResultMsg;
@@ -40,13 +41,12 @@ public class DietarySurveyController {
  
 	/**
 	 * 根据id查询膳食调查
-	 * @param id
 	 * @return
 	 */
 	@ResponseBody
-	@GetMapping("{id}")
-	public ResultMsg getListById(@PathVariable("id") Long id) {
-		return ResultUtil.success(dietarySurveyRepository.findOne(id));
+	@GetMapping("/search")
+	public ResultMsg getListById(PeopleKey peopleKey) {
+		return ResultUtil.success(dietarySurveyRepository.findOne(peopleKey));
 	}
 
 	/**
@@ -70,23 +70,21 @@ public class DietarySurveyController {
 
 	/**
 	 * 删除膳食调查
-	 * @param id
 	 * @return
 	 */
-	@GetMapping(value = "delete/{id}")
-	public ResultMsg deleteDietarySurvey(@PathVariable("id") Long id) {
-		dietarySurveyRepository.delete(id);
+	@GetMapping("/delete")
+	public ResultMsg deleteDietarySurvey(PeopleKey peopleKey) {
+		dietarySurveyRepository.delete(peopleKey);
 		return ResultUtil.success();
 	}
 
 	/**
 	 * 修改膳食调查
-	 * @param id
 	 * @return
 	 */
-	@GetMapping(value = "modify/{id}")
-	public ResultMsg modifyDietarySurvey(@PathVariable("id") Long id, Model model) {
-		return ResultUtil.success(dietarySurveyRepository.findOne(id));
+	@GetMapping("/modify")
+	public ResultMsg modifyDietarySurvey(PeopleKey peopleKey) {
+		return ResultUtil.success(dietarySurveyRepository.findOne(peopleKey));
 	}
 
 }

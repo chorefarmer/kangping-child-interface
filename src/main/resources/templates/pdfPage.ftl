@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <title>营养监测分析报告</title>
+    <title>营养监测分析报告(3到18岁)</title>
 
     <link rel="stylesheet" href="http://localhost:8082/css/bodyComposition.css" />
     <link rel="stylesheet" href="http://localhost:8082/js/echarts.min.js" />
@@ -37,7 +37,7 @@
     <div style="text-align: center" class="header">
         <div class="bg-line"></div>
         <div class="header-title">
-            <span>营养监测分析报告</span>
+            <span>营养监测分析报告(3到18岁)</span>
         </div>
     </div>
 
@@ -336,95 +336,101 @@
                     <tr>
                         <td rowspan="5">早餐</td>
                         <td>谷类</td>
-                        <td>70g</td>
-                        <td>一个较大的馒头；两片较大或三片较小的全麦吐司</td>
+                        <td>${mealTimes.breakfastCerealQuantity}g</td>
+                        <td>${mealTimes.examplesOfBreakfastCereals}</td>
                     </tr>
                     <tr>
                         <#--<td>早餐</td>-->
                         <td>蔬菜</td>
-                        <td>60g</td>
-                        <td>半碗油菜或菠菜等绿叶菜；三分之一碗的芹菜茎</td>
+                        <td>${mealTimes.breakfastVegetablesQuantity}g</td>
+                        <td>${mealTimes.examplesOfBreakfastVegetables}</td>
                     </tr>
                     <tr>
                         <#--<td>早餐</td>-->
                         <td>水果</td>
-                        <td>50g</td>
-                        <td>半个体积较小的去核苹果；3-5个樱桃番茄；3-4颗草莓；半根香蕉</td>
+                        <td>${mealTimes.breakfastFruitsQuantity}g</td>
+                        <td>${mealTimes.examplesOfBreakfastFruits}</td>
                     </tr>
                     <tr>
                         <#--<td>早餐</td>-->
                         <td>蛋类</td>
-                        <td>50g</td>
-                        <td>一个普通大小的鸡蛋</td>
+                        <td>${mealTimes.breakfastEggsQuantity}g</td>
+                        <td>${mealTimes.examplesOfBreakfastEggs}</td>
                     </tr>
                     <tr>
                         <#--<td>早餐</td>-->
                         <td>乳制品</td>
-                        <td>300g</td>
-                        <td>两杯半左右带包装酸奶或牛奶</td>
+                        <td>${mealTimes.breakfastMilkQuantity}g</td>
+                        <td>${mealTimes.examplesOfBreakfastMilk}</td>
                     </tr>
                     <tr>
                         <td>加餐</td>
                         <td>水果</td>
-                        <td>250g</td>
-                        <td>两个半的去核小苹果或一个半的去核普通大小苹果；两根大香蕉；14-17颗草莓；14颗樱桃番茄</td>
+                        <td>${mealTimes.snacksFruitsQuantity}g</td>
+                        <td>${mealTimes.examplesOfSnacksFruits}</td>
                     </tr>
                     <tr>
                         <td rowspan="4">午餐</td>
                         <td>谷类</td>
-                        <td>100g</td>
-                        <td>满满一碗米饭接近溢出</td>
+                        <td>${mealTimes.lunchCerealQuantity}g</td>
+                        <td>${mealTimes.examplesOfLunchCereals}</td>
                     </tr>
                     <tr>
                         <#--<td>午餐</td>-->
                         <td>蔬菜</td>
-                        <td>200g</td>
-                        <td>4颗全手长的油菜或三分之二碟芹菜茎</td>
+                        <td>${mealTimes.lunchVegetablesQuantity}g</td>
+                        <td>${mealTimes.examplesOfLunchVegetables}</td>
                     </tr>
                     <tr>
                         <#--<td>午餐</td>-->
                         <td>禽畜肉类</td>
-                        <td>50g</td>
-                        <td>超市买到的鸡胸肉的五分之二大小即可</td>
+                        <td>${mealTimes.lunchMeatQuantity}g</td>
+                        <td>${mealTimes.examplesOfLunchMeat}</td>
                     </tr>
                     <tr>
                         <#--<td>午餐</td>-->
                         <td>烹调油</td>
-                        <td>15g</td>
-                        <td>一汤勺</td>
+                        <td>${mealTimes.lunchOilQuantity}g</td>
+                        <td>${mealTimes.examplesOfLunchOil}</td>
+                    </tr>
+                    <tr>
+                        <td>加餐</td>
+                        <td>乳制品</td>
+                        <td>${mealTimes.snacksMilkQuantity}g</td>
+                        <td>${mealTimes.examplesOfSnacksMilk}</td>
                     </tr>
                     <tr>
                         <td>加餐</td>
                         <td>坚果</td>
-                        <td>10g</td>
-                        <td>10粒去壳杏仁|2个核桃仁|5粒松子仁|3粒腰果|一碟南瓜子仁</td>
+                        <td>${mealTimes.snacksNutQuantity}g</td>
+                        <td>${mealTimes.examplesOfSnacksNut}</td>
                     </tr>
                     <tr>
                         <td rowspan="5">晚餐</td>
                         <td>谷类</td>
-                        <td>80g</td>
-                        <td>四分之三碗米饭或两个较小的馒头</td>
+                        <td>${mealTimes.dinnerCerealQuantity}g</td>
+                        <td>${mealTimes.examplesOfDinnerCereals}</td>
                     </tr>
                     <tr>
                         <#--<td>晚餐</td>-->
                         <td>蔬菜</td>
-                        <td>170g</td>
-                        <td>满满一碗绿叶菜接近溢出</td>
+                        <td>${mealTimes.dinnerVegetablesQuantity}g</td>
+                        <td>${mealTimes.examplesOfDinnerVegetables}</td>
                     </tr><tr>
                         <#--<td>晚餐</td>-->
                         <td>水产类</td>
-                        <td>50g</td>
-                        <td>从指根到腕关节部分手掌大小的带鱼段的五分之四大小即可；四只河虾；两只基围虾和三个虾仁</td>
+                        <td>${mealTimes.dinnerFisheriesQuantity}g</td>
+                        <td>${mealTimes.examplesOfDinnerFisheries}</td>
                     </tr><tr>
                         <#--<td>晚餐</td>-->
                         <td>大豆</td>
-                        <td>15g</td>
-                        <td>对应豆浆300毫升左右，一瓶鲜豆浆的量；或豆腐脑6汤勺左右；扁平状的豆腐干一小块；北豆腐或南豆腐一小块</td>
+                        <td>${mealTimes.dinnerSoybeanQuantity}g</td>
+                        <td>${mealTimes.examplesOfDinnerSoybean}</td>
                     </tr><tr>
                         <#--<td>晚餐</td>-->
                         <td>烹调油</td>
-                        <td>10g</td>
-                        <td>三分之二汤勺</td>
+                        <td>${mealTimes.dinnerOilQuantity}g</td>
+                        <td>${mealTimes.examplesOfDinnerOil}</td>
                     </tr>
                     <tr>
                         <td></td>
@@ -464,10 +470,7 @@
                         <td>做游戏</td>
                         <td>做游戏玩耍40分钟</td>
                     </tr>
-                    <tr>
-                        <td>工间操+散步</td>
-                        <td>工间操30分钟外加散步30分钟</td>
-                    </tr>
+
                     <tr>
                         <td>散步</td>
                         <td>散步60分钟</td>

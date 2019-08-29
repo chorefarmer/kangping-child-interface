@@ -2,10 +2,7 @@ package com.liang.spring.boot.child.domain;
 
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.Date;
@@ -18,11 +15,15 @@ import java.util.Date;
  */
 @Entity
 @DynamicUpdate
+@IdClass(PeopleKey.class)
 public class AllergiesAndIntolerances implements Serializable{
 
 	@Id  // 主键
 	//@GeneratedValue(strategy=GenerationType.IDENTITY) // 自增长策略
 	private Long guardian_phone; // 表关联字段 监护人联系方式
+
+	@Id
+	private Integer inspectOrder;
 
 	//食物过敏
 	private String egg;//鸡蛋

@@ -6,11 +6,10 @@ import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenerationTime;
 import org.springframework.data.annotation.LastModifiedDate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * Information 儿童 基本信息 实体类
@@ -20,10 +19,24 @@ import java.util.Date;
  */
 @Entity
 @DynamicUpdate
+@IdClass(PeopleKey.class)
 public class Information implements Serializable{
 
-	@Id  // 主键
-	private Long guardian_phone;//监护人联系方式  04-08需要确定数据类型
+//	@Id  // 主键
+//	private Long guardian_phone;//监护人联系方式  04-08需要确定数据类型
+//
+//	//liang-2019-8-23 添加复合主键 检测次数
+//	private Integer inspectOrder;
+
+	//liang-20190827 主键修改为复合主键
+//	@EmbeddedId
+//	private PeopleKey id;
+
+	@Id
+	private Long guardian_phone;
+
+	@Id
+	private Integer inspectOrder;
 
 	private String name;//儿童姓名
 
@@ -69,8 +82,9 @@ public class Information implements Serializable{
 	protected Information() {  // JPA 的规范要求无参构造函数；设为 protected 防止直接使用
 	}
 
-	public Information(Long guardian_phone, String name, Integer sex, Integer height, Date birth, Integer nation, Integer blood, String guardian, Integer educationalOfParents, String remark, Double weight, Date createTime, Date updateTime) {
+	public Information(Long guardian_phone, Integer inspectOrder, String name, Integer sex, Integer height, Date birth, Integer nation, Integer blood, String guardian, Integer educationalOfParents, String remark, Double weight, Date createTime, Date updateTime) {
 		this.guardian_phone = guardian_phone;
+		this.inspectOrder = inspectOrder;
 		this.name = name;
 		this.sex = sex;
 		this.height = height;
@@ -85,12 +99,46 @@ public class Information implements Serializable{
 		this.updateTime = updateTime;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Information that = (Information) o;
+		return Objects.equals(guardian_phone, that.guardian_phone) &&
+				Objects.equals(inspectOrder, that.inspectOrder) &&
+				Objects.equals(name, that.name) &&
+				Objects.equals(sex, that.sex) &&
+				Objects.equals(height, that.height) &&
+				Objects.equals(birth, that.birth) &&
+				Objects.equals(nation, that.nation) &&
+				Objects.equals(blood, that.blood) &&
+				Objects.equals(guardian, that.guardian) &&
+				Objects.equals(educationalOfParents, that.educationalOfParents) &&
+				Objects.equals(remark, that.remark) &&
+				Objects.equals(weight, that.weight) &&
+				Objects.equals(createTime, that.createTime) &&
+				Objects.equals(updateTime, that.updateTime);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(guardian_phone, inspectOrder, name, sex, height, birth, nation, blood, guardian, educationalOfParents, remark, weight, createTime, updateTime);
+	}
+
 	public Long getGuardian_phone() {
 		return guardian_phone;
 	}
 
 	public void setGuardian_phone(Long guardian_phone) {
 		this.guardian_phone = guardian_phone;
+	}
+
+	public Integer getInspectOrder() {
+		return inspectOrder;
+	}
+
+	public void setInspectOrder(Integer inspectOrder) {
+		this.inspectOrder = inspectOrder;
 	}
 
 	public String getName() {
@@ -193,6 +241,7 @@ public class Information implements Serializable{
 	public String toString() {
 		return "Information{" +
 				"guardian_phone=" + guardian_phone +
+				", inspectOrder=" + inspectOrder +
 				", name='" + name + '\'' +
 				", sex=" + sex +
 				", height=" + height +
@@ -202,7 +251,7 @@ public class Information implements Serializable{
 				", guardian='" + guardian + '\'' +
 				", educationalOfParents=" + educationalOfParents +
 				", remark='" + remark + '\'' +
-				", weight='" + weight + '\'' +
+				", weight=" + weight +
 				", createTime=" + createTime +
 				", updateTime=" + updateTime +
 				'}';

@@ -1,6 +1,7 @@
 package com.liang.spring.boot.child.repository;
 
 import com.liang.spring.boot.child.domain.DietaryGuide;
+import com.liang.spring.boot.child.domain.PeopleKey;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

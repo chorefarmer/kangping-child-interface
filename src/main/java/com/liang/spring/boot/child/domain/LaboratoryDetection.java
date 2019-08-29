@@ -16,11 +16,15 @@ import java.util.Date;
  */
 @Entity
 @DynamicUpdate
+@IdClass(PeopleKey.class)
 public class LaboratoryDetection implements Serializable{
 
 	@Id  // 主键
 	//@GeneratedValue(strategy=GenerationType.IDENTITY) // 自增长策略
 	private Long guardian_phone; // 表关联字段 监护人联系方式
+
+	@Id
+	private Integer inspectOrder;
 
 	private Double flavol;//血清黄醇浓度
 

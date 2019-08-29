@@ -1,6 +1,8 @@
 package com.liang.spring.boot.child.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.liang.spring.boot.child.domain.Information;
+import com.liang.spring.boot.child.domain.PeopleKey;
 import com.liang.spring.boot.child.domain.ResultMsg;
 import com.liang.spring.boot.child.repository.InformationRepository;
 import com.liang.spring.boot.child.untils.GetAgeByBirth;
@@ -11,9 +13,11 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.*;
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -47,20 +51,25 @@ public class InformationController {
  
 	/**
 	 * 根据id查询基本信息
-	 * @param id
 	 * @return
 	 */
-	@GetMapping("{id}")
-	public ResultMsg getListById(Model model,
-								 @PathVariable("id") Long id) {
-		Information information=informationRepository.findOne(id);
+	@GetMapping("/search")
+	public ResultMsg getListById (Model model, @Valid PeopleKey peopleKey, BindingResult result) throws Exception{
+
+
+
+
+		Information information=informationRepository.findOne(peopleKey);
+
 		Date birth=information.getBirth();
 		int age= GetAgeByBirth.getAgeFromBirthTime(birth);
 
+        System.out.println("年龄为"+age);
 		model.addAttribute("age",age);
-		model.addAttribute(information);
+//        System.out.println("个人基本信息json返回数据："+JSON.parse(information.toString()));
+        System.out.println("个人基本信息json返回数据："+information);
 
-		return ResultUtil.success(model);
+		return ResultUtil.success(information);
 	}
 
 	/**
@@ -69,7 +78,8 @@ public class InformationController {
 	 */
 	@GetMapping("/form")
 	public ResultMsg InformationList( ) {
-		return ResultUtil.success(getInformationList());
+        System.out.println(getInformationList());
+	    return ResultUtil.success(getInformationList());
 	}
 
 	/**
@@ -79,8 +89,11 @@ public class InformationController {
 	@ResponseBody
 	@PostMapping
 	public ResultMsg<Information> informationAdd(Information information) {
-		Long id=information.getGuardian_phone();
-		if(informationRepository.findOne(id)!=null){
+//		Information findInfor=informationRepository.findOne(information());
+
+		System.out.println("当前对象提交手机号为："+information.getGuardian_phone());
+		
+		if(informationRepository.findOne(new PeopleKey(information.getGuardian_phone(),information.getInspectOrder()))!=null){
 			return ResultUtil.error(1,"该档案号已经注册过");
 		}
 		return ResultUtil.success(informationRepository.save(information));
@@ -91,8 +104,9 @@ public class InformationController {
 	 * @param id
 	 * @return
 	 */
-	@GetMapping(value = "delete/{id}")
-	public ResultMsg deleteInformation(@PathVariable("id") Long id) {
+	@GetMapping(value = "/delete")
+	public ResultMsg deleteInformation(PeopleKey id) {
+
 		informationRepository.delete(id);
 		return ResultUtil.success();
 	}
@@ -151,6 +165,7 @@ public class InformationController {
 			@Override
 			public Predicate toPredicate(Root<Information> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
 
+
 				Path<String> name = root.get("name");
 				System.out.println("name："+information.getName());
 
@@ -186,5 +201,22 @@ public class InformationController {
 //		return ResultUtil.success(m);
 	}
 
+
+    /**
+     * 新增检测提交数据 接口
+     * @return
+     */
+    @PostMapping("/addInspect")
+    public ResultMsg addInspectById (Model model, Information information, BindingResult result,Integer status) throws Exception{
+
+
+        /**
+         * 新建检测后order前台+1后提交 2019-8-29 liang
+         */
+
+        informationRepository.save(information);
+
+        return ResultUtil.success(information);
+    }
 
 }

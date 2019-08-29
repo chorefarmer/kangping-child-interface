@@ -1,5 +1,6 @@
 package com.liang.spring.boot.child.controller;
 
+import com.liang.spring.boot.child.domain.PeopleKey;
 import com.liang.spring.boot.child.untils.ResultUtil;
 import com.liang.spring.boot.child.domain.SportsSurvey;
 import com.liang.spring.boot.child.domain.ResultMsg;
@@ -40,13 +41,12 @@ public class SportsSurveyController {
  
 	/**
 	 * 根据id查询运动调查
-	 * @param id
 	 * @return
 	 */
 	@ResponseBody
-	@GetMapping("{id}")
-	public ResultMsg getListById(@PathVariable("id") Long id) {
-		return ResultUtil.success(sportsSurveyRepository.findOne(id));
+	@GetMapping("/search")
+	public ResultMsg getListById(PeopleKey peopleKey) {
+		return ResultUtil.success(sportsSurveyRepository.findOne(peopleKey));
 	}
 
 	/**
@@ -70,23 +70,21 @@ public class SportsSurveyController {
 
 	/**
 	 * 删除运动调查
-	 * @param id
 	 * @return
 	 */
-	@GetMapping(value = "delete/{id}")
-	public ResultMsg deleteSportsSurvey(@PathVariable("id") Long id) {
-		sportsSurveyRepository.delete(id);
+	@GetMapping("/delete")
+	public ResultMsg deleteSportsSurvey(PeopleKey peopleKey) {
+		sportsSurveyRepository.delete(peopleKey);
 		return ResultUtil.success();
 	}
 
 	/**
 	 * 修改运动调查
-	 * @param id
 	 * @return
 	 */
-	@GetMapping(value = "modify/{id}")
-	public ResultMsg modifySportsSurvey(@PathVariable("id") Long id, Model model) {
-		return ResultUtil.success(sportsSurveyRepository.findOne(id));
+	@GetMapping("/modify")
+	public ResultMsg modifySportsSurvey(PeopleKey peopleKey) {
+		return ResultUtil.success(sportsSurveyRepository.findOne(peopleKey));
 	}
 
 }

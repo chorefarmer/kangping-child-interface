@@ -1,5 +1,6 @@
 package com.liang.spring.boot.child.controller;
 
+import com.liang.spring.boot.child.domain.PeopleKey;
 import com.liang.spring.boot.child.service.FilePathService;
 //import com.liang.spring.boot.child.service.LaboratoryDetectionService;
 import com.liang.spring.boot.child.service.LaboratoryDetectionService;
@@ -55,13 +56,12 @@ public class LaboratoryDetectionController {
  
 	/**
 	 * 根据id查询实验室检测
-	 * @param id
 	 * @return
 	 */
 	@ResponseBody
-	@GetMapping("{id}")
-	public ResultMsg getListById(@PathVariable("id") Long id) {
-		return ResultUtil.success(laboratoryDetectionRepository.findOne(id));
+	@GetMapping("/search")
+	public ResultMsg getListById(PeopleKey peopleKey) {
+		return ResultUtil.success(laboratoryDetectionRepository.findOne(peopleKey));
 	}
 
 	/**
@@ -85,23 +85,21 @@ public class LaboratoryDetectionController {
 
 	/**
 	 * 删除实验室检测
-	 * @param id
 	 * @return
 	 */
-	@GetMapping(value = "delete/{id}")
-	public ResultMsg deleteLaboratoryDetection(@PathVariable("id") Long id) {
-		laboratoryDetectionRepository.delete(id);
+	@GetMapping("/delete")
+	public ResultMsg deleteLaboratoryDetection(PeopleKey peopleKey) {
+		laboratoryDetectionRepository.delete(peopleKey);
 		return ResultUtil.success();
 	}
 
 	/**
 	 * 修改实验室检测
-	 * @param id
 	 * @return
 	 */
-	@GetMapping(value = "modify/{id}")
-	public ResultMsg modifyLaboratoryDetection(@PathVariable("id") Long id, Model model) {
-		return ResultUtil.success(laboratoryDetectionRepository.findOne(id));
+	@GetMapping("/modify")
+	public ResultMsg modifyLaboratoryDetection(PeopleKey peopleKey) {
+		return ResultUtil.success(laboratoryDetectionRepository.findOne(peopleKey));
 	}
 
 	/**

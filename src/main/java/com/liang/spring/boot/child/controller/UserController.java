@@ -66,7 +66,6 @@ public class UserController {
 
 	/**
 	 * 获取 form 表单页面
-	 * @param user
 	 * @return
 	 */
 	@GetMapping("/form")
@@ -79,8 +78,6 @@ public class UserController {
 	/**
 	 * 新建用户
 	 * @param user
-	 * @param result
-	 * @param redirect
 	 * @return
 	 */
 	@PostMapping
@@ -104,7 +101,6 @@ public class UserController {
 
 	/**
 	 * 修改用户
-	 * @param user
 	 * @return
 	 */
 	@GetMapping(value = "modify/{id}")

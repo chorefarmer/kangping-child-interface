@@ -9,6 +9,7 @@ import org.springframework.data.annotation.CreatedDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import java.util.Date;
 
 /**
@@ -18,10 +19,14 @@ import java.util.Date;
  */
 @Entity
 @DynamicUpdate
+@IdClass(PeopleKey.class)
 public class BodyCompositionTest {
 
     @Id
     private Long guardian_phone;//表关联字段  监护人联系方式  编号
+
+    @Id
+    private Integer inspectOrder;
 
     @CreatedDate
     @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss")
@@ -37,8 +42,7 @@ public class BodyCompositionTest {
 
     private Double ExtracellularFluid;//细胞外液
 
-    //总体水  liang-20190617 细胞內液  细胞
-//    private Double ExtracellularFluid;
+    private Double TotalWater;//总体水
 
     private Double Muscle;//肌肉
 
@@ -66,14 +70,16 @@ public class BodyCompositionTest {
     protected BodyCompositionTest() {  // JPA 的规范要求无参构造函数；设为 protected 防止直接使用
     }
 
-    public BodyCompositionTest(Long guardian_phone, Date checkDate, Double fat, Double sclerotin, Double protein, Double intracellularFluid, Double extracellularFluid, Double muscle, Double fatfreeBodyWeight, Double height, Double weight, Double bodyFatPercent, Double skeletalMuscle, Double weightIndexBMI, Double waistToHipratio, Double metabolicRate, Double visceralFat, Double score) {
+    public BodyCompositionTest(Long guardian_phone, Integer inspectOrder, Date checkDate, Double fat, Double sclerotin, Double protein, Double intracellularFluid, Double extracellularFluid, Double totalWater, Double muscle, Double fatfreeBodyWeight, Double height, Double weight, Double bodyFatPercent, Double skeletalMuscle, Double weightIndexBMI, Double waistToHipratio, Double metabolicRate, Double visceralFat, Double score) {
         this.guardian_phone = guardian_phone;
+        this.inspectOrder = inspectOrder;
         CheckDate = checkDate;
         Fat = fat;
         Sclerotin = sclerotin;
         Protein = protein;
         IntracellularFluid = intracellularFluid;
         ExtracellularFluid = extracellularFluid;
+        TotalWater = totalWater;
         Muscle = muscle;
         FatfreeBodyWeight = fatfreeBodyWeight;
         Height = height;
@@ -93,6 +99,14 @@ public class BodyCompositionTest {
 
     public void setGuardian_phone(Long guardian_phone) {
         this.guardian_phone = guardian_phone;
+    }
+
+    public Integer getInspectOrder() {
+        return inspectOrder;
+    }
+
+    public void setInspectOrder(Integer inspectOrder) {
+        this.inspectOrder = inspectOrder;
     }
 
     public Date getCheckDate() {
@@ -141,6 +155,14 @@ public class BodyCompositionTest {
 
     public void setExtracellularFluid(Double extracellularFluid) {
         ExtracellularFluid = extracellularFluid;
+    }
+
+    public Double getTotalWater() {
+        return TotalWater;
+    }
+
+    public void setTotalWater(Double totalWater) {
+        TotalWater = totalWater;
     }
 
     public Double getMuscle() {
@@ -235,12 +257,14 @@ public class BodyCompositionTest {
     public String toString() {
         return "BodyCompositionTest{" +
                 "guardian_phone=" + guardian_phone +
+                ", inspectOrder=" + inspectOrder +
                 ", CheckDate=" + CheckDate +
                 ", Fat=" + Fat +
                 ", Sclerotin=" + Sclerotin +
                 ", Protein=" + Protein +
                 ", IntracellularFluid=" + IntracellularFluid +
                 ", ExtracellularFluid=" + ExtracellularFluid +
+                ", TotalWater=" + TotalWater +
                 ", Muscle=" + Muscle +
                 ", FatfreeBodyWeight=" + FatfreeBodyWeight +
                 ", Height=" + Height +

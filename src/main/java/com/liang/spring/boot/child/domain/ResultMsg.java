@@ -9,7 +9,7 @@ public class ResultMsg<T> {
     private String msg;
 
     /*具体内容*/
-    private  T data;
+    private  Object data;
 
     public Integer getCode() {
         return code;
@@ -27,7 +27,7 @@ public class ResultMsg<T> {
         this.msg = msg;
     }
 
-    public T getData() {
+    public Object getData() {
         return data;
     }
 

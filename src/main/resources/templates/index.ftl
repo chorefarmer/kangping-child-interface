@@ -5,7 +5,7 @@
 </head>
 <body>
 <h2>Demo Page ${title}</h2>
-<div><a href="/pdf/preview" target="_blank"> 强大的预览 </a></div>
-<div><a href="/pdf/download"> 强大的下载 </a></div>
+<div><a href="http://localhost:8082/pdf/preview" target="_blank"> 强大的预览 </a></div>
+<div><a href="http://localhost:8082/pdf/download"> 强大的下载 </a></div>
 </body>
 </html>

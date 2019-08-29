@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <title>营养监测分析报告(3到18岁)</title>
+    <title>营养监测分析报告(1岁以下)</title>
 
     <link rel="stylesheet" href="http://localhost:8082/css/bodyComposition.css" />
     <link rel="stylesheet" href="http://localhost:8082/js/echarts.min.js" />
@@ -37,7 +37,7 @@
     <div style="text-align: center" class="header">
         <div class="bg-line"></div>
         <div class="header-title">
-            <span>营养监测分析报告(3到18岁)</span>
+            <span>营养监测分析报告(1岁以下)</span>
         </div>
     </div>
 

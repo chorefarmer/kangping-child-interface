@@ -4,6 +4,7 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import java.io.Serializable;
 
 /**
@@ -14,11 +15,15 @@ import java.io.Serializable;
  */
 @Entity
 @DynamicUpdate
+@IdClass(PeopleKey.class)
 public class DietarySurvey implements Serializable{
 
 	@Id  // 主键
     //@GeneratedValue(strategy=GenerationType.IDENTITY) // 自增长策略
 	private Long guardian_phone; // 表关联字段 监护人联系方式
+
+	@Id
+	private Integer inspectOrder;
 
 	private Integer stapleFood;//主食量
 

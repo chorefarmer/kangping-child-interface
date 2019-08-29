@@ -1,6 +1,7 @@
 package com.liang.spring.boot.child.repository;
 
 import com.liang.spring.boot.child.domain.Information;
+import com.liang.spring.boot.child.domain.PeopleKey;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
@@ -10,6 +11,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
  * @since 1.0.0 2017年3月2日
  * @author <a href="https://waylau.com">Way Lau</a> 
  */
-public interface InformationRepository extends JpaSpecificationExecutor<Information>,JpaRepository<Information, Long>{
+public interface InformationRepository extends JpaSpecificationExecutor<Information>,JpaRepository<Information, PeopleKey>{
+
 
 }

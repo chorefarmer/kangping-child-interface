@@ -1,6 +1,7 @@
 package com.liang.spring.boot.child.controller;
 
 import com.liang.spring.boot.child.domain.BodyCompositionTest;
+import com.liang.spring.boot.child.domain.PeopleKey;
 import com.liang.spring.boot.child.domain.ResultMsg;
 import com.liang.spring.boot.child.repository.BodyCompositionTestRepository;
 import com.liang.spring.boot.child.untils.ResultUtil;
@@ -25,9 +26,9 @@ public class BodyCompositionTestController {
         return ResultUtil.success(bodyCompositionTestRepository.save(bodyCompositionTest));
     }
 
-    @GetMapping("{id}")
-    public ResultMsg findBodyCompositionTestById(@PathVariable("id") Long id){
+    @GetMapping("/search")
+    public ResultMsg findBodyCompositionTestById(PeopleKey peopleKey){
 
-        return ResultUtil.success(bodyCompositionTestRepository.findOne(id));
+        return ResultUtil.success(bodyCompositionTestRepository.findOne(peopleKey));
     }
 }

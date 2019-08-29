@@ -1,5 +1,6 @@
 package com.liang.spring.boot.child.controller;
 
+import com.liang.spring.boot.child.domain.PeopleKey;
 import com.liang.spring.boot.child.untils.ResultUtil;
 import com.liang.spring.boot.child.domain.PastMedicalHistory;
 import com.liang.spring.boot.child.domain.ResultMsg;
@@ -39,13 +40,12 @@ public class PastMedicalHistoryController {
  
 	/**
 	 * 根据id查询既往病史
-	 * @param id
 	 * @return
 	 */
 	@ResponseBody
-	@GetMapping("{id}")
-	public ResultMsg getListById(@PathVariable("id") Long id) {
-		return ResultUtil.success(pastMedicalHistoryRepository.findOne(id));
+	@GetMapping
+	public ResultMsg getListById(PeopleKey peopleKey) {
+		return ResultUtil.success(pastMedicalHistoryRepository.findOne(peopleKey));
 	}
 
 	/**
@@ -69,23 +69,21 @@ public class PastMedicalHistoryController {
 
 	/**
 	 * 删除既往病史
-	 * @param id
 	 * @return
 	 */
-	@GetMapping(value = "delete/{id}")
-	public ResultMsg deletePastMedicalHistory(@PathVariable("id") Long id) {
-		pastMedicalHistoryRepository.delete(id);
+	@GetMapping("/delete")
+	public ResultMsg deletePastMedicalHistory(PeopleKey peopleKey) {
+		pastMedicalHistoryRepository.delete(peopleKey);
 		return ResultUtil.success();
 	}
 
 	/**
 	 * 修改既往病史
-	 * @param id
 	 * @return
 	 */
-	@GetMapping(value = "modify/{id}")
-	public ResultMsg modifyPastMedicalHistory(@PathVariable("id") Long id, Model model) {
-		return ResultUtil.success(pastMedicalHistoryRepository.findOne(id));
+	@PostMapping("/modify")
+	public ResultMsg modifyPastMedicalHistory(PastMedicalHistory pastMedicalHistory) {
+		return ResultUtil.success(pastMedicalHistoryRepository.save(pastMedicalHistory));
 	}
 
 }
