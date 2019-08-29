@@ -26,18 +26,18 @@ public class CalcuPAL {
             }
             //活动等级  平常比较安静 活动量不大
             if(sport_status==2) {
-                PAL = 1.3;
+                PAL = 1.15;
             }
         }
 
         if(age>=3&&age<6){//年龄3~6
             //活泼好动
             if(sport_status==1) {
-                PAL = 1.55;
+                PAL = 1.42;
             }
             //比较安静  活动量不大
             if(sport_status==2) {
-                PAL = 1.4;
+                PAL = 1.2;
             }
         }
 
@@ -52,14 +52,10 @@ public class CalcuPAL {
         if(age>=6) {
             if (sport_status == 1) {
 
-                if (age >= 6 && age <= 7) {
-                    PAL = 1.75;
-                } else if (age >= 8 && age <= 9) {
-                    PAL = 1.8;
-                } else if (age >= 10 && age <= 14) {
-                    PAL = 1.85;
+                if (age >= 6 && age <= 14) {
+                    PAL = 1.42;
                 } else if (age >= 15 && age <= 18) {
-                    PAL = 1.95;
+                    PAL = 1.45;
                 }
             }
 
@@ -69,14 +65,10 @@ public class CalcuPAL {
              */
             if (sport_status == 2) {
 
-                if (age >= 6 && age <= 7) {
-                    PAL = 1.55;
-                } else if (age >= 8 && age <= 9) {
-                    PAL = 1.6;
-                } else if (age >= 10 && age <= 14) {
-                    PAL = 1.65;
+                if (age >= 6 && age <= 14) {
+                    PAL = 1.26;
                 } else if (age >= 15 && age <= 18) {
-                    PAL = 1.75;
+                    PAL = 1.31;
                 }
             }
 
@@ -86,14 +78,10 @@ public class CalcuPAL {
              */
             if (sport_status == 3) {
 
-                if (age >= 6 && age <= 7) {
-                    PAL = 1.35;
-                } else if (age >= 8 && age <= 9) {
-                    PAL = 1.4;
-                } else if (age >= 10 && age <= 14) {
-                    PAL = 1.45;
+                if (age >= 6 && age <= 14) {
+                    PAL = 1.13;
                 } else if (age >= 15 && age <= 18) {
-                    PAL = 1.55;
+                    PAL = 1.16;
                 }
             }
         }

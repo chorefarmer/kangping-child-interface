@@ -1,6 +1,7 @@
 package com.liang.spring.boot.child.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.sun.org.apache.xml.internal.security.keys.keyresolver.implementations.PrivateKeyResolver;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenerationTime;
@@ -48,6 +49,8 @@ public class Information implements Serializable{
 	//2019-4-22 取消数据格式化  返回Unix时间戳
 	private Date birth;//出生日期
 
+	private Integer age;
+
 	//	选填项
 
 	private Integer nation;//名族
@@ -82,13 +85,14 @@ public class Information implements Serializable{
 	protected Information() {  // JPA 的规范要求无参构造函数；设为 protected 防止直接使用
 	}
 
-	public Information(Long guardian_phone, Integer inspectOrder, String name, Integer sex, Integer height, Date birth, Integer nation, Integer blood, String guardian, Integer educationalOfParents, String remark, Double weight, Date createTime, Date updateTime) {
+	public Information(Long guardian_phone, Integer inspectOrder, String name, Integer sex, Integer height, Date birth, Integer age, Integer nation, Integer blood, String guardian, Integer educationalOfParents, String remark, Double weight, Date createTime, Date updateTime) {
 		this.guardian_phone = guardian_phone;
 		this.inspectOrder = inspectOrder;
 		this.name = name;
 		this.sex = sex;
 		this.height = height;
 		this.birth = birth;
+		this.age = age;
 		this.nation = nation;
 		this.blood = blood;
 		this.guardian = guardian;
@@ -97,32 +101,6 @@ public class Information implements Serializable{
 		this.weight = weight;
 		this.createTime = createTime;
 		this.updateTime = updateTime;
-	}
-
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-		Information that = (Information) o;
-		return Objects.equals(guardian_phone, that.guardian_phone) &&
-				Objects.equals(inspectOrder, that.inspectOrder) &&
-				Objects.equals(name, that.name) &&
-				Objects.equals(sex, that.sex) &&
-				Objects.equals(height, that.height) &&
-				Objects.equals(birth, that.birth) &&
-				Objects.equals(nation, that.nation) &&
-				Objects.equals(blood, that.blood) &&
-				Objects.equals(guardian, that.guardian) &&
-				Objects.equals(educationalOfParents, that.educationalOfParents) &&
-				Objects.equals(remark, that.remark) &&
-				Objects.equals(weight, that.weight) &&
-				Objects.equals(createTime, that.createTime) &&
-				Objects.equals(updateTime, that.updateTime);
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(guardian_phone, inspectOrder, name, sex, height, birth, nation, blood, guardian, educationalOfParents, remark, weight, createTime, updateTime);
 	}
 
 	public Long getGuardian_phone() {
@@ -171,6 +149,14 @@ public class Information implements Serializable{
 
 	public void setBirth(Date birth) {
 		this.birth = birth;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 	public Integer getNation() {
@@ -238,6 +224,33 @@ public class Information implements Serializable{
 	}
 
 	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Information that = (Information) o;
+		return Objects.equals(guardian_phone, that.guardian_phone) &&
+				Objects.equals(inspectOrder, that.inspectOrder) &&
+				Objects.equals(name, that.name) &&
+				Objects.equals(sex, that.sex) &&
+				Objects.equals(height, that.height) &&
+				Objects.equals(birth, that.birth) &&
+				Objects.equals(age, that.age) &&
+				Objects.equals(nation, that.nation) &&
+				Objects.equals(blood, that.blood) &&
+				Objects.equals(guardian, that.guardian) &&
+				Objects.equals(educationalOfParents, that.educationalOfParents) &&
+				Objects.equals(remark, that.remark) &&
+				Objects.equals(weight, that.weight) &&
+				Objects.equals(createTime, that.createTime) &&
+				Objects.equals(updateTime, that.updateTime);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(guardian_phone, inspectOrder, name, sex, height, birth, age, nation, blood, guardian, educationalOfParents, remark, weight, createTime, updateTime);
+	}
+
+	@Override
 	public String toString() {
 		return "Information{" +
 				"guardian_phone=" + guardian_phone +
@@ -246,6 +259,7 @@ public class Information implements Serializable{
 				", sex=" + sex +
 				", height=" + height +
 				", birth=" + birth +
+				", age=" + age +
 				", nation=" + nation +
 				", blood=" + blood +
 				", guardian='" + guardian + '\'' +

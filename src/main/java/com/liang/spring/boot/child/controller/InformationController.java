@@ -54,7 +54,7 @@ public class InformationController {
 	 * @return
 	 */
 	@GetMapping("/search")
-	public ResultMsg getListById (Model model, @Valid PeopleKey peopleKey, BindingResult result) throws Exception{
+	public ResultMsg getListById (@Valid PeopleKey peopleKey, BindingResult result) throws Exception{
 
 
 
@@ -64,8 +64,9 @@ public class InformationController {
 		Date birth=information.getBirth();
 		int age= GetAgeByBirth.getAgeFromBirthTime(birth);
 
+
         System.out.println("年龄为"+age);
-		model.addAttribute("age",age);
+		information.setAge(age);
 //        System.out.println("个人基本信息json返回数据："+JSON.parse(information.toString()));
         System.out.println("个人基本信息json返回数据："+information);
 
