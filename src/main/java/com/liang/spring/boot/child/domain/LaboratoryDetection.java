@@ -66,8 +66,9 @@ public class LaboratoryDetection implements Serializable{
 
 	}
 
-	public LaboratoryDetection(Long guardian_phone, Double flavol, Double serum25, Double serumZinc, Double glucoseTolerance, Double glycatedHemoglobin, Double fattyiverL, Double bindingProtein, Double oxyphorase, Double FBG, Double RBG, Double bloodFat, String path) {
+	public LaboratoryDetection(Long guardian_phone, Integer inspectOrder, Double flavol, Double serum25, Double serumZinc, Double glucoseTolerance, Double glycatedHemoglobin, Double fattyiverL, Double bindingProtein, Double oxyphorase, Double FBG, Double RBG, Double bloodFat, MultipartFile file, String path) {
 		this.guardian_phone = guardian_phone;
+		this.inspectOrder = inspectOrder;
 		this.flavol = flavol;
 		this.serum25 = serum25;
 		SerumZinc = serumZinc;
@@ -79,107 +80,64 @@ public class LaboratoryDetection implements Serializable{
 		this.FBG = FBG;
 		this.RBG = RBG;
 		this.bloodFat = bloodFat;
+		this.file = file;
 		this.path = path;
-	}
-
-	public Long getGuardian_phone() {
-		return guardian_phone;
 	}
 
 	public void setGuardian_phone(Long guardian_phone) {
 		this.guardian_phone = guardian_phone;
 	}
 
-	public Double getFlavol() {
-		return flavol;
+	public void setInspectOrder(Integer inspectOrder) {
+		this.inspectOrder = inspectOrder;
 	}
 
 	public void setFlavol(Double flavol) {
 		this.flavol = flavol;
 	}
 
-	public Double getSerum25() {
-		return serum25;
-	}
-
 	public void setSerum25(Double serum25) {
 		this.serum25 = serum25;
-	}
-
-	public Double getSerumZinc() {
-		return SerumZinc;
 	}
 
 	public void setSerumZinc(Double serumZinc) {
 		SerumZinc = serumZinc;
 	}
 
-	public Double getGlucoseTolerance() {
-		return glucoseTolerance;
-	}
-
 	public void setGlucoseTolerance(Double glucoseTolerance) {
 		this.glucoseTolerance = glucoseTolerance;
-	}
-
-	public Double getGlycatedHemoglobin() {
-		return GlycatedHemoglobin;
 	}
 
 	public void setGlycatedHemoglobin(Double glycatedHemoglobin) {
 		GlycatedHemoglobin = glycatedHemoglobin;
 	}
 
-	public Double getFattyiverL() {
-		return fattyiverL;
-	}
-
 	public void setFattyiverL(Double fattyiverL) {
 		this.fattyiverL = fattyiverL;
-	}
-
-	public Double getBindingProtein() {
-		return bindingProtein;
 	}
 
 	public void setBindingProtein(Double bindingProtein) {
 		this.bindingProtein = bindingProtein;
 	}
 
-	public Double getOxyphorase() {
-		return oxyphorase;
-	}
-
 	public void setOxyphorase(Double oxyphorase) {
 		this.oxyphorase = oxyphorase;
-	}
-
-	public Double getFBG() {
-		return FBG;
 	}
 
 	public void setFBG(Double FBG) {
 		this.FBG = FBG;
 	}
 
-	public Double getRBG() {
-		return RBG;
-	}
-
 	public void setRBG(Double RBG) {
 		this.RBG = RBG;
-	}
-
-	public Double getBloodFat() {
-		return bloodFat;
 	}
 
 	public void setBloodFat(Double bloodFat) {
 		this.bloodFat = bloodFat;
 	}
 
-	public String getPath() {
-		return path;
+	public void setFile(MultipartFile file) {
+		this.file = file;
 	}
 
 	public void setPath(String path) {
@@ -190,6 +148,7 @@ public class LaboratoryDetection implements Serializable{
 	public String toString() {
 		return "LaboratoryDetection{" +
 				"guardian_phone=" + guardian_phone +
+				", inspectOrder=" + inspectOrder +
 				", flavol=" + flavol +
 				", serum25=" + serum25 +
 				", SerumZinc=" + SerumZinc +
@@ -201,6 +160,7 @@ public class LaboratoryDetection implements Serializable{
 				", FBG=" + FBG +
 				", RBG=" + RBG +
 				", bloodFat=" + bloodFat +
+				", file=" + file +
 				", path='" + path + '\'' +
 				'}';
 	}

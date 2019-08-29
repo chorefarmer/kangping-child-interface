@@ -2,44 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16ec6a7d-2b40-41e0-85c1-7e7f41e82d72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/static/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/static/国际自然医学学会.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/pdfPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/pdfPage.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/AllergiesAndIntolerancesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/AllergiesAndIntolerancesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/AllergiesAndIntolerancesController_ModelAndView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/AllergiesAndIntolerancesController_ModelAndView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/AnalysisController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/BodyCompositionTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/BodyCompositionTestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/DietarySurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/DietarySurveyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/InformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/InformationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/LaboratoryDetectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/LaboratoryDetectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PastMedicalHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PastMedicalHistoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/SportsSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/SportsSurveyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/AllergiesAndIntolerances.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/AllergiesAndIntolerances.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/BodyCompositionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/BodyCompositionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietaryGuide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietaryGuide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietarySurvey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietarySurvey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/Information.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/Information.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/LaboratoryDetection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/LaboratoryDetection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/MealTimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/MealTimes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/PastMedicalHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/PastMedicalHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/ResultMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/ResultMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/SportsSurvey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/SportsSurvey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/SystemImgUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/SystemImgUpload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/AllergiesAndIntolerancesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/AllergiesAndIntolerancesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/BodyCompositionTestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/BodyCompositionTestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/DietaryGuideRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/DietaryGuideRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/DietarySurveyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/DietarySurveyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/InformationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/InformationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/LaboratoryDetectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/LaboratoryDetectionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/PastMedicalHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/PastMedicalHistoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/SportsSurveyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/SportsSurveyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/SystemImgUploadRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/SystemImgUploadRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pdfPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pdfPage.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -75,46 +40,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/BodyCompositionTestController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/Xml2JsonController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="25" column="63" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/DietarySurveyController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1423">
-              <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/LaboratoryDetectionController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1128">
-              <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PastMedicalHistoryController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-641">
-              <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="124" column="74" selection-start-line="124" selection-start-column="74" selection-end-line="124" selection-end-column="74" />
+            <state relative-caret-position="1159">
+              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,37 +52,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/SportsSurveyController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/SystemImgUploadController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-131">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="102" column="11" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/HospitalController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="-1978">
+              <caret line="94" column="45" lean-forward="true" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,8 +66,337 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/InformationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2856">
-              <caret line="55" column="26" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="26" />
+            <state relative-caret-position="264">
+              <caret line="98" column="60" selection-start-line="98" selection-start-column="56" selection-end-line="98" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/Information.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-14">
+              <caret line="38" column="32" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3405#3406#0" expanded="true" />
+                <element signature="e#3433#3434#0" expanded="true" />
+                <element signature="e#3488#3489#0" expanded="true" />
+                <element signature="e#3531#3532#0" expanded="true" />
+                <element signature="e#3568#3569#0" expanded="true" />
+                <element signature="e#3594#3595#0" expanded="true" />
+                <element signature="e#3648#3649#0" expanded="true" />
+                <element signature="e#3687#3688#0" expanded="true" />
+                <element signature="e#3715#3716#0" expanded="true" />
+                <element signature="e#3733#3734#0" expanded="true" />
+                <element signature="e#3770#3771#0" expanded="true" />
+                <element signature="e#3793#3794#0" expanded="true" />
+                <element signature="e#3821#3822#0" expanded="true" />
+                <element signature="e#3838#3839#0" expanded="true" />
+                <element signature="e#3874#3875#0" expanded="true" />
+                <element signature="e#3895#3896#0" expanded="true" />
+                <element signature="e#3926#3927#0" expanded="true" />
+                <element signature="e#3946#3947#0" expanded="true" />
+                <element signature="e#3988#3989#0" expanded="true" />
+                <element signature="e#4015#4016#0" expanded="true" />
+                <element signature="e#4042#4043#0" expanded="true" />
+                <element signature="e#4061#4062#0" expanded="true" />
+                <element signature="e#4098#4099#0" expanded="true" />
+                <element signature="e#4123#4124#0" expanded="true" />
+                <element signature="e#4154#4155#0" expanded="true" />
+                <element signature="e#4174#4175#0" expanded="true" />
+                <element signature="e#4216#4217#0" expanded="true" />
+                <element signature="e#4243#4244#0" expanded="true" />
+                <element signature="e#4273#4274#0" expanded="true" />
+                <element signature="e#4292#4293#0" expanded="true" />
+                <element signature="e#4332#4333#0" expanded="true" />
+                <element signature="e#4357#4358#0" expanded="true" />
+                <element signature="e#4389#4390#0" expanded="true" />
+                <element signature="e#4411#4412#0" expanded="true" />
+                <element signature="e#4456#4457#0" expanded="true" />
+                <element signature="e#4487#4488#0" expanded="true" />
+                <element signature="e#4532#4533#0" expanded="true" />
+                <element signature="e#4566#4567#0" expanded="true" />
+                <element signature="e#4636#4637#0" expanded="true" />
+                <element signature="e#4691#4692#0" expanded="true" />
+                <element signature="e#4721#4722#0" expanded="true" />
+                <element signature="e#4741#4742#0" expanded="true" />
+                <element signature="e#4782#4783#0" expanded="true" />
+                <element signature="e#4809#4810#0" expanded="true" />
+                <element signature="e#4839#4840#0" expanded="true" />
+                <element signature="e#4859#4860#0" expanded="true" />
+                <element signature="e#4900#4901#0" expanded="true" />
+                <element signature="e#4927#4928#0" expanded="true" />
+                <element signature="e#4959#4960#0" expanded="true" />
+                <element signature="e#4983#4984#0" expanded="true" />
+                <element signature="e#5030#5031#0" expanded="true" />
+                <element signature="e#5065#5066#0" expanded="true" />
+                <element signature="e#5097#5098#0" expanded="true" />
+                <element signature="e#5121#5122#0" expanded="true" />
+                <element signature="e#5168#5169#0" expanded="true" />
+                <element signature="e#5203#5204#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/AllergiesAndIntolerances.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="180" column="18" selection-start-line="180" selection-start-column="18" selection-end-line="180" selection-end-column="18" />
+              <folding>
+                <element signature="e#1596#1597#0" expanded="true" />
+                <element signature="e#1624#1625#0" expanded="true" />
+                <element signature="e#1679#1680#0" expanded="true" />
+                <element signature="e#1722#1723#0" expanded="true" />
+                <element signature="e#1759#1760#0" expanded="true" />
+                <element signature="e#1785#1786#0" expanded="true" />
+                <element signature="e#1839#1840#0" expanded="true" />
+                <element signature="e#1878#1879#0" expanded="true" />
+                <element signature="e#1905#1906#0" expanded="true" />
+                <element signature="e#1922#1923#0" expanded="true" />
+                <element signature="e#1957#1958#0" expanded="true" />
+                <element signature="e#1978#1979#0" expanded="true" />
+                <element signature="e#2006#2007#0" expanded="true" />
+                <element signature="e#2024#2025#0" expanded="true" />
+                <element signature="e#2061#2062#0" expanded="true" />
+                <element signature="e#2084#2085#0" expanded="true" />
+                <element signature="e#2114#2115#0" expanded="true" />
+                <element signature="e#2134#2135#0" expanded="true" />
+                <element signature="e#2175#2176#0" expanded="true" />
+                <element signature="e#2202#2203#0" expanded="true" />
+                <element signature="e#2230#2231#0" expanded="true" />
+                <element signature="e#2248#2249#0" expanded="true" />
+                <element signature="e#2285#2286#0" expanded="true" />
+                <element signature="e#2308#2309#0" expanded="true" />
+                <element signature="e#2338#2339#0" expanded="true" />
+                <element signature="e#2358#2359#0" expanded="true" />
+                <element signature="e#2399#2400#0" expanded="true" />
+                <element signature="e#2426#2427#0" expanded="true" />
+                <element signature="e#2455#2456#0" expanded="true" />
+                <element signature="e#2474#2475#0" expanded="true" />
+                <element signature="e#2513#2514#0" expanded="true" />
+                <element signature="e#2538#2539#0" expanded="true" />
+                <element signature="e#2566#2567#0" expanded="true" />
+                <element signature="e#2584#2585#0" expanded="true" />
+                <element signature="e#2621#2622#0" expanded="true" />
+                <element signature="e#2644#2645#0" expanded="true" />
+                <element signature="e#2672#2673#0" expanded="true" />
+                <element signature="e#2690#2691#0" expanded="true" />
+                <element signature="e#2727#2728#0" expanded="true" />
+                <element signature="e#2750#2751#0" expanded="true" />
+                <element signature="e#2779#2780#0" expanded="true" />
+                <element signature="e#2798#2799#0" expanded="true" />
+                <element signature="e#2837#2838#0" expanded="true" />
+                <element signature="e#2862#2863#0" expanded="true" />
+                <element signature="e#2896#2897#0" expanded="true" />
+                <element signature="e#2920#2921#0" expanded="true" />
+                <element signature="e#2969#2970#0" expanded="true" />
+                <element signature="e#3004#3005#0" expanded="true" />
+                <element signature="e#3032#3033#0" expanded="true" />
+                <element signature="e#3050#3051#0" expanded="true" />
+                <element signature="e#3087#3088#0" expanded="true" />
+                <element signature="e#3110#3111#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/BodyCompositionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4087">
+              <caret line="256" column="18" selection-start-line="256" selection-start-column="18" selection-end-line="256" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2743#2744#0" expanded="true" />
+                <element signature="e#2780#2781#0" expanded="true" />
+                <element signature="e#2838#2839#0" expanded="true" />
+                <element signature="e#2890#2891#0" expanded="true" />
+                <element signature="e#2930#2931#0" expanded="true" />
+                <element signature="e#2965#2966#0" expanded="true" />
+                <element signature="e#3022#3023#0" expanded="true" />
+                <element signature="e#3070#3071#0" expanded="true" />
+                <element signature="e#3104#3105#0" expanded="true" />
+                <element signature="e#3136#3137#0" expanded="true" />
+                <element signature="e#3184#3185#0" expanded="true" />
+                <element signature="e#3221#3222#0" expanded="true" />
+                <element signature="e#3251#3252#0" expanded="true" />
+                <element signature="e#3277#3278#0" expanded="true" />
+                <element signature="e#3315#3316#0" expanded="true" />
+                <element signature="e#3340#3341#0" expanded="true" />
+                <element signature="e#3376#3377#0" expanded="true" />
+                <element signature="e#3408#3409#0" expanded="true" />
+                <element signature="e#3458#3459#0" expanded="true" />
+                <element signature="e#3495#3496#0" expanded="true" />
+                <element signature="e#3529#3530#0" expanded="true" />
+                <element signature="e#3559#3560#0" expanded="true" />
+                <element signature="e#3605#3606#0" expanded="true" />
+                <element signature="e#3638#3639#0" expanded="true" />
+                <element signature="e#3683#3684#0" expanded="true" />
+                <element signature="e#3724#3725#0" expanded="true" />
+                <element signature="e#3792#3793#0" expanded="true" />
+                <element signature="e#3847#3848#0" expanded="true" />
+                <element signature="e#3892#3893#0" expanded="true" />
+                <element signature="e#3933#3934#0" expanded="true" />
+                <element signature="e#4001#4002#0" expanded="true" />
+                <element signature="e#4056#4057#0" expanded="true" />
+                <element signature="e#4093#4094#0" expanded="true" />
+                <element signature="e#4126#4127#0" expanded="true" />
+                <element signature="e#4178#4179#0" expanded="true" />
+                <element signature="e#4217#4218#0" expanded="true" />
+                <element signature="e#4250#4251#0" expanded="true" />
+                <element signature="e#4279#4280#0" expanded="true" />
+                <element signature="e#4323#4324#0" expanded="true" />
+                <element signature="e#4354#4355#0" expanded="true" />
+                <element signature="e#4398#4399#0" expanded="true" />
+                <element signature="e#4438#4439#0" expanded="true" />
+                <element signature="e#4504#4505#0" expanded="true" />
+                <element signature="e#4557#4558#0" expanded="true" />
+                <element signature="e#4590#4591#0" expanded="true" />
+                <element signature="e#4619#4620#0" expanded="true" />
+                <element signature="e#4663#4664#0" expanded="true" />
+                <element signature="e#4694#4695#0" expanded="true" />
+                <element signature="e#4727#4728#0" expanded="true" />
+                <element signature="e#4756#4757#0" expanded="true" />
+                <element signature="e#4800#4801#0" expanded="true" />
+                <element signature="e#4831#4832#0" expanded="true" />
+                <element signature="e#4872#4873#0" expanded="true" />
+                <element signature="e#4909#4910#0" expanded="true" />
+                <element signature="e#4969#4970#0" expanded="true" />
+                <element signature="e#5016#5017#0" expanded="true" />
+                <element signature="e#5057#5058#0" expanded="true" />
+                <element signature="e#5094#5095#0" expanded="true" />
+                <element signature="e#5154#5155#0" expanded="true" />
+                <element signature="e#5201#5202#0" expanded="true" />
+                <element signature="e#5242#5243#0" expanded="true" />
+                <element signature="e#5279#5280#0" expanded="true" />
+                <element signature="e#5339#5340#0" expanded="true" />
+                <element signature="e#5386#5387#0" expanded="true" />
+                <element signature="e#5428#5429#0" expanded="true" />
+                <element signature="e#5466#5467#0" expanded="true" />
+                <element signature="e#5528#5529#0" expanded="true" />
+                <element signature="e#5577#5578#0" expanded="true" />
+                <element signature="e#5617#5618#0" expanded="true" />
+                <element signature="e#5653#5654#0" expanded="true" />
+                <element signature="e#5711#5712#0" expanded="true" />
+                <element signature="e#5756#5757#0" expanded="true" />
+                <element signature="e#5794#5795#0" expanded="true" />
+                <element signature="e#5828#5829#0" expanded="true" />
+                <element signature="e#5882#5883#0" expanded="true" />
+                <element signature="e#5923#5924#0" expanded="true" />
+                <element signature="e#5955#5956#0" expanded="true" />
+                <element signature="e#5983#5984#0" expanded="true" />
+                <element signature="e#6025#6026#0" expanded="true" />
+                <element signature="e#6059#6060#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietaryGuide.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="22" column="16" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietarySurvey.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="214" column="18" selection-start-line="214" selection-start-column="18" selection-end-line="214" selection-end-column="18" />
+              <folding>
+                <element signature="e#2132#2133#0" expanded="true" />
+                <element signature="e#2160#2161#0" expanded="true" />
+                <element signature="e#2215#2216#0" expanded="true" />
+                <element signature="e#2258#2259#0" expanded="true" />
+                <element signature="e#2295#2296#0" expanded="true" />
+                <element signature="e#2321#2322#0" expanded="true" />
+                <element signature="e#2375#2376#0" expanded="true" />
+                <element signature="e#2414#2415#0" expanded="true" />
+                <element signature="e#2449#2450#0" expanded="true" />
+                <element signature="e#2473#2474#0" expanded="true" />
+                <element signature="e#2523#2524#0" expanded="true" />
+                <element signature="e#2558#2559#0" expanded="true" />
+                <element signature="e#2593#2594#0" expanded="true" />
+                <element signature="e#2617#2618#0" expanded="true" />
+                <element signature="e#2667#2668#0" expanded="true" />
+                <element signature="e#2702#2703#0" expanded="true" />
+                <element signature="e#2741#2742#0" expanded="true" />
+                <element signature="e#2769#2770#0" expanded="true" />
+                <element signature="e#2827#2828#0" expanded="true" />
+                <element signature="e#2870#2871#0" expanded="true" />
+                <element signature="e#2898#2899#0" expanded="true" />
+                <element signature="e#2915#2916#0" expanded="true" />
+                <element signature="e#2951#2952#0" expanded="true" />
+                <element signature="e#2972#2973#0" expanded="true" />
+                <element signature="e#3003#3004#0" expanded="true" />
+                <element signature="e#3023#3024#0" expanded="true" />
+                <element signature="e#3065#3066#0" expanded="true" />
+                <element signature="e#3092#3093#0" expanded="true" />
+                <element signature="e#3128#3129#0" expanded="true" />
+                <element signature="e#3153#3154#0" expanded="true" />
+                <element signature="e#3205#3206#0" expanded="true" />
+                <element signature="e#3237#3238#0" expanded="true" />
+                <element signature="e#3266#3267#0" expanded="true" />
+                <element signature="e#3284#3285#0" expanded="true" />
+                <element signature="e#3322#3323#0" expanded="true" />
+                <element signature="e#3345#3346#0" expanded="true" />
+                <element signature="e#3373#3374#0" expanded="true" />
+                <element signature="e#3390#3391#0" expanded="true" />
+                <element signature="e#3426#3427#0" expanded="true" />
+                <element signature="e#3447#3448#0" expanded="true" />
+                <element signature="e#3484#3485#0" expanded="true" />
+                <element signature="e#3510#3511#0" expanded="true" />
+                <element signature="e#3564#3565#0" expanded="true" />
+                <element signature="e#3603#3604#0" expanded="true" />
+                <element signature="e#3638#3639#0" expanded="true" />
+                <element signature="e#3662#3663#0" expanded="true" />
+                <element signature="e#3712#3713#0" expanded="true" />
+                <element signature="e#3747#3748#0" expanded="true" />
+                <element signature="e#3784#3785#0" expanded="true" />
+                <element signature="e#3810#3811#0" expanded="true" />
+                <element signature="e#3864#3865#0" expanded="true" />
+                <element signature="e#3903#3904#0" expanded="true" />
+                <element signature="e#3944#3945#0" expanded="true" />
+                <element signature="e#3974#3975#0" expanded="true" />
+                <element signature="e#4036#4037#0" expanded="true" />
+                <element signature="e#4083#4084#0" expanded="true" />
+                <element signature="e#4120#4121#0" expanded="true" />
+                <element signature="e#4146#4147#0" expanded="true" />
+                <element signature="e#4200#4201#0" expanded="true" />
+                <element signature="e#4239#4240#0" expanded="true" />
+                <element signature="e#4277#4278#0" expanded="true" />
+                <element signature="e#4304#4305#0" expanded="true" />
+                <element signature="e#4360#4361#0" expanded="true" />
+                <element signature="e#4401#4402#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/AllergiesAndIntolerancesController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="25" column="42" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="42" />
+              <folding>
+                <element signature="e#1858#1859#0" expanded="true" />
+                <element signature="e#1925#1926#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/6.0.5/6d5546956712e1dd8fb8554071c583c831708a2a/mysql-connector-java-6.0.5-sources.jar!/com/mysql/cj/jdbc/exceptions/SQLError.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="532" selection-start-line="532" selection-end-line="532" />
             </state>
           </provider>
         </entry>
@@ -217,9 +451,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/Information.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/PeopleKey.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/ResultMsg.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/AllergiesAndIntolerances.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietaryGuide.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietarySurvey.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/LaboratoryDetection.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/PastMedicalHistory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/SportsSurvey.java" />
@@ -238,11 +470,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/DietarySurveyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/LaboratoryDetectionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/DietaryGuideRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/SportsSurveyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/BodyCompositionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/AllergiesAndIntolerancesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/AllergiesAndIntolerances.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietarySurvey.java" />
       </list>
     </option>
   </component>
@@ -334,7 +568,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567056094677" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567059753232" />
     <property name="last_opened_file_path" value="E:/liang_java_develop/Git/cmd/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -452,12 +686,12 @@
       <workItem from="1566871301231" duration="46000" />
       <workItem from="1566880078808" duration="16687000" />
       <workItem from="1566956066643" duration="17899000" />
-      <workItem from="1567042754269" duration="10197000" />
+      <workItem from="1567042754269" duration="12966000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287590000" />
+    <option name="totallyTimeSpent" value="290359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -510,16 +744,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pdfPage.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="936">
@@ -555,34 +779,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/Xml2JsonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="54" column="37" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/untils/ResultUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/AllergiesAndIntolerances.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietarySurvey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -861,13 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietaryGuide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/repository/DietaryGuideRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -899,10 +1092,118 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/AllergiesAndIntolerancesController_ModelAndView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/BodyCompositionTestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="25" column="63" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/DietarySurveyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1423">
+          <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/HospitalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/LaboratoryDetectionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1128">
+          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PastMedicalHistoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-641">
+          <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/SportsSurveyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/SystemImgUploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="102" column="11" lean-forward="true" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/Xml2JsonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1159">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1978">
+          <caret line="94" column="45" lean-forward="true" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/InformationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="98" column="60" selection-start-line="98" selection-start-column="56" selection-end-line="98" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/AllergiesAndIntolerancesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="e#1858#1859#0" expanded="true" />
+            <element signature="e#1925#1926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/6.0.5/6d5546956712e1dd8fb8554071c583c831708a2a/mysql-connector-java-6.0.5-sources.jar!/com/mysql/cj/jdbc/exceptions/SQLError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="532" selection-start-line="532" selection-end-line="532" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/Information.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="38" column="33" selection-start-line="37" selection-start-column="4" selection-end-line="38" selection-end-column="33" />
+        <state relative-caret-position="-14">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3405#3406#0" expanded="true" />
@@ -965,9 +1266,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/AllergiesAndIntolerances.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="180" column="18" selection-start-line="180" selection-start-column="18" selection-end-line="180" selection-end-column="18" />
+          <folding>
+            <element signature="e#1596#1597#0" expanded="true" />
+            <element signature="e#1624#1625#0" expanded="true" />
+            <element signature="e#1679#1680#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
+            <element signature="e#1785#1786#0" expanded="true" />
+            <element signature="e#1839#1840#0" expanded="true" />
+            <element signature="e#1878#1879#0" expanded="true" />
+            <element signature="e#1905#1906#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
+            <element signature="e#1957#1958#0" expanded="true" />
+            <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="e#2006#2007#0" expanded="true" />
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2061#2062#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
+            <element signature="e#2134#2135#0" expanded="true" />
+            <element signature="e#2175#2176#0" expanded="true" />
+            <element signature="e#2202#2203#0" expanded="true" />
+            <element signature="e#2230#2231#0" expanded="true" />
+            <element signature="e#2248#2249#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="e#2308#2309#0" expanded="true" />
+            <element signature="e#2338#2339#0" expanded="true" />
+            <element signature="e#2358#2359#0" expanded="true" />
+            <element signature="e#2399#2400#0" expanded="true" />
+            <element signature="e#2426#2427#0" expanded="true" />
+            <element signature="e#2455#2456#0" expanded="true" />
+            <element signature="e#2474#2475#0" expanded="true" />
+            <element signature="e#2513#2514#0" expanded="true" />
+            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="e#2566#2567#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
+            <element signature="e#2621#2622#0" expanded="true" />
+            <element signature="e#2644#2645#0" expanded="true" />
+            <element signature="e#2672#2673#0" expanded="true" />
+            <element signature="e#2690#2691#0" expanded="true" />
+            <element signature="e#2727#2728#0" expanded="true" />
+            <element signature="e#2750#2751#0" expanded="true" />
+            <element signature="e#2779#2780#0" expanded="true" />
+            <element signature="e#2798#2799#0" expanded="true" />
+            <element signature="e#2837#2838#0" expanded="true" />
+            <element signature="e#2862#2863#0" expanded="true" />
+            <element signature="e#2896#2897#0" expanded="true" />
+            <element signature="e#2920#2921#0" expanded="true" />
+            <element signature="e#2969#2970#0" expanded="true" />
+            <element signature="e#3004#3005#0" expanded="true" />
+            <element signature="e#3032#3033#0" expanded="true" />
+            <element signature="e#3050#3051#0" expanded="true" />
+            <element signature="e#3087#3088#0" expanded="true" />
+            <element signature="e#3110#3111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/BodyCompositionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4789">
+        <state relative-caret-position="4087">
           <caret line="256" column="18" selection-start-line="256" selection-start-column="18" selection-end-line="256" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1055,94 +1417,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/AllergiesAndIntolerancesController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietaryGuide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="48" column="17" lean-forward="true" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        <state relative-caret-position="286">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/domain/DietarySurvey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="214" column="18" selection-start-line="214" selection-start-column="18" selection-end-line="214" selection-end-column="18" />
           <folding>
-            <element signature="e#1858#1859#0" expanded="true" />
-            <element signature="e#1925#1926#0" expanded="true" />
+            <element signature="e#2132#2133#0" expanded="true" />
+            <element signature="e#2160#2161#0" expanded="true" />
+            <element signature="e#2215#2216#0" expanded="true" />
+            <element signature="e#2258#2259#0" expanded="true" />
+            <element signature="e#2295#2296#0" expanded="true" />
+            <element signature="e#2321#2322#0" expanded="true" />
+            <element signature="e#2375#2376#0" expanded="true" />
+            <element signature="e#2414#2415#0" expanded="true" />
+            <element signature="e#2449#2450#0" expanded="true" />
+            <element signature="e#2473#2474#0" expanded="true" />
+            <element signature="e#2523#2524#0" expanded="true" />
+            <element signature="e#2558#2559#0" expanded="true" />
+            <element signature="e#2593#2594#0" expanded="true" />
+            <element signature="e#2617#2618#0" expanded="true" />
+            <element signature="e#2667#2668#0" expanded="true" />
+            <element signature="e#2702#2703#0" expanded="true" />
+            <element signature="e#2741#2742#0" expanded="true" />
+            <element signature="e#2769#2770#0" expanded="true" />
+            <element signature="e#2827#2828#0" expanded="true" />
+            <element signature="e#2870#2871#0" expanded="true" />
+            <element signature="e#2898#2899#0" expanded="true" />
+            <element signature="e#2915#2916#0" expanded="true" />
+            <element signature="e#2951#2952#0" expanded="true" />
+            <element signature="e#2972#2973#0" expanded="true" />
+            <element signature="e#3003#3004#0" expanded="true" />
+            <element signature="e#3023#3024#0" expanded="true" />
+            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#3092#3093#0" expanded="true" />
+            <element signature="e#3128#3129#0" expanded="true" />
+            <element signature="e#3153#3154#0" expanded="true" />
+            <element signature="e#3205#3206#0" expanded="true" />
+            <element signature="e#3237#3238#0" expanded="true" />
+            <element signature="e#3266#3267#0" expanded="true" />
+            <element signature="e#3284#3285#0" expanded="true" />
+            <element signature="e#3322#3323#0" expanded="true" />
+            <element signature="e#3345#3346#0" expanded="true" />
+            <element signature="e#3373#3374#0" expanded="true" />
+            <element signature="e#3390#3391#0" expanded="true" />
+            <element signature="e#3426#3427#0" expanded="true" />
+            <element signature="e#3447#3448#0" expanded="true" />
+            <element signature="e#3484#3485#0" expanded="true" />
+            <element signature="e#3510#3511#0" expanded="true" />
+            <element signature="e#3564#3565#0" expanded="true" />
+            <element signature="e#3603#3604#0" expanded="true" />
+            <element signature="e#3638#3639#0" expanded="true" />
+            <element signature="e#3662#3663#0" expanded="true" />
+            <element signature="e#3712#3713#0" expanded="true" />
+            <element signature="e#3747#3748#0" expanded="true" />
+            <element signature="e#3784#3785#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
+            <element signature="e#3864#3865#0" expanded="true" />
+            <element signature="e#3903#3904#0" expanded="true" />
+            <element signature="e#3944#3945#0" expanded="true" />
+            <element signature="e#3974#3975#0" expanded="true" />
+            <element signature="e#4036#4037#0" expanded="true" />
+            <element signature="e#4083#4084#0" expanded="true" />
+            <element signature="e#4120#4121#0" expanded="true" />
+            <element signature="e#4146#4147#0" expanded="true" />
+            <element signature="e#4200#4201#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="e#4277#4278#0" expanded="true" />
+            <element signature="e#4304#4305#0" expanded="true" />
+            <element signature="e#4360#4361#0" expanded="true" />
+            <element signature="e#4401#4402#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/AllergiesAndIntolerancesController_ModelAndView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/BodyCompositionTestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/DietarySurveyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1423">
-          <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/HospitalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/InformationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2856">
-          <caret line="55" column="26" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/LaboratoryDetectionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1128">
-          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PastMedicalHistoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-641">
-          <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/PdfController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="124" column="74" selection-start-line="124" selection-start-column="74" selection-end-line="124" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/SportsSurveyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/SystemImgUploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liang/spring/boot/child/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="102" column="11" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
         </state>
       </provider>
     </entry>

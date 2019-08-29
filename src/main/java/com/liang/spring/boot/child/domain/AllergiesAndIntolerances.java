@@ -57,8 +57,9 @@ public class AllergiesAndIntolerances implements Serializable{
 	protected AllergiesAndIntolerances() {  // JPA 的规范要求无参构造函数；设为 protected 防止直接使用
 	}
 
-	public AllergiesAndIntolerances(Long guardian_phone, String egg, String milk, String peanut, String soya, String barley, String wheat, String mast, String fish, String prawn, String lactobiose, String egg_) {
+	public AllergiesAndIntolerances(Long guardian_phone, Integer inspectOrder, String egg, String milk, String peanut, String soya, String barley, String wheat, String mast, String fish, String prawn, String lactobiose, String egg_) {
 		this.guardian_phone = guardian_phone;
+		this.inspectOrder = inspectOrder;
 		this.egg = egg;
 		this.milk = milk;
 		this.peanut = peanut;
@@ -78,6 +79,14 @@ public class AllergiesAndIntolerances implements Serializable{
 
 	public void setGuardian_phone(Long guardian_phone) {
 		this.guardian_phone = guardian_phone;
+	}
+
+	public Integer getInspectOrder() {
+		return inspectOrder;
+	}
+
+	public void setInspectOrder(Integer inspectOrder) {
+		this.inspectOrder = inspectOrder;
 	}
 
 	public String getEgg() {
@@ -172,6 +181,7 @@ public class AllergiesAndIntolerances implements Serializable{
 	public String toString() {
 		return "AllergiesAndIntolerances{" +
 				"guardian_phone=" + guardian_phone +
+				", inspectOrder=" + inspectOrder +
 				", egg='" + egg + '\'' +
 				", milk='" + milk + '\'' +
 				", peanut='" + peanut + '\'' +

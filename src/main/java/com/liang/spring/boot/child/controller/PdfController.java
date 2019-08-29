@@ -61,7 +61,7 @@ public class PdfController {
      * @param request  HttpServletRequest
      * @param response HttpServletResponse
      */
-    @GetMapping("/preview/{id}")
+    @GetMapping("/preview")
     public void preview(@PathVariable("id") Long id,
                         PeopleKey peopleKey,
                         HttpServletRequest request, HttpServletResponse response) {

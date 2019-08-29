@@ -47,11 +47,9 @@ public class SportsSurvey implements Serializable{
 	protected SportsSurvey() {  // JPA 的规范要求无参构造函数；设为 protected 防止直接使用
 	}
 
-	public void setGuardian_phone(Long guardian_phone) {
+	public SportsSurvey(Long guardian_phone, Integer inspectOrder, Integer sport_status) {
 		this.guardian_phone = guardian_phone;
-	}
-
-	public void setSport_status(Integer sport_status) {
+		this.inspectOrder = inspectOrder;
 		this.sport_status = sport_status;
 	}
 
@@ -59,14 +57,31 @@ public class SportsSurvey implements Serializable{
 		return guardian_phone;
 	}
 
+	public void setGuardian_phone(Long guardian_phone) {
+		this.guardian_phone = guardian_phone;
+	}
+
+	public Integer getInspectOrder() {
+		return inspectOrder;
+	}
+
+	public void setInspectOrder(Integer inspectOrder) {
+		this.inspectOrder = inspectOrder;
+	}
+
 	public Integer getSport_status() {
 		return sport_status;
+	}
+
+	public void setSport_status(Integer sport_status) {
+		this.sport_status = sport_status;
 	}
 
 	@Override
 	public String toString() {
 		return "SportsSurvey{" +
 				"guardian_phone=" + guardian_phone +
+				", inspectOrder=" + inspectOrder +
 				", sport_status=" + sport_status +
 				'}';
 	}

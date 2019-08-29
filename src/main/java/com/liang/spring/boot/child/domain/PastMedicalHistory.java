@@ -113,8 +113,9 @@ public class PastMedicalHistory implements Serializable{
 	protected PastMedicalHistory() {  // JPA 的规范要求无参构造函数；设为 protected 防止直接使用
 	}
 
-	public PastMedicalHistory(Long guardian_phone, String normal, String premature, String macrosomia, String lowBirthWeight, String polyembryony, String drink, String smoke, String vegetarian, String diabetes, String hypertension, String acalcerosis, String hypovitaminosisD, String hypovitaminosisA, String zincDeficiency, String anemia, String hairThin, String hairFew, String hairchangeColor, String hairEmbrittlement, String hairCaducous, String hairBaldness, String hairDry, String hairPressureAlopecia, String xerophthalmia, String keratomalacia, String keratohelcosis, String peeling, String furfur, String keratosisPilaris, String geographicTongue, String cankerSore, String enamel, String opsigenes, String odontiasis, String bleedingGums) {
+	public PastMedicalHistory(Long guardian_phone, Integer inspectOrder, String normal, String premature, String macrosomia, String lowBirthWeight, String polyembryony, String drink, String smoke, String vegetarian, String diabetes, String hypertension, String acalcerosis, String hypovitaminosisD, String hypovitaminosisA, String zincDeficiency, String anemia, String hairThin, String hairFew, String hairchangeColor, String hairEmbrittlement, String hairCaducous, String hairBaldness, String hairDry, String hairPressureAlopecia, String xerophthalmia, String keratomalacia, String keratohelcosis, String peeling, String furfur, String keratosisPilaris, String geographicTongue, String cankerSore, String enamel, String opsigenes, String odontiasis, String bleedingGums) {
 		this.guardian_phone = guardian_phone;
+		this.inspectOrder = inspectOrder;
 		this.normal = normal;
 		this.premature = premature;
 		Macrosomia = macrosomia;
@@ -158,6 +159,14 @@ public class PastMedicalHistory implements Serializable{
 
 	public void setGuardian_phone(Long guardian_phone) {
 		this.guardian_phone = guardian_phone;
+	}
+
+	public Integer getInspectOrder() {
+		return inspectOrder;
+	}
+
+	public void setInspectOrder(Integer inspectOrder) {
+		this.inspectOrder = inspectOrder;
 	}
 
 	public String getNormal() {
@@ -444,6 +453,7 @@ public class PastMedicalHistory implements Serializable{
 	public String toString() {
 		return "PastMedicalHistory{" +
 				"guardian_phone=" + guardian_phone +
+				", inspectOrder=" + inspectOrder +
 				", normal='" + normal + '\'' +
 				", premature='" + premature + '\'' +
 				", Macrosomia='" + Macrosomia + '\'' +

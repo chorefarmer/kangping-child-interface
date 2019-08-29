@@ -64,8 +64,9 @@ public class DietarySurvey implements Serializable{
 	protected DietarySurvey() {  // JPA 的规范要求无参构造函数；设为 protected 防止直接使用
 	}
 
-	public DietarySurvey(Long guardian_phone, Integer stapleFood, Integer vegetables, Integer marineProducts, Integer egg, Integer fruits, Integer poultryMeat, Integer milk, Integer nut, Boolean prefersSweet, Boolean prefersFRY, Boolean prefersSodas, Boolean withoutBreakfast, Boolean ateAndPlayed, Boolean irregularDiet) {
+	public DietarySurvey(Long guardian_phone, Integer inspectOrder, Integer stapleFood, Integer vegetables, Integer marineProducts, Integer egg, Integer fruits, Integer poultryMeat, Integer milk, Integer nut, Boolean prefersSweet, Boolean prefersFRY, Boolean prefersSodas, Boolean withoutBreakfast, Boolean ateAndPlayed, Boolean irregularDiet) {
 		this.guardian_phone = guardian_phone;
+		this.inspectOrder = inspectOrder;
 		this.stapleFood = stapleFood;
 		this.vegetables = vegetables;
 		this.marineProducts = marineProducts;
@@ -88,6 +89,14 @@ public class DietarySurvey implements Serializable{
 
 	public void setGuardian_phone(Long guardian_phone) {
 		this.guardian_phone = guardian_phone;
+	}
+
+	public Integer getInspectOrder() {
+		return inspectOrder;
+	}
+
+	public void setInspectOrder(Integer inspectOrder) {
+		this.inspectOrder = inspectOrder;
 	}
 
 	public Integer getStapleFood() {
@@ -206,6 +215,7 @@ public class DietarySurvey implements Serializable{
 	public String toString() {
 		return "DietarySurvey{" +
 				"guardian_phone=" + guardian_phone +
+				", inspectOrder=" + inspectOrder +
 				", stapleFood=" + stapleFood +
 				", vegetables=" + vegetables +
 				", marineProducts=" + marineProducts +
