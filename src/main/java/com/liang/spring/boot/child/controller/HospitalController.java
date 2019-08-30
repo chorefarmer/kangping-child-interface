@@ -7,6 +7,8 @@ import com.liang.spring.boot.child.untils.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 /**
  * Created by: elvis(李亮)
  * 2019-05-07 14:09
@@ -27,19 +29,25 @@ public class HospitalController {
     @PostMapping
     public ResultMsg saveHospital(Hospital hospital) {
 
+        if(hospital.getHospitalId()==null){
+            hospital.setHospitalId(UUID.randomUUID().toString().replace("-", "").toLowerCase());
+        }
         return ResultUtil.success(hospitalRepository.save(hospital));
     }
 
     /**
      * 根据id查询医院管理
-     * @param id
      * @return
      */
     @ResponseBody
-    @GetMapping("{id}")
-    public ResultMsg getListById(@PathVariable("id") Long id) {
+    @GetMapping
+    public ResultMsg getListById( ) {
 
-        return ResultUtil.success(hospitalRepository.findOne(id));
+
+        System.out.println("医院信息："+hospitalRepository.findAll());
+
+        return ResultUtil.success(hospitalRepository.findAll());
+
     }
 
 }

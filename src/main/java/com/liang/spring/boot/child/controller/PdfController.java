@@ -79,6 +79,8 @@ public class PdfController {
         //根据id查询到医院科室基本信息
         Hospital hospital=hospitalRepository.findOne(peopleKey.getGuardian_phone());
 
+
+
         variables.put("hospital",hospital);
 
         System.out.println("科室基本信息"+hospital.getHospitalName());

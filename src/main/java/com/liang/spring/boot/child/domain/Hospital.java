@@ -16,6 +16,8 @@ import javax.persistence.Id;
 public class Hospital {
 
     @Id  // 主键
+    private String hospitalId;
+
     private Long hospotialPhone;//联系电话
 
     private String hospitalName;//医院名称
@@ -30,12 +32,21 @@ public class Hospital {
     protected Hospital() {
     }
 
-    public Hospital(Long hospotialPhone, String hospitalName, String officeName, String contacts, String email) {
+    public Hospital(String hospitalId, Long hospotialPhone, String hospitalName, String officeName, String contacts, String email) {
+        this.hospitalId = hospitalId;
         this.hospotialPhone = hospotialPhone;
         this.hospitalName = hospitalName;
         this.officeName = officeName;
         this.contacts = contacts;
         this.email = email;
+    }
+
+    public String getHospitalId() {
+        return hospitalId;
+    }
+
+    public void setHospitalId(String hospitalId) {
+        this.hospitalId = hospitalId;
     }
 
     public Long getHospotialPhone() {
@@ -81,7 +92,8 @@ public class Hospital {
     @Override
     public String toString() {
         return "Hospital{" +
-                "hospotialPhone=" + hospotialPhone +
+                "hospitalId='" + hospitalId + '\'' +
+                ", hospotialPhone=" + hospotialPhone +
                 ", hospitalName='" + hospitalName + '\'' +
                 ", officeName='" + officeName + '\'' +
                 ", contacts='" + contacts + '\'' +
