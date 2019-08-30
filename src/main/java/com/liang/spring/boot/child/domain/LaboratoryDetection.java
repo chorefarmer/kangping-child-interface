@@ -84,60 +84,120 @@ public class LaboratoryDetection implements Serializable{
 		this.path = path;
 	}
 
+	public Long getGuardian_phone() {
+		return guardian_phone;
+	}
+
 	public void setGuardian_phone(Long guardian_phone) {
 		this.guardian_phone = guardian_phone;
+	}
+
+	public Integer getInspectOrder() {
+		return inspectOrder;
 	}
 
 	public void setInspectOrder(Integer inspectOrder) {
 		this.inspectOrder = inspectOrder;
 	}
 
+	public Double getFlavol() {
+		return flavol;
+	}
+
 	public void setFlavol(Double flavol) {
 		this.flavol = flavol;
+	}
+
+	public Double getSerum25() {
+		return serum25;
 	}
 
 	public void setSerum25(Double serum25) {
 		this.serum25 = serum25;
 	}
 
+	public Double getSerumZinc() {
+		return SerumZinc;
+	}
+
 	public void setSerumZinc(Double serumZinc) {
 		SerumZinc = serumZinc;
+	}
+
+	public Double getGlucoseTolerance() {
+		return glucoseTolerance;
 	}
 
 	public void setGlucoseTolerance(Double glucoseTolerance) {
 		this.glucoseTolerance = glucoseTolerance;
 	}
 
+	public Double getGlycatedHemoglobin() {
+		return GlycatedHemoglobin;
+	}
+
 	public void setGlycatedHemoglobin(Double glycatedHemoglobin) {
 		GlycatedHemoglobin = glycatedHemoglobin;
+	}
+
+	public Double getFattyiverL() {
+		return fattyiverL;
 	}
 
 	public void setFattyiverL(Double fattyiverL) {
 		this.fattyiverL = fattyiverL;
 	}
 
+	public Double getBindingProtein() {
+		return bindingProtein;
+	}
+
 	public void setBindingProtein(Double bindingProtein) {
 		this.bindingProtein = bindingProtein;
+	}
+
+	public Double getOxyphorase() {
+		return oxyphorase;
 	}
 
 	public void setOxyphorase(Double oxyphorase) {
 		this.oxyphorase = oxyphorase;
 	}
 
+	public Double getFBG() {
+		return FBG;
+	}
+
 	public void setFBG(Double FBG) {
 		this.FBG = FBG;
+	}
+
+	public Double getRBG() {
+		return RBG;
 	}
 
 	public void setRBG(Double RBG) {
 		this.RBG = RBG;
 	}
 
+	public Double getBloodFat() {
+		return bloodFat;
+	}
+
 	public void setBloodFat(Double bloodFat) {
 		this.bloodFat = bloodFat;
 	}
 
+	public MultipartFile getFile() {
+		return file;
+	}
+
 	public void setFile(MultipartFile file) {
 		this.file = file;
+	}
+
+	public String getPath() {
+		return path;
 	}
 
 	public void setPath(String path) {
