@@ -24,9 +24,9 @@ public class CalcuBMRBetweenOneAndSix {
         /*1-3岁按照体重和性别计算BMR*/
         if(age>=1&&age<3){
             if(sex==1){//男童
-                BMR=1000*(0.255*weight-0.141)/4.18;
+                BMR=60.9*weight-54;
             }else if(sex==0){//女童
-                BMR=1000*(0.246*weight-0.0965)/4.18;
+                BMR=61*weight-51;
             }
         }
 

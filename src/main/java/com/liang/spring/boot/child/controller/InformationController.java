@@ -68,7 +68,7 @@ public class InformationController {
         System.out.println("年龄为"+age);
 		information.setAge(age);
 //        System.out.println("个人基本信息json返回数据："+JSON.parse(information.toString()));
-        System.out.println("个人基本信息json返回数据："+information);
+       // System.out.println("个人基本信息json返回数据："+information);
 
 		return ResultUtil.success(information);
 	}
@@ -92,7 +92,7 @@ public class InformationController {
 	public ResultMsg<Information> informationAdd(Information information) {
 //		Information findInfor=informationRepository.findOne(information());
 
-		System.out.println("当前对象提交手机号为："+information.getGuardian_phone());
+		//System.out.println("当前对象提交手机号为："+information.getGuardian_phone());
 		
 		if(informationRepository.findOne(new PeopleKey(information.getGuardian_phone(),information.getInspectOrder()))!=null){
 			return ResultUtil.error(1,"该档案号已经注册过");

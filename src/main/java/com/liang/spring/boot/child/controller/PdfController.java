@@ -62,9 +62,7 @@ public class PdfController {
      * @param response HttpServletResponse
      */
     @GetMapping("/preview")
-    public void preview(@PathVariable("id") Long id,
-                        PeopleKey peopleKey,
-                        HttpServletRequest request, HttpServletResponse response) {
+    public void preview(PeopleKey peopleKey, HttpServletRequest request, HttpServletResponse response) {
 
         //局部变量基础代谢率和每日建议摄入能量初始化
          Double BMR=null;
@@ -77,8 +75,9 @@ public class PdfController {
         Map<String,Object> variables = new HashMap<>();
 
 
+
         //根据id查询到医院科室基本信息
-        Hospital hospital=hospitalRepository.findOne(id);
+        Hospital hospital=hospitalRepository.findOne(peopleKey.getGuardian_phone());
 
         variables.put("hospital",hospital);
 
