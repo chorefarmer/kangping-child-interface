@@ -4,6 +4,7 @@ import com.liang.spring.boot.child.domain.BodyCompositionTest;
 import com.liang.spring.boot.child.domain.PeopleKey;
 import com.liang.spring.boot.child.domain.ResultMsg;
 import com.liang.spring.boot.child.repository.BodyCompositionTestRepository;
+import com.liang.spring.boot.child.service.BodyCompositionTestService;
 import com.liang.spring.boot.child.untils.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,17 +19,20 @@ import org.springframework.web.bind.annotation.*;
 public class BodyCompositionTestController {
 
     @Autowired
-    private BodyCompositionTestRepository bodyCompositionTestRepository;
+    private BodyCompositionTestService bodyCompositionTestService;
 
+    @ResponseBody
     @PostMapping
     public ResultMsg saveBodyCompositionTest(BodyCompositionTest bodyCompositionTest){
 
-        return ResultUtil.success(bodyCompositionTestRepository.save(bodyCompositionTest));
+        return bodyCompositionTestService.saveBodyCompositionTest(bodyCompositionTest);
+
     }
 
     @GetMapping("/search")
     public ResultMsg findBodyCompositionTestById(PeopleKey peopleKey){
 
-        return ResultUtil.success(bodyCompositionTestRepository.findOne(peopleKey));
+        return bodyCompositionTestService.findBodyCompositionTestById(peopleKey);
+
     }
 }

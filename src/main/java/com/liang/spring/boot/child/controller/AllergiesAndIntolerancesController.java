@@ -3,6 +3,7 @@ package com.liang.spring.boot.child.controller;
 import com.liang.spring.boot.child.domain.AllergiesAndIntolerances;
 import com.liang.spring.boot.child.domain.Information;
 import com.liang.spring.boot.child.domain.PeopleKey;
+import com.liang.spring.boot.child.service.AllergiesAndIntolerancesService;
 import com.liang.spring.boot.child.untils.ResultUtil;
 import com.liang.spring.boot.child.domain.ResultMsg;
 import com.liang.spring.boot.child.repository.AllergiesAndIntolerancesRepository;
@@ -25,31 +26,20 @@ import java.util.List;
 @RestController
 @RequestMapping("/allergiesAndIntolerances")
 public class AllergiesAndIntolerancesController {
-	
-	@Autowired 
-	private AllergiesAndIntolerancesRepository allergiesAndIntolerancesRepository;
 
-	/**
-	 * 从 食物过敏与不耐受存储库 获取食物过敏与不耐受列表
-	 * @return
-	 */
-	private List<AllergiesAndIntolerances> getAllergiesAndIntolerancesList() {
-		List<AllergiesAndIntolerances> allergiesAndIntolerancess = new ArrayList<>();
-		for (AllergiesAndIntolerances allergiesAndIntolerances : allergiesAndIntolerancesRepository.findAll()) {
-			allergiesAndIntolerancess.add(allergiesAndIntolerances);
-		}
- 		return allergiesAndIntolerancess;
-	}
+	@Autowired
+	private AllergiesAndIntolerancesService allergiesAndIntolerancesService;
 
- 
 	/**
 	 * 根据id查询食物过敏与不耐受
 	 * @return
 	 */
 	@ResponseBody
 	@GetMapping("/search")
-	public ResultMsg getListById(Model model, @Valid PeopleKey peopleKey, BindingResult result) throws Exception{
-		return ResultUtil.success(allergiesAndIntolerancesRepository.findOne(peopleKey));
+	public ResultMsg getListById(@Valid PeopleKey peopleKey) throws Exception{
+
+		return allergiesAndIntolerancesService.getListById(peopleKey);
+
 	}
 
 	/**
@@ -58,7 +48,9 @@ public class AllergiesAndIntolerancesController {
 	 */
 	@GetMapping("/form")
 	public ResultMsg AllergiesAndIntolerancesList( ) {
-		return ResultUtil.success(getAllergiesAndIntolerancesList());
+
+		return allergiesAndIntolerancesService.AllergiesAndIntolerancesList();
+
 	}
 
 	/**
@@ -68,7 +60,9 @@ public class AllergiesAndIntolerancesController {
 	@ResponseBody
 	@PostMapping
 	public ResultMsg<AllergiesAndIntolerances> allergiesAndIntolerancesAdd(AllergiesAndIntolerances allergiesAndIntolerances) {
-		return ResultUtil.success(allergiesAndIntolerancesRepository.save(allergiesAndIntolerances));
+
+		return allergiesAndIntolerancesService.allergiesAndIntolerancesAdd(allergiesAndIntolerances);
+
 	}
 
 	/**
@@ -78,8 +72,9 @@ public class AllergiesAndIntolerancesController {
 	 */
 	@GetMapping(value = "/delete")
 	public ResultMsg deleteAllergiesAndIntolerances(PeopleKey id) {
-		allergiesAndIntolerancesRepository.delete(id);
-		return ResultUtil.success();
+
+		return allergiesAndIntolerancesService.deleteAllergiesAndIntolerances(id);
+
 	}
 
 	/**
@@ -89,7 +84,9 @@ public class AllergiesAndIntolerancesController {
 	 */
 	@PostMapping("/modify")
 	public ResultMsg modifyAllergiesAndIntolerances(AllergiesAndIntolerances allergiesAndIntolerances) {
-		return ResultUtil.success(allergiesAndIntolerancesRepository.save(allergiesAndIntolerances));
+
+		return allergiesAndIntolerancesService.modifyAllergiesAndIntolerances(allergiesAndIntolerances);
+
 	}
 
 }

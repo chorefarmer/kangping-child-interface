@@ -5,6 +5,7 @@ import com.liang.spring.boot.child.domain.Information;
 import com.liang.spring.boot.child.domain.PeopleKey;
 import com.liang.spring.boot.child.domain.ResultMsg;
 import com.liang.spring.boot.child.repository.InformationRepository;
+import com.liang.spring.boot.child.service.InformationService;
 import com.liang.spring.boot.child.untils.GetAgeByBirth;
 import com.liang.spring.boot.child.untils.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,6 @@ import java.util.List;
 
 /**
  * 儿童 基本信息 控制器.
- * 
  * @author LiLiang
  * @date 2019年3月5日
  */
@@ -34,43 +34,17 @@ import java.util.List;
 public class InformationController {
 	
 	@Autowired 
-	private InformationRepository informationRepository;
+	private InformationService informationService;
 
-	/**
-	 * 从 基本信息存储库 获取基本信息列表
-	 * @return
-	 */
-	private List<Information> getInformationList() {
-		List<Information> informations = new ArrayList<>();
-		for (Information information : informationRepository.findAll()) {
-			informations.add(information);
-		}
- 		return informations;
-	}
-
- 
 	/**
 	 * 根据id查询基本信息
 	 * @return
 	 */
 	@GetMapping("/search")
-	public ResultMsg getListById (@Valid PeopleKey peopleKey, BindingResult result) throws Exception{
+	public ResultMsg getListById (@Valid PeopleKey peopleKey) throws Exception{
 
+		return informationService.getListById(peopleKey);
 
-
-
-		Information information=informationRepository.findOne(peopleKey);
-
-		Date birth=information.getBirth();
-		int age= GetAgeByBirth.getAgeFromBirthTime(birth);
-
-
-        System.out.println("年龄为"+age);
-		information.setAge(age);
-//        System.out.println("个人基本信息json返回数据："+JSON.parse(information.toString()));
-       // System.out.println("个人基本信息json返回数据："+information);
-
-		return ResultUtil.success(information);
 	}
 
 	/**
@@ -79,8 +53,9 @@ public class InformationController {
 	 */
 	@GetMapping("/form")
 	public ResultMsg InformationList( ) {
-        System.out.println(getInformationList());
-	    return ResultUtil.success(getInformationList());
+
+	    return informationService.InformationList();
+
 	}
 
 	/**
@@ -90,14 +65,9 @@ public class InformationController {
 	@ResponseBody
 	@PostMapping
 	public ResultMsg<Information> informationAdd(Information information) {
-//		Information findInfor=informationRepository.findOne(information());
 
-		//System.out.println("当前对象提交手机号为："+information.getGuardian_phone());
-		
-		if(informationRepository.findOne(new PeopleKey(information.getGuardian_phone(),information.getInspectOrder()))!=null){
-			return ResultUtil.error(1,"该档案号已经注册过");
-		}
-		return ResultUtil.success(informationRepository.save(information));
+		return informationService.informationAdd(information);
+
 	}
 
 	/**
@@ -108,8 +78,9 @@ public class InformationController {
 	@GetMapping(value = "/delete")
 	public ResultMsg deleteInformation(PeopleKey id) {
 
-		informationRepository.delete(id);
+		informationService.deleteInformation(id);
 		return ResultUtil.success();
+
 	}
 
 	/**
@@ -119,33 +90,20 @@ public class InformationController {
 	 */
 	@PostMapping(value = "/modify")
 	public ResultMsg modifyInformation(Information information) {
-		return ResultUtil.success(informationRepository.save(information));
+
+		return informationService.modifyInformation(information);
+
 	}
 
 	/**
 	 *分页实现
 	 */
-
 	@RequestMapping("/listInformation")   //查询所有分类
 	public ResultMsg listInformation(Model m,
 							   @RequestParam(value="start",defaultValue="0")int start,
 							   @RequestParam(value = "size", defaultValue = "5") int size) throws Exception {
 
-		//start = start < 0 ? 0:start;
-		//Sort sort = new Sort(Sort.Direction.DESC,"guardian_phone"); //设置根据id倒序排列
-		//Pageable pageable = new PageRequest(start, size,sort); //根据start、size、sort创建分页对象
-
-		Pageable pageable = new PageRequest(start, size);
-		Page<Information> page = informationRepository.findAll(pageable);    //根据这个分页对象获取分页对象
-
-		m.addAttribute("Number",page.getNumber());//当前为第几页
-		m.addAttribute("NumberOfElements",page.getNumberOfElements());//当前页有多少条数据
-		m.addAttribute("Size",page.getSize());//每页有多少条数据
-		m.addAttribute("TotalElements",page.getTotalElements());//总共有多少条数据
-		m.addAttribute("TotalPage",page.getTotalPages());//总共有多少页
-		m.addAttribute("content",page.getContent());//数据的内容
-
-		return ResultUtil.success(m);
+		return informationService.listInformation(m, start, size);
 
 	}
 
@@ -159,47 +117,8 @@ public class InformationController {
 									 @RequestParam(value="start",defaultValue="0")int start,
 									 @RequestParam(value = "size", defaultValue = "20") int size) throws Exception {
 
-		Pageable pageable=new PageRequest(start, size);  //分页信息
+		return informationService.findByPageAndParams(m, information, start, size);
 
-		Specification<Information> spec = new Specification<Information>() {
-
-			@Override
-			public Predicate toPredicate(Root<Information> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-
-
-				Path<String> name = root.get("name");
-				System.out.println("name："+information.getName());
-
-				Path<Long> guardian_phone = root.get("guardian_phone");
-				System.out.println("phone："+information.getGuardian_phone());
-
-				Predicate p1 = cb.like(name, "%"+information.getName()+"%");
-
-				Predicate p2 = cb.equal(guardian_phone, information.getGuardian_phone());
-
-				Predicate p = cb.or(p1, p2);
-
-
-				return p;
-
-			}
-		};
-
-
-		if(information.getName()==null&&information.getGuardian_phone()==null){
-			return informationRepository.findAll(pageable);
-		}
-		return informationRepository.findAll(spec, pageable);
-//		Page<Information> page=informationRepository.findAll(spec, pageable);
-//
-//		m.addAttribute("Number",page.getNumber());//当前为第几页
-//		m.addAttribute("NumberOfElements",page.getNumberOfElements());//当前页有多少条数据
-//		m.addAttribute("Size",page.getSize());//每页有多少条数据
-//		m.addAttribute("TotalElements",page.getTotalElements());//总共有多少条数据
-//		m.addAttribute("TotalPage",page.getTotalPages());//总共有多少页
-//		m.addAttribute("content",page.getContent());//数据的内容
-//
-//		return ResultUtil.success(m);
 	}
 
 
@@ -210,14 +129,9 @@ public class InformationController {
     @PostMapping("/addInspect")
     public ResultMsg addInspectById (Model model, Information information, BindingResult result,Integer status) throws Exception{
 
-
-        /**
-         * 新建检测后order前台+1后提交 2019-8-29 liang
-         */
-
-        informationRepository.save(information);
-
+        informationService.addInspectById(model, information, result, status);
         return ResultUtil.success(information);
+
     }
 
 }

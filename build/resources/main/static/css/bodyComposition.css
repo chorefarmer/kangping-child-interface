@@ -1,0 +1,473 @@
+.bg-line {
+    width: 100%;
+    height: 30px;
+    background-color: skyblue;
+    position: relative;
+}
+
+.header-title {
+    width: 100px;
+    height: 100px;
+    margin: -65px auto;
+    background-color: white;
+    position: relative;
+    line-height: 100px;
+    font-size: 24px;
+    /*text-align: center;*/
+}
+
+
+.item-title-infor {
+    height: 40px;
+    line-height: 40px;
+    /*border-bottom: 1px solid #000000;*/
+    padding-top: 55px;
+    color: lightskyblue;
+}
+
+.item-title-tcf {
+    height: 40px;
+    line-height: 40px;
+    /*border-bottom: 1px solid #000000;*/
+    padding-top: 25px;
+    color: lightskyblue;
+}
+
+.item-title-height {
+    height: 40px;
+    line-height: 40px;
+    /*border-bottom: 1px solid #000000;*/
+    padding-top: 25px;
+    color: lightskyblue;
+}
+
+.item-title-shanshi {
+    height: 40px;
+    line-height: 40px;
+    /*border-bottom: 1px solid #000000;*/
+    padding-top: 25px;
+    color: lightskyblue;
+}
+
+.item-title-dayintake {
+    height: 40px;
+    line-height: 40px;
+    /*border-bottom: 1px solid #000000;*/
+    padding-top: 25px;
+    color: lightskyblue;
+}
+
+.item-title-intake {
+    height: 40px;
+    line-height: 40px;
+    /*border-bottom: 1px solid #000000;*/
+    padding-top: 25px;
+    color: lightskyblue;
+}
+
+.item-title-sport {
+    height: 40px;
+    line-height: 40px;
+    /*border-bottom: 1px solid #000000;*/
+    padding-top: 25px;
+    color: lightskyblue;
+}
+
+.title-left {
+    width: 50%;
+    float: left;
+    text-align: left;
+    font-size: 20px;
+}
+
+.title-right {
+    width: 50%;
+    float: left;
+    text-align: right;
+    font-size: 14px;
+}
+
+
+/*基本信息 table样式 start*/
+.table_wrap_infor table {
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px #000;
+}
+
+.table_wrap_infor table thead tr,
+.table_wrap_infor table tbody tr {
+    height: 35px;
+    line-height: 35px;
+    /*background-color: pink;*/
+}
+.table_wrap_infor table tr th:first-child,
+.table_wrap_infor table tr td:nth-child(2),
+.table_wrap_infor table tr td:nth-child(3),
+.table_wrap_infor table tr td:nth-child(4),
+.table_wrap_infor table tr td:nth-child(5),
+.table_wrap_infor table tr td:first-child {/*设置table左边边框*/
+    border-left: 2px solid #eaeaea;
+}
+
+.table_wrap_infor table tr th:last-child,
+/*.table_wrap_infor table tr td:nth-child(2),*/
+/*.table_wrap_infor table tr td:nth-child(3),*/
+/*.table_wrap_infor table tr td:nth-child(4),*/
+/*.table_wrap_infor table tr td:nth-child(5),*/
+.table_wrap_infor table tr td:last-child {/*设置table右边边框*/
+    border-right: 2px solid #eaeaea;
+}
+
+.table_wrap_infor table tr td:first-child,
+.table_wrap_infor table tr td:nth-child(2),
+.table_wrap_infor table tr td:nth-child(3),
+.table_wrap_infor table tr td:nth-child(4),
+/*.table_wrap_infor table tr td:nth-child(5),*/
+.table_wrap_infor table tr td:last-child{/*设置table表格每列底部边框*/
+    border-bottom: 2px solid #eaeaea;
+}
+
+.table_wrap_infor table tr th {
+    background: #eaeaea;
+}
+/*四角圆角设置*/
+.table_wrap_infor table tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.table_wrap_infor table tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+.table_wrap_infor table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.table_wrap_infor table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+/*基本信息 table样式 end*/
+
+
+/*体成分检测 table样式 start*/
+.table_wrap_tcf table {
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px #000;
+}
+
+.table_wrap_tcf table thead tr,
+.table_wrap_tcf table tbody tr {
+    height: 35px;
+    line-height: 35px;
+    /*background-color: pink;*/
+}
+.table_wrap_tcf table tr th:first-child,
+.table_wrap_tcf table tr td:nth-child(2),
+/*.table_wrap_tcf table tr td:nth-child(3),*/
+/*.table_wrap_tcf table tr td:nth-child(4),*/
+/*.table_wrap_tcf table tr td:nth-child(5),*/
+/*.table_wrap_tcf table tr td:nth-child(6),*/
+.table_wrap_tcf table tr td:first-child {/*设置table左边边框*/
+    border-left: 2px solid #eaeaea;
+}
+
+.table_wrap_tcf table tr th:last-child,
+.table_wrap_tcf table tr td:nth-child(2),
+.table_wrap_tcf table tr td:nth-child(3),
+.table_wrap_tcf table tr td:nth-child(4),
+.table_wrap_tcf table tr td:nth-child(5),
+.table_wrap_tcf table tr td:nth-child(6),
+.table_wrap_tcf table tr td:last-child {/*设置table右边边框*/
+    border-right: 2px solid #eaeaea;
+}
+
+.table_wrap_tcf table tr td:first-child,
+.table_wrap_tcf table tr td:nth-child(2),
+.table_wrap_tcf table tr td:nth-child(3),
+.table_wrap_tcf table tr td:nth-child(4),
+.table_wrap_tcf table tr td:nth-child(5),
+.table_wrap_tcf table tr td:last-child{/*设置table表格每列底部边框*/
+    border-bottom: 2px solid #eaeaea;
+}
+
+.table_wrap_tcf table tr th {
+    background: #eaeaea;
+}
+/*四角圆角设置*/
+.table_wrap_tcf table tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.table_wrap_tcf table tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+.table_wrap_tcf table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.table_wrap_tcf table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+/*体成分检测 table样式 end*/
+
+/*膳食结构分析 table样式 start*/
+.table_wrap_shanshi table {
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px #000;
+}
+
+.table_wrap_shanshi table thead tr,
+
+.table_wrap_shanshi table tbody tr {
+    height: 35px;
+    line-height: 35px;
+    /*background-color: pink;*/
+}
+.table_wrap_shanshi table tr th:first-child,
+.table_wrap_shanshi table tr td:nth-child(2),
+    /*.table_wrap_shanshi table tr td:nth-child(3),*/
+    /*.table_wrap_shanshi table tr td:nth-child(4),*/
+    /*.table_wrap_shanshi table tr td:nth-child(5),*/
+.table_wrap_shanshi table tr td:first-child {/*设置table左边边框*/
+    border-left: 2px solid #eaeaea;
+}
+
+.table_wrap_shanshi table tr th:last-child,
+.table_wrap_shanshi table tr td:nth-child(2),
+.table_wrap_shanshi table tr td:nth-child(3),
+.table_wrap_shanshi table tr td:nth-child(4),
+.table_wrap_shanshi table tr td:nth-child(5),
+.table_wrap_shanshi table tr td:last-child {/*设置table右边边框*/
+    border-right: 2px solid #eaeaea;
+}
+
+.table_wrap_shanshi table tr td:first-child,
+.table_wrap_shanshi table tr td:nth-child(2),
+.table_wrap_shanshi table tr td:nth-child(3),
+.table_wrap_shanshi table tr td:nth-child(4),
+.table_wrap_shanshi table tr td:nth-child(5),
+.table_wrap_shanshi table tr td:last-child{/*设置table表格每列底部边框*/
+    border-bottom: 2px solid #eaeaea;
+}
+
+.table_wrap_shanshi table tr th {
+    background: #eaeaea;
+}
+/*四角圆角设置*/
+.table_wrap_shanshi table tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.table_wrap_shanshi table tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+.table_wrap_shanshi table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.table_wrap_shanshi table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+/*膳食结构分析 table样式 end*/
+
+/*指导方案建议日摄入量 start*/
+.table_wrap_dayintake table {
+    font-size: 14px;
+    text-align: center;
+    margin: 0px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px #000;
+}
+
+.table_wrap_dayintake table thead tr,
+
+.table_wrap_dayintake table tbody tr {
+    height: 35px;
+    line-height: 35px;
+    /*background-color: pink;*/
+}
+.table_wrap_dayintake table tr th:first-child,
+.table_wrap_dayintake table tr td:nth-child(2),
+    /*.table_wrap_dayintake table tr td:nth-child(3),*/
+    /*.table_wrap_dayintake table tr td:nth-child(4),*/
+    /*.table_wrap_dayintake table tr td:nth-child(5),*/
+.table_wrap_dayintake table tr td:first-child {/*设置table左边边框*/
+    border-left: 2px solid #eaeaea;
+}
+
+.table_wrap_dayintake table tr th:last-child,
+.table_wrap_dayintake table tr td:nth-child(2),
+.table_wrap_dayintake table tr td:nth-child(3),
+.table_wrap_dayintake table tr td:nth-child(4),
+.table_wrap_dayintake table tr td:nth-child(5),
+.table_wrap_dayintake table tr td:last-child {/*设置table右边边框*/
+    border-right: 2px solid #eaeaea;
+}
+
+.table_wrap_dayintake table tr td:first-child,
+.table_wrap_dayintake table tr td:nth-child(2),
+.table_wrap_dayintake table tr td:nth-child(3),
+.table_wrap_dayintake table tr td:nth-child(4),
+.table_wrap_dayintake table tr td:nth-child(5),
+.table_wrap_dayintake table tr td:last-child{/*设置table表格每列底部边框*/
+    border-bottom: 2px solid #eaeaea;
+}
+
+.table_wrap_dayintake table tr th {
+    background: #eaeaea;
+}
+/*四角圆角设置*/
+.table_wrap_dayintake table tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.table_wrap_dayintake table tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+.table_wrap_dayintake table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.table_wrap_dayintake table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+/*指导方案建议日摄入量 end*/
+
+
+/*餐次举例 table样式 start*/
+.table_wrap_intake table {
+    font-size: 14px;
+    text-align: center;
+    margin: 0px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px #000;
+}
+
+.table_wrap_intake table thead tr,
+.table_wrap_intake table tbody tr {
+    height: 35px;
+    line-height: 35px;
+    /*background-color: pink;*/
+}
+.table_wrap_intake table tr th:first-child,
+.table_wrap_intake table tr td:nth-child(2),
+.table_wrap_intake table tr td:nth-child(3),
+.table_wrap_intake table tr td:nth-child(4),
+.table_wrap_intake table tr td:nth-child(5),
+.table_wrap_intake table tr td:first-child {/*设置table左边边框*/
+    border-left: 2px solid #eaeaea;
+}
+
+.table_wrap_intake table tr th:last-child,
+/*.table_wrap_intake table tr td:nth-child(2),*/
+/*.table_wrap_intake table tr td:nth-child(3),*/
+/*.table_wrap_intake table tr td:nth-child(4),*/
+/*.table_wrap_intake table tr td:nth-child(5),*/
+.table_wrap_intake table tr td:last-child {/*设置table右边边框*/
+    border-right: 2px solid #eaeaea;
+}
+
+.table_wrap_intake table tr td:first-child,
+.table_wrap_intake table tr td:nth-child(2),
+.table_wrap_intake table tr td:nth-child(3),
+.table_wrap_intake table tr td:nth-child(4),
+.table_wrap_intake table tr td:nth-child(5),
+.table_wrap_intake table tr td:last-child{/*设置table表格每列底部边框*/
+    border-bottom: 2px solid #eaeaea;
+}
+
+.table_wrap_intake table tr th {
+    background: #eaeaea;
+}
+/*四角圆角设置*/
+.table_wrap_intake table tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.table_wrap_intake table tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+.table_wrap_intake table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.table_wrap_intake table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+/*餐次举例 table样式 end*/
+
+/*运动指导 table样式 start*/
+.table_wrap_sport table {
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px #000;
+}
+
+.table_wrap_sport table thead tr,
+.table_wrap_sport table tbody tr {
+    height: 35px;
+    line-height: 35px;
+    /*background-color: pink;*/
+}
+.table_wrap_sport table tr th:first-child,
+/*.table_wrap_sport table tr td:nth-child(2),*/
+    /*.table_wrap_sport table tr td:nth-child(3),*/
+    /*.table_wrap_sport table tr td:nth-child(4),*/
+    /*.table_wrap_sport table tr td:nth-child(5),*/
+.table_wrap_sport table tr td:first-child {/*设置table左边边框*/
+    border-left: 2px solid #eaeaea;
+}
+
+.table_wrap_sport table tr th:last-child,
+/*.table_wrap_sport table tr td:nth-child(2),*/
+/*.table_wrap_sport table tr td:nth-child(3),*/
+/*.table_wrap_sport table tr td:nth-child(4),*/
+/*.table_wrap_sport table tr td:nth-child(5),*/
+.table_wrap_sport table tr td:last-child {/*设置table右边边框*/
+    border-right: 2px solid #eaeaea;
+}
+
+.table_wrap_sport table tr td:first-child,
+.table_wrap_sport table tr td:nth-child(2),
+.table_wrap_sport table tr td:nth-child(3),
+.table_wrap_sport table tr td:nth-child(4),
+/*.table_wrap_sport table tr td:nth-child(5),*/
+.table_wrap_sport table tr td:last-child{/*设置table表格每列底部边框*/
+    border-bottom: 2px solid #eaeaea;
+}
+
+.table_wrap_sport table tr th {
+    background: #eaeaea;
+}
+/*四角圆角设置*/
+.table_wrap_sport table tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.table_wrap_sport table tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+.table_wrap_sport table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.table_wrap_sport table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+/*运动指导 table样式 end*/

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>营养监测分析报告(3到18岁)</title>
 
     <link rel="stylesheet" href="http://localhost:8082/css/bodyComposition.css" />

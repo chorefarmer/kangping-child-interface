@@ -1,6 +1,7 @@
 package com.liang.spring.boot.child.controller;
 
 import com.liang.spring.boot.child.domain.PeopleKey;
+import com.liang.spring.boot.child.service.PastMedicalHistoryService;
 import com.liang.spring.boot.child.untils.ResultUtil;
 import com.liang.spring.boot.child.domain.PastMedicalHistory;
 import com.liang.spring.boot.child.domain.ResultMsg;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 儿童既往病史控制器.
+ * 儿童既往病史 控制器.
  * 
  * @author LiLiang
  * @date 2019年3月5日
@@ -23,29 +24,18 @@ import java.util.List;
 public class PastMedicalHistoryController {
 	
 	@Autowired 
-	private PastMedicalHistoryRepository pastMedicalHistoryRepository;
+	private PastMedicalHistoryService pastMedicalHistoryService;
 
-	/**
-	 * 从 既往病史存储库 获取既往病史列表
-	 * @return
-	 */
-	private List<PastMedicalHistory> getPastMedicalHistoryList() {
-		List<PastMedicalHistory> pastMedicalHistorys = new ArrayList<>();
-		for (PastMedicalHistory pastMedicalHistory : pastMedicalHistoryRepository.findAll()) {
-			pastMedicalHistorys.add(pastMedicalHistory);
-		}
- 		return pastMedicalHistorys;
-	}
-
- 
 	/**
 	 * 根据id查询既往病史
 	 * @return
 	 */
 	@ResponseBody
-	@GetMapping
+	@GetMapping("/search")
 	public ResultMsg getListById(PeopleKey peopleKey) {
-		return ResultUtil.success(pastMedicalHistoryRepository.findOne(peopleKey));
+
+		return pastMedicalHistoryService.getListById(peopleKey);
+
 	}
 
 	/**
@@ -54,7 +44,9 @@ public class PastMedicalHistoryController {
 	 */
 	@GetMapping("/form")
 	public ResultMsg PastMedicalHistoryList( ) {
-		return ResultUtil.success(getPastMedicalHistoryList());
+
+		return pastMedicalHistoryService.PastMedicalHistoryList();
+
 	}
 
 	/**
@@ -64,7 +56,9 @@ public class PastMedicalHistoryController {
 	@ResponseBody
 	@PostMapping
 	public ResultMsg<PastMedicalHistory> pastMedicalHistoryAdd(PastMedicalHistory pastMedicalHistory) {
-		return ResultUtil.success(pastMedicalHistoryRepository.save(pastMedicalHistory));
+
+		return pastMedicalHistoryService.pastMedicalHistoryAdd(pastMedicalHistory);
+
 	}
 
 	/**
@@ -73,8 +67,10 @@ public class PastMedicalHistoryController {
 	 */
 	@GetMapping("/delete")
 	public ResultMsg deletePastMedicalHistory(PeopleKey peopleKey) {
-		pastMedicalHistoryRepository.delete(peopleKey);
+
+		pastMedicalHistoryService.deletePastMedicalHistory(peopleKey);
 		return ResultUtil.success();
+
 	}
 
 	/**
@@ -83,7 +79,9 @@ public class PastMedicalHistoryController {
 	 */
 	@PostMapping("/modify")
 	public ResultMsg modifyPastMedicalHistory(PastMedicalHistory pastMedicalHistory) {
-		return ResultUtil.success(pastMedicalHistoryRepository.save(pastMedicalHistory));
+
+		return pastMedicalHistoryService.modifyPastMedicalHistory(pastMedicalHistory);
+
 	}
 
 }

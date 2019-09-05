@@ -1,7 +1,6 @@
 package com.liang.spring.boot.child.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.sun.org.apache.xml.internal.security.keys.keyresolver.implementations.PrivateKeyResolver;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenerationTime;
@@ -71,6 +70,9 @@ public class Information implements Serializable{
 	//liang-2019-7-4  基本信息添加体重录入项
 	private Double weight;
 
+    //liang-2019-0902  基本信息添加是否添加辅食
+    private Integer addingFood;
+
 	/** 创建时间. */
 	@Column(name="CREATE_TIME",insertable=false, updatable=false)
 	@Generated(GenerationTime.INSERT)
@@ -85,189 +87,172 @@ public class Information implements Serializable{
 	protected Information() {  // JPA 的规范要求无参构造函数；设为 protected 防止直接使用
 	}
 
-	public Information(Long guardian_phone, Integer inspectOrder, String name, Integer sex, Integer height, Date birth, Integer age, Integer nation, Integer blood, String guardian, Integer educationalOfParents, String remark, Double weight, Date createTime, Date updateTime) {
-		this.guardian_phone = guardian_phone;
-		this.inspectOrder = inspectOrder;
-		this.name = name;
-		this.sex = sex;
-		this.height = height;
-		this.birth = birth;
-		this.age = age;
-		this.nation = nation;
-		this.blood = blood;
-		this.guardian = guardian;
-		this.educationalOfParents = educationalOfParents;
-		this.remark = remark;
-		this.weight = weight;
-		this.createTime = createTime;
-		this.updateTime = updateTime;
-	}
+    public Information(Long guardian_phone, Integer inspectOrder, String name, Integer sex, Integer height, Date birth, Integer age, Integer nation, Integer blood, String guardian, Integer educationalOfParents, String remark, Double weight, Integer addingFood, Date createTime, Date updateTime) {
+        this.guardian_phone = guardian_phone;
+        this.inspectOrder = inspectOrder;
+        this.name = name;
+        this.sex = sex;
+        this.height = height;
+        this.birth = birth;
+        this.age = age;
+        this.nation = nation;
+        this.blood = blood;
+        this.guardian = guardian;
+        this.educationalOfParents = educationalOfParents;
+        this.remark = remark;
+        this.weight = weight;
+        this.addingFood = addingFood;
+        this.createTime = createTime;
+        this.updateTime = updateTime;
+    }
 
-	public Long getGuardian_phone() {
-		return guardian_phone;
-	}
+    public Long getGuardian_phone() {
+        return guardian_phone;
+    }
 
-	public void setGuardian_phone(Long guardian_phone) {
-		this.guardian_phone = guardian_phone;
-	}
+    public void setGuardian_phone(Long guardian_phone) {
+        this.guardian_phone = guardian_phone;
+    }
 
-	public Integer getInspectOrder() {
-		return inspectOrder;
-	}
+    public Integer getInspectOrder() {
+        return inspectOrder;
+    }
 
-	public void setInspectOrder(Integer inspectOrder) {
-		this.inspectOrder = inspectOrder;
-	}
+    public void setInspectOrder(Integer inspectOrder) {
+        this.inspectOrder = inspectOrder;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public Integer getSex() {
-		return sex;
-	}
+    public Integer getSex() {
+        return sex;
+    }
 
-	public void setSex(Integer sex) {
-		this.sex = sex;
-	}
+    public void setSex(Integer sex) {
+        this.sex = sex;
+    }
 
-	public Integer getHeight() {
-		return height;
-	}
+    public Integer getHeight() {
+        return height;
+    }
 
-	public void setHeight(Integer height) {
-		this.height = height;
-	}
+    public void setHeight(Integer height) {
+        this.height = height;
+    }
 
-	public Date getBirth() {
-		return birth;
-	}
+    public Date getBirth() {
+        return birth;
+    }
 
-	public void setBirth(Date birth) {
-		this.birth = birth;
-	}
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
 
-	public Integer getAge() {
-		return age;
-	}
+    public Integer getAge() {
+        return age;
+    }
 
-	public void setAge(Integer age) {
-		this.age = age;
-	}
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 
-	public Integer getNation() {
-		return nation;
-	}
+    public Integer getNation() {
+        return nation;
+    }
 
-	public void setNation(Integer nation) {
-		this.nation = nation;
-	}
+    public void setNation(Integer nation) {
+        this.nation = nation;
+    }
 
-	public Integer getBlood() {
-		return blood;
-	}
+    public Integer getBlood() {
+        return blood;
+    }
 
-	public void setBlood(Integer blood) {
-		this.blood = blood;
-	}
+    public void setBlood(Integer blood) {
+        this.blood = blood;
+    }
 
-	public String getGuardian() {
-		return guardian;
-	}
+    public String getGuardian() {
+        return guardian;
+    }
 
-	public void setGuardian(String guardian) {
-		this.guardian = guardian;
-	}
+    public void setGuardian(String guardian) {
+        this.guardian = guardian;
+    }
 
-	public Integer getEducationalOfParents() {
-		return educationalOfParents;
-	}
+    public Integer getEducationalOfParents() {
+        return educationalOfParents;
+    }
 
-	public void setEducationalOfParents(Integer educationalOfParents) {
-		this.educationalOfParents = educationalOfParents;
-	}
+    public void setEducationalOfParents(Integer educationalOfParents) {
+        this.educationalOfParents = educationalOfParents;
+    }
 
-	public String getRemark() {
-		return remark;
-	}
+    public String getRemark() {
+        return remark;
+    }
 
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
 
-	public Double getWeight() {
-		return weight;
-	}
+    public Double getWeight() {
+        return weight;
+    }
 
-	public void setWeight(Double weight) {
-		this.weight = weight;
-	}
+    public void setWeight(Double weight) {
+        this.weight = weight;
+    }
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+    public Integer getAddingFood() {
+        return addingFood;
+    }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+    public void setAddingFood(Integer addingFood) {
+        this.addingFood = addingFood;
+    }
 
-	public Date getUpdateTime() {
-		return updateTime;
-	}
+    public Date getCreateTime() {
+        return createTime;
+    }
 
-	public void setUpdateTime(Date updateTime) {
-		this.updateTime = updateTime;
-	}
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-		Information that = (Information) o;
-		return Objects.equals(guardian_phone, that.guardian_phone) &&
-				Objects.equals(inspectOrder, that.inspectOrder) &&
-				Objects.equals(name, that.name) &&
-				Objects.equals(sex, that.sex) &&
-				Objects.equals(height, that.height) &&
-				Objects.equals(birth, that.birth) &&
-				Objects.equals(age, that.age) &&
-				Objects.equals(nation, that.nation) &&
-				Objects.equals(blood, that.blood) &&
-				Objects.equals(guardian, that.guardian) &&
-				Objects.equals(educationalOfParents, that.educationalOfParents) &&
-				Objects.equals(remark, that.remark) &&
-				Objects.equals(weight, that.weight) &&
-				Objects.equals(createTime, that.createTime) &&
-				Objects.equals(updateTime, that.updateTime);
-	}
+    public Date getUpdateTime() {
+        return updateTime;
+    }
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(guardian_phone, inspectOrder, name, sex, height, birth, age, nation, blood, guardian, educationalOfParents, remark, weight, createTime, updateTime);
-	}
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
 
-	@Override
-	public String toString() {
-		return "Information{" +
-				"guardian_phone=" + guardian_phone +
-				", inspectOrder=" + inspectOrder +
-				", name='" + name + '\'' +
-				", sex=" + sex +
-				", height=" + height +
-				", birth=" + birth +
-				", age=" + age +
-				", nation=" + nation +
-				", blood=" + blood +
-				", guardian='" + guardian + '\'' +
-				", educationalOfParents=" + educationalOfParents +
-				", remark='" + remark + '\'' +
-				", weight=" + weight +
-				", createTime=" + createTime +
-				", updateTime=" + updateTime +
-				'}';
-	}
+    @Override
+    public String toString() {
+        return "Information{" +
+                "guardian_phone=" + guardian_phone +
+                ", inspectOrder=" + inspectOrder +
+                ", name='" + name + '\'' +
+                ", sex=" + sex +
+                ", height=" + height +
+                ", birth=" + birth +
+                ", age=" + age +
+                ", nation=" + nation +
+                ", blood=" + blood +
+                ", guardian='" + guardian + '\'' +
+                ", educationalOfParents=" + educationalOfParents +
+                ", remark='" + remark + '\'' +
+                ", weight=" + weight +
+                ", addingFood=" + addingFood +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
 }

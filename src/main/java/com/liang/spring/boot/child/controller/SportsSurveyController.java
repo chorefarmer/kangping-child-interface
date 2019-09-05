@@ -1,10 +1,12 @@
 package com.liang.spring.boot.child.controller;
 
 import com.liang.spring.boot.child.domain.PeopleKey;
+import com.liang.spring.boot.child.service.SportsSurveyService;
 import com.liang.spring.boot.child.untils.ResultUtil;
 import com.liang.spring.boot.child.domain.SportsSurvey;
 import com.liang.spring.boot.child.domain.ResultMsg;
 import com.liang.spring.boot.child.repository.SportsSurveyRepository;
+import org.aspectj.weaver.PerObjectInterfaceTypeMunger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -24,21 +26,8 @@ import java.util.List;
 public class SportsSurveyController {
 	
 	@Autowired 
-	private SportsSurveyRepository sportsSurveyRepository;
+	private SportsSurveyService sportsSurveyService;
 
-	/**
-	 * 从 运动调查存储库 获取运动调查列表
-	 * @return
-	 */
-	private List<SportsSurvey> getSportsSurveyList() {
-		List<SportsSurvey> sportsSurveys = new ArrayList<>();
-		for (SportsSurvey sportsSurvey : sportsSurveyRepository.findAll()) {
-			sportsSurveys.add(sportsSurvey);
-		}
- 		return sportsSurveys;
-	}
-
- 
 	/**
 	 * 根据id查询运动调查
 	 * @return
@@ -46,7 +35,9 @@ public class SportsSurveyController {
 	@ResponseBody
 	@GetMapping("/search")
 	public ResultMsg getListById(PeopleKey peopleKey) {
-		return ResultUtil.success(sportsSurveyRepository.findOne(peopleKey));
+
+		return sportsSurveyService.getListById(peopleKey);
+
 	}
 
 	/**
@@ -55,7 +46,9 @@ public class SportsSurveyController {
 	 */
 	@GetMapping("/form")
 	public ResultMsg SportsSurveyList( ) {
-		return ResultUtil.success(getSportsSurveyList());
+
+		return sportsSurveyService.SportsSurveyList();
+
 	}
 
 	/**
@@ -65,7 +58,9 @@ public class SportsSurveyController {
 	@ResponseBody
 	@PostMapping
 	public ResultMsg<SportsSurvey> sportsSurveyAdd(SportsSurvey sportsSurvey) {
-		return ResultUtil.success(sportsSurveyRepository.save(sportsSurvey));
+
+		return sportsSurveyService.sportsSurveyAdd(sportsSurvey);
+
 	}
 
 	/**
@@ -74,8 +69,10 @@ public class SportsSurveyController {
 	 */
 	@GetMapping("/delete")
 	public ResultMsg deleteSportsSurvey(PeopleKey peopleKey) {
-		sportsSurveyRepository.delete(peopleKey);
+
+		sportsSurveyService.deleteSportsSurvey(peopleKey);
 		return ResultUtil.success();
+
 	}
 
 	/**
@@ -84,7 +81,9 @@ public class SportsSurveyController {
 	 */
 	@GetMapping("/modify")
 	public ResultMsg modifySportsSurvey(PeopleKey peopleKey) {
-		return ResultUtil.success(sportsSurveyRepository.findOne(peopleKey));
+
+		return sportsSurveyService.modifySportsSurvey(peopleKey);
+
 	}
 
 }

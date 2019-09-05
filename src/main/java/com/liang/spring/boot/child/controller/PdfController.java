@@ -1,6 +1,7 @@
 package com.liang.spring.boot.child.controller;
 
 
+import com.alibaba.fastjson.JSON;
 import com.liang.spring.boot.child.calculate.CalcuBMRBetweenOneAndSix;
 import com.liang.spring.boot.child.calculate.CalcuEER;
 import com.liang.spring.boot.child.calculate.CalcuPAL;
@@ -77,17 +78,24 @@ public class PdfController {
 
 
         //根据id查询到医院科室基本信息
-        Hospital hospital=hospitalRepository.findOne(peopleKey.getGuardian_phone());
 
 
 
-        variables.put("hospital",hospital);
+        List<Hospital> hospital=hospitalRepository.findAll();
 
-        System.out.println("科室基本信息"+hospital.getHospitalName());
+
+
+        variables.put("hospital",hospital.get(0));
+        System.out.println("处理后医院基本信息"+ hospital);
+
+        System.out.println("取出数组中第一条医院记录"+hospital.get(0));
+
+        //System.out.println("科室基本信息"+hospital.getHospitalName());
 
         //根据id查询到基本信息
         Information information=informationRepository.findOne(peopleKey);
 
+        System.out.println("处理后个人基本信息"+information);
             variables.put("information",information);
 
         System.out.println("当前id号"+information.getGuardian_phone());

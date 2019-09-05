@@ -40,6 +40,7 @@ public class PdfUtils {
      */
     private static Document generateDoc(FreeMarkerConfigurer configurer, String templateName, Map<String, Object> variables)  {
         Template tp;
+
         try {
             tp = configurer.getConfiguration().getTemplate(templateName);
         } catch (IOException e) {
@@ -58,7 +59,7 @@ public class PdfUtils {
                 LOGGER.error("IO异常", e);
             }
             DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            return builder.parse(new ByteArrayInputStream(stringWriter.toString().getBytes()));
+            return builder.parse(new ByteArrayInputStream(stringWriter.toString().getBytes("utf-8")));
         }catch (Exception e){
             LOGGER.error(e.getMessage(), e);
             return null;
@@ -112,7 +113,6 @@ public class PdfUtils {
      */
     public static void download(FreeMarkerConfigurer configurer, String templateName, List<Map<String, Object>> listVars, HttpServletResponse response, String fileName) {
         // 设置编码、文件ContentType类型、文件头、下载文件名
-        response.setCharacterEncoding("utf-8");
         response.setContentType("multipart/form-data");
         try {
             response.setHeader("Content-Disposition", "attachment;fileName=" +

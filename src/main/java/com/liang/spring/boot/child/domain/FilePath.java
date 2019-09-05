@@ -35,4 +35,12 @@ public class FilePath {
     public void setPath(String path) {
         this.path = path;
     }
+
+    @Override
+    public String toString() {
+        return "FilePath{" +
+                "id=" + id +
+                ", path='" + path + '\'' +
+                '}';
+    }
 }

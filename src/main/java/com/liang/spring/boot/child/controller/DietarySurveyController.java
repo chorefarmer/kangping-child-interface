@@ -1,6 +1,7 @@
 package com.liang.spring.boot.child.controller;
 
 import com.liang.spring.boot.child.domain.PeopleKey;
+import com.liang.spring.boot.child.service.DietarySurveyService;
 import com.liang.spring.boot.child.untils.ResultUtil;
 import com.liang.spring.boot.child.domain.DietarySurvey;
 import com.liang.spring.boot.child.domain.ResultMsg;
@@ -14,7 +15,6 @@ import java.util.List;
 
 /**
  * 儿童 膳食调查 控制器.
- * 
  * @author LiLiang
  * @date 2019年3月5日
  */
@@ -24,20 +24,7 @@ import java.util.List;
 public class DietarySurveyController {
 	
 	@Autowired 
-	private DietarySurveyRepository dietarySurveyRepository;
-
-	/**
-	 * 从 膳食调查存储库 获取膳食调查列表
-	 * @return
-	 */
-	private List<DietarySurvey> getDietarySurveyList() {
-		List<DietarySurvey> dietarySurveys = new ArrayList<>();
-		for (DietarySurvey dietarySurvey : dietarySurveyRepository.findAll()) {
-			dietarySurveys.add(dietarySurvey);
-		}
- 		return dietarySurveys;
-	}
-
+	private DietarySurveyService dietarySurveyService;
  
 	/**
 	 * 根据id查询膳食调查
@@ -46,7 +33,7 @@ public class DietarySurveyController {
 	@ResponseBody
 	@GetMapping("/search")
 	public ResultMsg getListById(PeopleKey peopleKey) {
-		return ResultUtil.success(dietarySurveyRepository.findOne(peopleKey));
+		return dietarySurveyService.getListById(peopleKey);
 	}
 
 	/**
@@ -55,7 +42,7 @@ public class DietarySurveyController {
 	 */
 	@GetMapping("/form")
 	public ResultMsg DietarySurveyList( ) {
-		return ResultUtil.success(getDietarySurveyList());
+		return dietarySurveyService.DietarySurveyList();
 	}
 
 	/**
@@ -65,7 +52,9 @@ public class DietarySurveyController {
 	@ResponseBody
 	@PostMapping
 	public ResultMsg<DietarySurvey> dietarySurveyAdd(DietarySurvey dietarySurvey) {
-		return ResultUtil.success(dietarySurveyRepository.save(dietarySurvey));
+
+		return dietarySurveyService.dietarySurveyAdd(dietarySurvey);
+
 	}
 
 	/**
@@ -74,8 +63,10 @@ public class DietarySurveyController {
 	 */
 	@GetMapping("/delete")
 	public ResultMsg deleteDietarySurvey(PeopleKey peopleKey) {
-		dietarySurveyRepository.delete(peopleKey);
+
+		dietarySurveyService.deleteDietarySurvey(peopleKey);
 		return ResultUtil.success();
+
 	}
 
 	/**
@@ -84,7 +75,9 @@ public class DietarySurveyController {
 	 */
 	@GetMapping("/modify")
 	public ResultMsg modifyDietarySurvey(PeopleKey peopleKey) {
-		return ResultUtil.success(dietarySurveyRepository.findOne(peopleKey));
+
+		return dietarySurveyService.modifyDietarySurvey(peopleKey);
+
 	}
 
 }

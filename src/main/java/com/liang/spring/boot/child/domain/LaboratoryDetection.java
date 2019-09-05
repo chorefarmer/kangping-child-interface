@@ -54,9 +54,9 @@ public class LaboratoryDetection implements Serializable{
 
 	private Double bloodFat;//血脂
 
-	/**2019-4-19 添加上传文件*/
-	@Transient
-	private MultipartFile file;
+//	/**2019-4-19 添加上传文件*/
+//	@Transient
+//	private MultipartFile file;
 
 	/**2019-4-19 添加文件路径地址*/
 	private String path;
@@ -66,7 +66,7 @@ public class LaboratoryDetection implements Serializable{
 
 	}
 
-	public LaboratoryDetection(Long guardian_phone, Integer inspectOrder, Double flavol, Double serum25, Double serumZinc, Double glucoseTolerance, Double glycatedHemoglobin, Double fattyiverL, Double bindingProtein, Double oxyphorase, Double FBG, Double RBG, Double bloodFat, MultipartFile file, String path) {
+	public LaboratoryDetection(Long guardian_phone, Integer inspectOrder, Double flavol, Double serum25, Double serumZinc, Double glucoseTolerance, Double glycatedHemoglobin, Double fattyiverL, Double bindingProtein, Double oxyphorase, Double FBG, Double RBG, Double bloodFat, String path) {
 		this.guardian_phone = guardian_phone;
 		this.inspectOrder = inspectOrder;
 		this.flavol = flavol;
@@ -80,7 +80,6 @@ public class LaboratoryDetection implements Serializable{
 		this.FBG = FBG;
 		this.RBG = RBG;
 		this.bloodFat = bloodFat;
-		this.file = file;
 		this.path = path;
 	}
 
@@ -188,13 +187,13 @@ public class LaboratoryDetection implements Serializable{
 		this.bloodFat = bloodFat;
 	}
 
-	public MultipartFile getFile() {
-		return file;
-	}
-
-	public void setFile(MultipartFile file) {
-		this.file = file;
-	}
+//	public MultipartFile getFile() {
+//		return file;
+//	}
+//
+//	public void setFile(MultipartFile file) {
+//		this.file = file;
+//	}
 
 	public String getPath() {
 		return path;
@@ -220,7 +219,7 @@ public class LaboratoryDetection implements Serializable{
 				", FBG=" + FBG +
 				", RBG=" + RBG +
 				", bloodFat=" + bloodFat +
-				", file=" + file +
+//				", file=" + file +
 				", path='" + path + '\'' +
 				'}';
 	}

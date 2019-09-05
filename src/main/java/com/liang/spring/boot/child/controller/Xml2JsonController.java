@@ -4,6 +4,7 @@ package com.liang.spring.boot.child.controller;
 import com.alibaba.fastjson.JSON;
 import com.liang.spring.boot.child.domain.ResultMsg;
 import com.liang.spring.boot.child.domain.SportsSurvey;
+import com.liang.spring.boot.child.service.Xml2JsonService;
 import com.liang.spring.boot.child.untils.ResultUtil;
 
 import com.mysql.cj.x.json.JsonArray;
@@ -36,25 +37,12 @@ import java.io.IOException;
 @RequestMapping("/xml2Json")
 public class Xml2JsonController{
 
-    public static JSONObject XmlToJson2(String  filepath) throws IOException {
-        FileInputStream in = new FileInputStream(new File(filepath)) ;
-        String xml = IOUtils.toString(in,"utf-8");
-//        System.out.println(xml);
-        JSONObject object =  XML.toJSONObject(xml);
-        return  object;
-    }
-
+    private Xml2JsonService xml2JsonService;
 
     @GetMapping
     public ResultMsg xml2Json(SportsSurvey sportsSurvey)throws JSONException, IOException {
 
-        String path="C:\\oncom.xml";
+        return xml2JsonService.xml2Json(sportsSurvey);
 
-        JSONObject xmlObject=XmlToJson2(path);
-
-        JSON xmlJson=JSON.parseObject(xmlObject.toString());
-
-//        System.out.println("返回结果："+xmlJson);
-        return ResultUtil.success(xmlJson);
     }
 }
