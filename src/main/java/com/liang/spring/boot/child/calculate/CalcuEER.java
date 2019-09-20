@@ -23,21 +23,38 @@ public class CalcuEER {
      * @param sex
      * @return
      */
-    public static Double calcuEEROfFirstYear(Integer sex,Integer month){
+    public static Double calcuEEROfFirstYear(Integer sex,Integer month,Double weight){
 
         /**
-         * 0-6个月的婴儿，分男女，给出母乳喂养时奶量
+         * 0-3个月的婴儿，分男女，给出母乳喂养时奶量
          * */
-        if(month>0&&month<=6){
+        if(month>0&&month<=3){
             if(sex==1){//男婴
-                ERR=544;
+                TEE=1000*(0.388*weight-0.635)/4.18;
+                EnergyStorag=171;
+                ERR=TEE+EnergyStorag;
             }else if(sex==2){//女婴
-                ERR=495;
+                TEE=1000*(0.388*weight-0.635)/4.18;
+                EnergyStorag=180;
+                ERR=TEE+EnergyStorag;
+            }
+        }
+        /**
+         * 3-6个月的婴儿，分男女，给出母乳喂养时奶量
+         * */
+        if(month>3&&month<=6){
+            System.out.println(month+"个月到这里了");
+            if(sex==1){//男婴
+                TEE=1000*(0.388*weight-0.635)/4.18;
+                EnergyStorag=111;
+                ERR=TEE+EnergyStorag;
+            }else if(sex==2){//女婴
+                TEE=1000*(0.388*weight-0.635)/4.18;
+                EnergyStorag=117;
+                ERR=TEE+EnergyStorag;
             }
         }
 
-
-        /*纯母乳喂养  母乳喂养时奶量*/
 
         /**
          * 0-6个月的婴儿，配方奶喂养，分男女，计算出配方奶的量
@@ -48,11 +65,27 @@ public class CalcuEER {
          * 7-12月婴儿混合喂养婴儿
          */
         /*混合喂养儿  */
-        if(month>=7&&month<12){
+        if(month>=7&&month<9){
             if(sex==1){//男婴
-                ERR=719;
+                TEE=1000*(weight*0.371-0.416)/4.18;
+                EnergyStorag=73;
+                ERR=TEE+EnergyStorag;
             }else if(sex==2){//女婴
-                ERR=673;
+                TEE=1000*(weight*0.371-0.416)/4.18;
+                EnergyStorag=64.3;
+                ERR=TEE+EnergyStorag;
+            }
+        }
+
+        if(month>=9&&month<12){
+            if(sex==1){//男婴
+                TEE=1000*(weight*0.371-0.416)/4.18;
+                EnergyStorag=73;
+                ERR=TEE+EnergyStorag;
+            }else if(sex==2){//女婴
+                TEE=1000*(weight*0.371-0.416)/4.18;
+                EnergyStorag=67.5;
+                ERR=TEE+EnergyStorag;
             }
         }
 

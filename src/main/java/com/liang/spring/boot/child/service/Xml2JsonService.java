@@ -1,6 +1,7 @@
 package com.liang.spring.boot.child.service;
 
 import com.alibaba.fastjson.JSON;
+import com.liang.spring.boot.child.domain.BodyCompositionTest;
 import com.liang.spring.boot.child.domain.ResultMsg;
 import com.liang.spring.boot.child.domain.SportsSurvey;
 import com.liang.spring.boot.child.untils.ResultUtil;
@@ -31,13 +32,15 @@ public class Xml2JsonService {
     }
 
 
-    public ResultMsg xml2Json(SportsSurvey sportsSurvey)throws JSONException, IOException {
+    public ResultMsg xml2Json(BodyCompositionTest bodyCompositionTest)throws JSONException, IOException {
 
         String path="C:\\oncom.xml";
 
         JSONObject xmlObject=XmlToJson2(path);
 
         JSON xmlJson=JSON.parseObject(xmlObject.toString());
+
+        System.out.println(xmlJson);
 
         return ResultUtil.success(xmlJson);
     }

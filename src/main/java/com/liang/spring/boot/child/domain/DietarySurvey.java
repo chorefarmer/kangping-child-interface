@@ -37,7 +37,7 @@ public class DietarySurvey implements Serializable{
 	private Integer fruits;//水果量
 
 	//2019-4-18 添加禽畜肉类
-	private Integer PoultryMeat;
+	private Integer poultryMeat;
 
 
 	private Integer milk;//牛奶量
@@ -72,7 +72,7 @@ public class DietarySurvey implements Serializable{
 		this.marineProducts = marineProducts;
 		this.egg = egg;
 		this.fruits = fruits;
-		PoultryMeat = poultryMeat;
+		this.poultryMeat = poultryMeat;
 		this.milk = milk;
 		this.nut = nut;
 		this.prefersSweet = prefersSweet;
@@ -140,11 +140,11 @@ public class DietarySurvey implements Serializable{
 	}
 
 	public Integer getPoultryMeat() {
-		return PoultryMeat;
+		return poultryMeat;
 	}
 
 	public void setPoultryMeat(Integer poultryMeat) {
-		PoultryMeat = poultryMeat;
+		this.poultryMeat = poultryMeat;
 	}
 
 	public Integer getMilk() {
@@ -221,7 +221,7 @@ public class DietarySurvey implements Serializable{
 				", marineProducts=" + marineProducts +
 				", egg=" + egg +
 				", fruits=" + fruits +
-				", PoultryMeat=" + PoultryMeat +
+				", poultryMeat=" + poultryMeat +
 				", milk=" + milk +
 				", nut=" + nut +
 				", prefersSweet=" + prefersSweet +

@@ -17,65 +17,18 @@ import java.util.List;
  * @Description:
  * @Date: Create in 11:20 2019/9/4
  */
-@Service
-public class AllergiesAndIntolerancesService {
+public interface AllergiesAndIntolerancesService {
 
-    @Autowired
-    private AllergiesAndIntolerancesRepository allergiesAndIntolerancesRepository;
 
-    /**
-     * 从 食物过敏与不耐受存储库 获取食物过敏与不耐受列表
-     * @return
-     */
-    public List<AllergiesAndIntolerances> getAllergiesAndIntolerancesList() {
-        List<AllergiesAndIntolerances> allergiesAndIntolerancess = new ArrayList<>();
-        for (AllergiesAndIntolerances allergiesAndIntolerances : allergiesAndIntolerancesRepository.findAll()) {
-            allergiesAndIntolerancess.add(allergiesAndIntolerances);
-        }
-        return allergiesAndIntolerancess;
-    }
+    List<AllergiesAndIntolerances> getAllergiesAndIntolerancesList();
 
-    public ResultMsg getListById(@Valid PeopleKey peopleKey){
+    ResultMsg getListById(PeopleKey peopleKey);
 
-        return ResultUtil.success(allergiesAndIntolerancesRepository.findOne(peopleKey));
-    }
+    ResultMsg AllergiesAndIntolerancesList( );
 
-    /**
-     * 获取 form 表单页面
-     * @return
-     */
-    public ResultMsg AllergiesAndIntolerancesList( ) {
-        return ResultUtil.success(getAllergiesAndIntolerancesList());
-    }
+    ResultMsg<AllergiesAndIntolerances> allergiesAndIntolerancesAdd(AllergiesAndIntolerances allergiesAndIntolerances);
 
-    /**
-     * 新建保存食物过敏与不耐受
-     * @return
-     */
-    public ResultMsg<AllergiesAndIntolerances> allergiesAndIntolerancesAdd(AllergiesAndIntolerances allergiesAndIntolerances) {
+    ResultMsg deleteAllergiesAndIntolerances(PeopleKey id);
 
-        return ResultUtil.success(allergiesAndIntolerancesRepository.save(allergiesAndIntolerances));
-
-    }
-
-    /**
-     * 删除食物过敏与不耐受
-     * @param id
-     * @return
-     */
-    public ResultMsg deleteAllergiesAndIntolerances(PeopleKey id) {
-        allergiesAndIntolerancesRepository.delete(id);
-        return ResultUtil.success();
-    }
-
-    /**
-     * 修改食物过敏与不耐受
-     * @param allergiesAndIntolerances
-     * @return
-     */
-    public ResultMsg modifyAllergiesAndIntolerances(AllergiesAndIntolerances allergiesAndIntolerances) {
-
-        return ResultUtil.success(allergiesAndIntolerancesRepository.save(allergiesAndIntolerances));
-
-    }
+    ResultMsg modifyAllergiesAndIntolerances(AllergiesAndIntolerances allergiesAndIntolerances);
 }

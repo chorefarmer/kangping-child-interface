@@ -2,6 +2,7 @@ package com.liang.spring.boot.child.controller;
 
 
 import com.alibaba.fastjson.JSON;
+import com.liang.spring.boot.child.domain.BodyCompositionTest;
 import com.liang.spring.boot.child.domain.ResultMsg;
 import com.liang.spring.boot.child.domain.SportsSurvey;
 import com.liang.spring.boot.child.service.Xml2JsonService;
@@ -16,6 +17,7 @@ import org.json.JSONObject;
 import org.json.XML;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -37,12 +39,13 @@ import java.io.IOException;
 @RequestMapping("/xml2Json")
 public class Xml2JsonController{
 
+    @Autowired
     private Xml2JsonService xml2JsonService;
 
     @GetMapping
-    public ResultMsg xml2Json(SportsSurvey sportsSurvey)throws JSONException, IOException {
+    public ResultMsg xml2Json(BodyCompositionTest bodyCompositionTest)throws JSONException, IOException {
 
-        return xml2JsonService.xml2Json(sportsSurvey);
+        return xml2JsonService.xml2Json(bodyCompositionTest);
 
     }
 }

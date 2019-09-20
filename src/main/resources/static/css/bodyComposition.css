@@ -109,6 +109,7 @@
 .table_wrap_infor table tr td:nth-child(3),
 .table_wrap_infor table tr td:nth-child(4),
 .table_wrap_infor table tr td:nth-child(5),
+.table_wrap_infor table tr td:nth-child(6),
 .table_wrap_infor table tr td:first-child {/*设置table左边边框*/
     border-left: 2px solid #eaeaea;
 }
@@ -126,7 +127,7 @@
 .table_wrap_infor table tr td:nth-child(2),
 .table_wrap_infor table tr td:nth-child(3),
 .table_wrap_infor table tr td:nth-child(4),
-/*.table_wrap_infor table tr td:nth-child(5),*/
+.table_wrap_infor table tr td:nth-child(5),
 .table_wrap_infor table tr td:last-child{/*设置table表格每列底部边框*/
     border-bottom: 2px solid #eaeaea;
 }
@@ -471,3 +472,20 @@
     border-bottom-right-radius: 12px;
 }
 /*运动指导 table样式 end*/
+.item-title-doctorAdvice {
+    height: 40px;
+    line-height: 40px;
+    /*border-bottom: 1px solid #000000;*/
+    padding-top:150px;
+    padding-left:50px;
+    color: black;
+}
+
+.item-title-doctor {
+    height: 40px;
+    line-height: 40px;
+    /*border-bottom: 1px solid #000000;*/
+    padding-top:100px;
+    padding-left:450px;
+    color: black;
+}

@@ -16,64 +16,18 @@ import java.util.List;
  * @Description:
  * @Date: Create in 12:10 2019/9/4
  */
-@Service
-public class DietarySurveyService {
+public interface DietarySurveyService {
 
-    @Autowired
-    private DietarySurveyRepository dietarySurveyRepository;
+    List<DietarySurvey> getDietarySurveyList();
 
-    /**
-     * 从 膳食调查存储库 获取膳食调查列表
-     * @return
-     */
-    private List<DietarySurvey> getDietarySurveyList() {
-        List<DietarySurvey> dietarySurveys = new ArrayList<>();
-        for (DietarySurvey dietarySurvey : dietarySurveyRepository.findAll()) {
-            dietarySurveys.add(dietarySurvey);
-        }
-        return dietarySurveys;
-    }
+    ResultMsg getListById(PeopleKey peopleKey);
 
+    ResultMsg DietarySurveyList( );
 
-    /**
-     * 根据id查询膳食调查
-     * @return
-     */
-    public ResultMsg getListById(PeopleKey peopleKey) {
-        return ResultUtil.success(dietarySurveyRepository.findOne(peopleKey));
-    }
+    ResultMsg<DietarySurvey> dietarySurveyAdd(DietarySurvey dietarySurvey);
 
-    /**
-     * 获取 form 表单页面
-     * @return
-     */
-    public ResultMsg DietarySurveyList( ) {
-        return ResultUtil.success(getDietarySurveyList());
-    }
+    ResultMsg deleteDietarySurvey(PeopleKey peopleKey);
 
-    /**
-     * 新建保存膳食调查
-     * @return
-     */
-    public ResultMsg<DietarySurvey> dietarySurveyAdd(DietarySurvey dietarySurvey) {
-        return ResultUtil.success(dietarySurveyRepository.save(dietarySurvey));
-    }
-
-    /**
-     * 删除膳食调查
-     * @return
-     */
-    public ResultMsg deleteDietarySurvey(PeopleKey peopleKey) {
-        dietarySurveyRepository.delete(peopleKey);
-        return ResultUtil.success();
-    }
-
-    /**
-     * 修改膳食调查
-     * @return
-     */
-    public ResultMsg modifyDietarySurvey(PeopleKey peopleKey) {
-        return ResultUtil.success(dietarySurveyRepository.findOne(peopleKey));
-    }
+    ResultMsg modifyDietarySurvey(PeopleKey peopleKey);
 
 }

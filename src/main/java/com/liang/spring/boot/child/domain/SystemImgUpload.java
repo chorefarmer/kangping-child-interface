@@ -26,18 +26,18 @@ public class SystemImgUpload {
     @Id
     private Integer inspectOrder;
 
-    @Transient
-    private MultipartFile file;
+//    @Transient
+//    private MultipartFile file;
 
     private String path;
 
     protected SystemImgUpload() {
     }
 
-    public SystemImgUpload(Long guardian_phone, Integer inspectOrder, MultipartFile file, String path) {
+    public SystemImgUpload(Long guardian_phone, Integer inspectOrder, String path) {
         this.guardian_phone = guardian_phone;
         this.inspectOrder = inspectOrder;
-        this.file = file;
+//        this.file = file;
         this.path = path;
     }
 
@@ -57,13 +57,13 @@ public class SystemImgUpload {
         this.inspectOrder = inspectOrder;
     }
 
-    public MultipartFile getFile() {
-        return file;
-    }
-
-    public void setFile(MultipartFile file) {
-        this.file = file;
-    }
+//    public MultipartFile getFile() {
+//        return file;
+//    }
+//
+//    public void setFile(MultipartFile file) {
+//        this.file = file;
+//    }
 
     public String getPath() {
         return path;
@@ -78,7 +78,7 @@ public class SystemImgUpload {
         return "SystemImgUpload{" +
                 "guardian_phone=" + guardian_phone +
                 ", inspectOrder=" + inspectOrder +
-                ", file=" + file +
+//                ", file=" + file +
                 ", path='" + path + '\'' +
                 '}';
     }

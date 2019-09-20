@@ -1,5 +1,7 @@
 package com.liang.spring.boot.child.calculate;
 
+import com.liang.spring.boot.child.untils.GetAgeByBirth;
+
 /**
  * 根据 运动调查 计算活动水平 PAL
  * Created by: elvis(李亮)
@@ -19,7 +21,7 @@ public class CalcuPAL {
     public static Double caluPAL(Integer age,Integer sport_status){
 
 
-        if(age>0&&age<3){//年龄0~3
+        if(age>=0&&age<3){//年龄0~3
             //活动等级  正常活动    喜欢蹦跳
             if(sport_status==1) {
                 PAL = 1.35;

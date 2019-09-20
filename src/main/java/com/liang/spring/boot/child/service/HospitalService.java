@@ -18,32 +18,9 @@ import java.util.UUID;
  * @Description:
  * @Date: Create in 12:15 2019/9/4
  */
-@Service
-public class HospitalService {
+public interface HospitalService {
 
-    @Autowired
-    private HospitalRepository hospitalRepository;
+    ResultMsg saveHospital(Hospital hospital);
 
-    /**
-     * 提交医院管理信息
-     * @param hospital
-     * @return
-     */
-    public ResultMsg saveHospital(Hospital hospital) {
-
-        if(hospital.getHospitalId()==null){
-            hospital.setHospitalId(UUID.randomUUID().toString().replace("-", "").toLowerCase());
-        }
-        return ResultUtil.success(hospitalRepository.save(hospital));
-    }
-
-    /**
-     * 根据id查询医院管理
-     * @return
-     */
-    public ResultMsg getListById( ) {
-
-        return ResultUtil.success(hospitalRepository.findAll().get(0));
-
-    }
+    ResultMsg getListById( );
 }

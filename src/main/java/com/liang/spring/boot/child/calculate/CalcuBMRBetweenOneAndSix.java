@@ -21,6 +21,10 @@ public class CalcuBMRBetweenOneAndSix {
      */
     public static Double calcuBMR(Integer age,Integer sex,Double weight){
 
+        /**
+         * 0-1岁按照体重和性别计算BMR
+         */
+
         /*1-3岁按照体重和性别计算BMR*/
         if(age>=1&&age<3){
             if(sex==1){//男童

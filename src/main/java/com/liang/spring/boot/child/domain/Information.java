@@ -48,7 +48,7 @@ public class Information implements Serializable{
 	//2019-4-22 取消数据格式化  返回Unix时间戳
 	private Date birth;//出生日期
 
-	private Integer age;
+	private String age;
 
 	//	选填项
 
@@ -87,7 +87,7 @@ public class Information implements Serializable{
 	protected Information() {  // JPA 的规范要求无参构造函数；设为 protected 防止直接使用
 	}
 
-    public Information(Long guardian_phone, Integer inspectOrder, String name, Integer sex, Integer height, Date birth, Integer age, Integer nation, Integer blood, String guardian, Integer educationalOfParents, String remark, Double weight, Integer addingFood, Date createTime, Date updateTime) {
+    public Information(Long guardian_phone, Integer inspectOrder, String name, Integer sex, Integer height, Date birth, String age, Integer nation, Integer blood, String guardian, Integer educationalOfParents, String remark, Double weight, Integer addingFood, Date createTime, Date updateTime) {
         this.guardian_phone = guardian_phone;
         this.inspectOrder = inspectOrder;
         this.name = name;
@@ -105,6 +105,7 @@ public class Information implements Serializable{
         this.createTime = createTime;
         this.updateTime = updateTime;
     }
+
 
     public Long getGuardian_phone() {
         return guardian_phone;
@@ -154,11 +155,11 @@ public class Information implements Serializable{
         this.birth = birth;
     }
 
-    public Integer getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -243,7 +244,7 @@ public class Information implements Serializable{
                 ", sex=" + sex +
                 ", height=" + height +
                 ", birth=" + birth +
-                ", age=" + age +
+                ", age='" + age + '\'' +
                 ", nation=" + nation +
                 ", blood=" + blood +
                 ", guardian='" + guardian + '\'' +

@@ -22,47 +22,8 @@ import java.net.UnknownHostException;
  * @Description:
  * @Date: Create in 15:25 2019/6/21
  */
-@Service
-public class SystemImgUploadService  {
 
-    @Autowired
-    private SystemImgUploadRepository repository;
+public interface SystemImgUploadService  {
 
-
-    public ResultMsg Upload(@RequestParam(value="file",required = false) MultipartFile file, SystemImgUpload systemImgUpload) {
-
-
-        if(!file.isEmpty()) {
-
-            String fileName = file.getOriginalFilename();
-
-
-            String path = ClassUtils.getDefaultClassLoader().getResource("").getPath()+"static/";
-
-
-            try {
-
-                FileUtil.fileupload(file.getBytes(), path, fileName);
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-
-
-            try {
-                InetAddress address=InetAddress.getLocalHost();
-                String localhost=address.getHostAddress();
-
-                systemImgUpload.setPath("http://"+localhost+":8082/"+fileName);
-                repository.save(systemImgUpload);
-
-            } catch (UnknownHostException e) {
-                e.printStackTrace();
-            }
-
-
-        }
-        return ResultUtil.success(systemImgUpload);
-
-    }
+    ResultMsg Upload(@RequestParam(value="file",required = false) MultipartFile file, SystemImgUpload systemImgUpload);
 }

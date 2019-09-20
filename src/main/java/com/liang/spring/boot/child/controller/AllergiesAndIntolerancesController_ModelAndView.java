@@ -27,7 +27,7 @@ public class AllergiesAndIntolerancesController_ModelAndView {
 	private AllergiesAndIntolerancesRepository allergiesAndIntolerancesRepository;
 
 	/**
-	 * 从 食物过敏与不耐受存储库 获取食物过敏与不耐受列表
+	 * 从 食物过敏与不耐受存储库  
 	 * @return
 	 */
 	private List<AllergiesAndIntolerances> getAllergiesAndIntolerancesList() {

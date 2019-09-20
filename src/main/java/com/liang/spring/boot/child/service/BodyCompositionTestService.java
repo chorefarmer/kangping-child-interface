@@ -16,19 +16,9 @@ import org.springframework.web.bind.annotation.PostMapping;
  * @Description:
  * @Date: Create in 12:03 2019/9/4
  */
-@Service
-public class BodyCompositionTestService {
+public interface BodyCompositionTestService {
 
-    @Autowired
-    private BodyCompositionTestRepository bodyCompositionTestRepository;
+    ResultMsg saveBodyCompositionTest(BodyCompositionTest bodyCompositionTest);
 
-    public ResultMsg saveBodyCompositionTest(BodyCompositionTest bodyCompositionTest){
-
-        return ResultUtil.success(bodyCompositionTestRepository.save(bodyCompositionTest));
-    }
-
-    public ResultMsg findBodyCompositionTestById(PeopleKey peopleKey){
-
-        return ResultUtil.success(bodyCompositionTestRepository.findOne(peopleKey));
-    }
+    ResultMsg findBodyCompositionTestById(PeopleKey peopleKey);
 }

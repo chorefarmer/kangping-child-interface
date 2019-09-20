@@ -2,10 +2,10 @@
 <html>
 <head lang="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>营养监测分析报告(3到18岁)</title>
+    <title>营养监测分析报告(3-18Y)</title>
 
-    <link rel="stylesheet" href="http://localhost:8082/css/bodyComposition.css" />
-    <link rel="stylesheet" href="http://localhost:8082/js/echarts.min.js" />
+    <link rel="stylesheet" href="http://localhost:8080/css/bodyComposition.css" />
+    <link rel="stylesheet" href="http://localhost:8080/js/echarts.min.js" />
 
     <style>
         @page {
@@ -13,7 +13,7 @@
             margin: 0.25in;
             padding: 1em;
             @bottom-center{
-                content:"康萍科技儿童个体营养监测分析报告";
+                content:"儿童个体营养监测分析报告";
                 font-family: SimSun;
                 font-size: 16px;
                 color:deepskyblue;
@@ -31,14 +31,14 @@
 <body style="font-family: SimSun">
 <div class="container">
     <div style="margin: 0 0 15px 200px " class="hospital">
-        <img style="width: 60px;height: 60px;margin: 0 0 -20px 0 " src="http://localhost:8082/img/hospital.jpg" />
+        <img style="width: 60px;height: 60px;margin: 0 0 -20px 0 " src="http://localhost:8080/img/hospital.jpg" />
         <span style="font-size: 35px">${hospital.hospitalName}</span>
     </div>
 
     <div style="text-align: center" class="header">
         <div class="bg-line"></div>
         <div class="header-title">
-            <span>营养监测分析报告(3到18岁)</span>
+            <span>营养监测分析报告</span>
         </div>
     </div>
 
@@ -46,7 +46,7 @@
             <#--基本信息-->
             <div class="item-title-infor">
                 <div class="title-left">
-                    <img width="35px" height="35px" src="http://localhost:8082/img/information.jpg" />
+                    <img width="35px" height="35px" src="http://localhost:8080/img/information.jpg" />
                     基本信息
                 </div>
                 <div class="title-right">检测时间:${.now}</div>
@@ -68,7 +68,7 @@
                         <td>${information.guardian_phone?c}</td>
                         <td>${information.name}</td>
                         <td>${sex}</td>
-                        <td>${information.height}</td>
+                        <td>${height}</td>
                         <td>${information.birth?string('yyyy-MM-dd')}</td>
                     </tr>
 
@@ -80,7 +80,7 @@
             <#--体成分检测-->
             <div class="item-title-tcf">
                 <div class="title-left">
-                    <img width="35px" height="35px" src="http://localhost:8082/img/bodyComposition.jpg" />
+                    <img width="35px" height="35px" src="http://localhost:8080/img/bodyComposition.jpg" />
                     体成分检测结果
                 </div>
                 <div class="title-right"></div>
@@ -102,15 +102,15 @@
                     <tbody>
                     <tr>
                         <td>细胞内液(kg)</td>
-                        <td>14.3</td><#--细胞內液-->
-                        <td rowspan="2">27.6</td><#--总体水-->
+                        <td>${bodyCompositionTest.intracellularFluid}</td><#--细胞內液-->
+                        <td rowspan="2">${bodyCompositionTest.totalWater}</td><#--总体水-->
                         <td rowspan="3"></td>
                         <td rowspan="4"></td>
                         <td rowspan="5"></td>
                     </tr>
                     <tr>
                         <td>细胞外液(kg)</td>
-                        <td>13.3</td><#--细胞外液-->
+                        <td>${bodyCompositionTest.extracellularFluid}</td><#--细胞外液-->
                         <#--<td></td>-->
                         <#--<td></td>-->
                         <#--<td></td>-->
@@ -119,11 +119,11 @@
                     <tr>
                         <td>蛋白质(kg)</td>
                         <td>${bodyCompositionTest.protein}</td><#--蛋白质-->
-                        <td colspan="2">32.9</td><#--肌肉量-->
+                        <td colspan="2">${bodyCompositionTest.muscle}</td><#--肌肉量-->
                     </tr>
                     <tr>
                         <td>无机盐(kg)</td>
-                        <td>3.6</td><#--无机盐-->
+                        <td>${bodyCompositionTest.sclerotin}</td><#--无机盐-->
                         <td colspan="3">${bodyCompositionTest.fatfreeBodyWeight}</td><#--瘦体重-->
                         <#--<td></td>-->
                         <#--<td></td>-->
@@ -145,28 +145,28 @@
             <#--身高体重曲线图-->
             <div class="item-title-height">
                 <div class="title-left">
-                    <img width="35px" height="35px" src="http://localhost:8082/img/heightWeight.jpg" />
+                    <img width="35px" height="35px" src="http://localhost:8080/img/heightWeight.jpg" />
                     身高体重曲线图
                 </div>
                 <div class="title-right"></div>
             </div>
             <div >
-                <img style="margin-left: -300px;width:600px;height:350px"  src="http://localhost:8082/${information.guardian_phone?c}_Height.png" />
+                <img style="margin-left: -300px;width:600px;height:350px"  src="http://localhost:8080/${information.guardian_phone?c}_Height.png" />
 
             </div>
                 <div >
-                <img style="margin-left: 50px;width:600px;height:350px"  src="http://localhost:8082/${information.guardian_phone?c}_Weight.png" />
+                <img style="margin-left: 50px;width:600px;height:350px"  src="http://localhost:8080/${information.guardian_phone?c}_Weight.png" />
 
             </div>
             <div >
-                <img style="margin-left: 50px;width:600px;height:350px"  src="http://localhost:8082/${information.guardian_phone?c}_Bmi.png" />
+                <img style="margin-left: 50px;width:600px;height:350px"  src="http://localhost:8080/${information.guardian_phone?c}_Bmi.png" />
 
             </div>
 
             <#--膳食结构分析-->
             <div class="item-title-shanshi">
                 <div class="title-left">
-                    <img width="35px" height="35px" src="http://localhost:8082/img/dietary.jpg" />
+                    <img width="35px" height="35px" src="http://localhost:8080/img/dietary.jpg" />
                     膳食结构分析
                 </div>
                 <div class="title-right"></div>
@@ -186,43 +186,46 @@
                         <td>谷类</td>
                         <#--<td>312.5g</td>-->
                         <td>
-                            <#--<#if 0>-->
-
-                            <#--<#else>-->
-                                <#---->
-                            <#--</#if>-->
-                            <img style="line-height: 20px;margin-left: 5px" width="20px" height="20px" src="http://localhost:8082/img/downArrow.jpg" />
+                            ${StapleFoodIntake}
+                            <#--<img style="line-height: 20px;margin-left: 5px" width="20px" height="20px" src="http://localhost:8080/img/downArrow.jpg" />-->
                         </td>
                     </tr>
                     <tr>
                         <td>蔬菜</td>
                         <#--<td>500g</td>-->
-                        <td><img style="line-height: 20px;margin-left: 5px" width="20px" height="20px" src="http://localhost:8082/img/downArrow.jpg" /></td>
+                        <td>
+                            ${VegetablesIntake}
+                            <#--<img style="line-height: 20px;margin-left: 5px" width="20px" height="20px" src="http://localhost:8080/img/downArrow.jpg" />--></td>
                     </tr>
                     <tr>
                         <td>水果</td>
                         <#--<td>300g</td>-->
-                        <td><img style="line-height: 20px;margin-left: 5px" width="20px" height="20px" src="http://localhost:8082/img/downArrow.jpg" /></td>
+                        <td>
+                            ${FruitsIntake}
+                            <#--<img style="line-height: 20px;margin-left: 5px" width="20px" height="20px" src="http://localhost:8080/img/downArrow.jpg" />--></td>
                     </tr>
                     <tr>
                         <td>禽畜</td>
                         <#--<td>75g</td>-->
-                        <td><img style="line-height: 20px;margin-left: 5px" width="20px" height="20px" src="http://localhost:8082/img/downArrow.jpg" /></td>
+                        <td>
+                            ${livestockGIntake}
+                            <#--<img style="line-height: 20px;margin-left: 5px" width="20px" height="20px" src="http://localhost:8080/img/downArrow.jpg" />--></td>
                     </tr>
                     <tr>
                         <td>海产品</td>
                         <#--<td>75g</td>-->
-                        <td>正确</td>
+                        <td>${aquaticProductGIntake}</td>
                     </tr>
                     <tr>
                         <td>蛋及制品</td>
-                        <#--<td>50g</td>-->
-                        <td><img style="line-height: 20px;margin-left: 5px" width="20px" height="20px" src="http://localhost:8082/img/downArrow.jpg" /></td>
+                        <td>
+                            ${eggGIntake}
+                            <#--<img style="line-height: 20px;margin-left: 5px" width="20px" height="20px" src="http://localhost:8080/img/downArrow.jpg" />--></td>
                     </tr>
                     <tr>
                         <td>奶</td>
                         <#--<td>320g</td>-->
-                        <td>正确</td>
+                        <td>${milkGIntake}</td>
                     </tr>
                     <#--<tr>-->
                         <#--<td>豆及制品</td>-->
@@ -233,7 +236,7 @@
                     <tr>
                         <td>坚果</td>
                         <#--<td>15g</td>-->
-                        <td>正确</td>
+                        <td>${nutGIntake}</td>
                     </tr>
                     <#--<tr>-->
                         <#--<td>油脂</td>-->
@@ -250,7 +253,7 @@
             <#--指导方案建议日摄入量-->
             <div class="item-title-dayintake">
                 <div class="title-left">
-                    <img width="35px" height="35px" src="http://localhost:8082/img/intakeAdvice.jpg" />
+                    <img width="35px" height="35px" src="http://localhost:8080/img/intakeAdvice.jpg" />
                     指导方案建议日摄入量
                 </div>
                 <div class="title-right"></div>
@@ -317,7 +320,7 @@
             <#--餐次举例-->
             <div class="item-title-intake">
                 <div class="title-left">
-                    <img width="35px" height="35px" src="http://localhost:8082/img/intakeCanci.jpg" />
+                    <img width="35px" height="35px" src="http://localhost:8080/img/intakeCanci.jpg" />
                     餐次举例
                 </div>
                 <div class="title-right"></div>
@@ -452,7 +455,7 @@
             <#--运动指导-->
             <div class="item-title-sport">
                 <div class="title-left">
-                    <img width="35px" height="35px" src="http://localhost:8082/img/sport.jpg" />
+                    <img width="35px" height="35px" src="http://localhost:8080/img/sport.jpg" />
                     运动指导
                 </div>
                 <div class="title-right"></div>
@@ -480,10 +483,7 @@
                         <td>游泳</td>
                         <td>游泳40分钟</td>
                     </tr>
-                    <#--<tr>-->
-                        <#--<td>瑜伽</td>-->
-                        <#--<td>瑜伽50分钟</td>-->
-                    <#--</tr>-->
+
                     <tr>
                         <td>注意事项:</td>
                         <td>可根据自己的具体情况调整运动时间，可多次完成</td>
